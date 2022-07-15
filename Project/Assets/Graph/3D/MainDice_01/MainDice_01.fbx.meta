@@ -35,7 +35,7 @@ ModelImporter:
       name: M_MainDice_6
     second: {fileID: 2100000, guid: 31003b8a4f0139d4d965f135b344ac37, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
