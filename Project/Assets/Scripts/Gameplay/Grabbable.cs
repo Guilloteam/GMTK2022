@@ -8,6 +8,7 @@ public class Grabbable : MonoBehaviour
     private bool _hovered;
     public System.Action hoverStartDelegate;
     public System.Action hoverEndDelegate;
+    public System.Action<Vector3> throwDelegate;
 
     private Collider[] colliders;
     private Collider mainCollider;
@@ -45,10 +46,10 @@ public class Grabbable : MonoBehaviour
         }
     }
 
-    public void Throw(Vector3 direction, float force, float torque)
+    public void Throw(Vector3 direction)
     {
-        rigidbody.velocity = direction * force;
-        rigidbody.AddTorque(Vector3.Cross(direction, Vector3.up) * torque, ForceMode.Acceleration);
+        throwDelegate?.Invoke(direction);
+        
     }
 
     public void Start()
