@@ -13,8 +13,6 @@ public class GrabHand : MonoBehaviour
     public InputAction grabAction;
     public float grabAnimDuration = 0.3f;
     public LayerMask raycastLayerMask;
-    public float throwStrength = 10;
-    public float throwTorque = 10;
 
     void Start()
     {
@@ -66,7 +64,7 @@ public class GrabHand : MonoBehaviour
                 {
                     Vector3 throwDirection = hit.point - transform.position;
                     throwDirection.y = 0;
-                    grabbedElement.Throw(throwDirection.normalized, throwStrength, throwTorque);
+                    grabbedElement.Throw(throwDirection.normalized);
                     grabbedElement = null;
                 }
             }
