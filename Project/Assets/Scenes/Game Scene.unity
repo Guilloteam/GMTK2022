@@ -983,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &279989359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3519,7 +3519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1194309690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6324,7 +6324,7 @@ PrefabInstance:
     - target: {fileID: 1260700223, guid: dccaf84bbef175e4cb8171ba252348aa, type: 3}
       propertyPath: diceConfig
       value: 
-      objectReference: {fileID: 11400000, guid: e6fa0c476eadef5438ed4c240de6dacc, type: 2}
+      objectReference: {fileID: 11400000, guid: fdc2c1f40749a504eaf54114f45a2a35, type: 2}
     - target: {fileID: 1260700223, guid: dccaf84bbef175e4cb8171ba252348aa, type: 3}
       propertyPath: configs.Array.size
       value: 6
