@@ -9,11 +9,13 @@ public class UIDice : MonoBehaviour
     public LayerMask raycastLayer;
     public float turnDuration;
     public Vector3 rotationAxis = (Vector3.right + Vector3.forward)/2;
-    private DiceSlot hoveredSlot;
-    public System.Action<DiceSlot> diceSlotClickedDelegate;
+    private int hoveredSlotIndex;
+    public System.Action<DiceSlot, int> diceSlotClickedDelegate;
+    private List<Coroutine> pendingCoroutines = new List<Coroutine>();
+    private DiceSlots slots;
     void Start()
     {
-        
+        slots = GetComponent<DiceSlots>();
     }
 
     private void Update()
@@ -22,23 +24,23 @@ public class UIDice : MonoBehaviour
         if(Physics.Raycast(camera.ScreenPointToRay(Mouse.current.position.ReadValue()), out hit, 100, raycastLayer))
         {
             DiceSlot slot = hit.collider.GetComponent<DiceSlot>();
-            if(slot != null)
+            if(slot != null && slot.transform.parent == transform)
             {
-                if(hoveredSlot != null && hoveredSlot != slot)
-                    hoveredSlot.hovered = false;
+                if(hoveredSlotIndex >= 0 && hoveredSlotIndex != slot.slotIndex)
+                    slots.slots[hoveredSlotIndex].hovered = false;
                 slot.hovered = true;
-                hoveredSlot = slot;
+                hoveredSlotIndex = slot.slotIndex;
                 if(Mouse.current.leftButton.wasPressedThisFrame)
                 {
-                    diceSlotClickedDelegate?.Invoke(hoveredSlot);
+                    diceSlotClickedDelegate?.Invoke(slots.slots[hoveredSlotIndex], hoveredSlotIndex);
                 }
             }
         }
         else
         {
-            if(hoveredSlot != null)
-                hoveredSlot.hovered = false;
-            hoveredSlot = null;
+            if(hoveredSlotIndex >= 0)
+                slots.slots[hoveredSlotIndex].hovered = false;
+            hoveredSlotIndex = -1;
         }
     }
 

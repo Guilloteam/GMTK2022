@@ -7,6 +7,7 @@ public class ProjectilePhysicsSettings : ScriptableObject
 {
     public Vector2 throwStrength;
     public float throwTorque;
+    public float throwTorqueVariation;
     public Vector3 drag;
     public float mass;
     public Vector3 gravity;
