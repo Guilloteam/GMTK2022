@@ -9,6 +9,7 @@ public class DamageReceiver : MonoBehaviour
 
     public System.Action<int, Vector3> damageReceivedDelegate;
     public System.Action deathDelegate;
+    public Transform deathPrefab;
 
     private void Start()
     {
@@ -23,6 +24,9 @@ public class DamageReceiver : MonoBehaviour
         if(health <= 0)
         {
             deathDelegate?.Invoke();
+            if(deathPrefab != null)
+                Instantiate(deathPrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
         else
         {

@@ -11,6 +11,7 @@ public class BasicEnemyAI : MonoBehaviour
     void Start()
     {
         movementController = GetComponent<MovementController>();
+        target = KeyboardMovement.instance.transform;
     }
 
     void Update()

@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Ground
   - 3D UI
-  - 
-  - 
-  - 
+  - Damage Hitbox
+  - Enemy
+  - PlayerBlocker
   - 
   - 
   - 
