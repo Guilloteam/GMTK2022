@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 4
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 5
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}
@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 4122211699459483426}
   - component: {fileID: 1260700223}
   - component: {fileID: 1260700222}
+  - component: {fileID: 8940420454854618077}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -381,6 +382,7 @@ MonoBehaviour:
   projectilePhysics: {fileID: 0}
   idlePhysicsConfig: {fileID: 11400000, guid: 2735c1b2073b82148a277545581ef53f, type: 2}
   thrownPhysicsConfig: {fileID: 11400000, guid: 697d7e874ec4abe409cc8b0bd4eaaee0, type: 2}
+  throwActivationDelay: 0.3
 --- !u!114 &1260700223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +415,20 @@ MonoBehaviour:
   - {fileID: 5356169384590191153}
   - {fileID: 1994974212089087416}
   - {fileID: 3631643368303466425}
+--- !u!114 &8940420454854618077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122211699459483435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1ca9d0275be043a727de7a8a96005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  impactThreshold: 1
 --- !u!1 &4122211699652914091
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}
@@ -506,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 6
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0, z: 0}

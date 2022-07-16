@@ -64,7 +64,7 @@ public class GrabHand : MonoBehaviour
                 RaycastHit hit;
                 if(Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out hit, 1000, raycastLayerMask))
                 {
-                    Vector3 throwDirection = hit.point - transform.position;
+                    Vector3 throwDirection = hit.point - grabPosition.position;
                     throwDirection.y = 0;
                     grabbedElement.Throw(throwDirection.normalized);
                     grabbedElement = null;

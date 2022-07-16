@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ca885c242287143999aa21c72587ce, type: 3}
   m_Name: Player Physics
   m_EditorClassIdentifier: 
-  acceleration: 50
+  acceleration: 30
   inertia: 0.01
   maxSpeed: 10
   mass: 1
