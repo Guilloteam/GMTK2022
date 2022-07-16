@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3992810828020164485}
   - component: {fileID: 4902368671891281600}
   - component: {fileID: 4902368671891281601}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 4
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &4902368671891281601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 3992810828199898160}
   - component: {fileID: 2904678557087851853}
   - component: {fileID: 3992810828199898161}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,10 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &3992810828199898161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +137,7 @@ GameObject:
   - component: {fileID: 3992810828484106866}
   - component: {fileID: 1581831652351801673}
   - component: {fileID: 3992810828484106858}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,10 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 5
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &3992810828484106858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ GameObject:
   - component: {fileID: 3992810828715191410}
   - component: {fileID: 2314920696584989080}
   - component: {fileID: 3992810828715191402}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,10 +234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &3992810828715191402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -259,7 +263,7 @@ GameObject:
   - component: {fileID: 3992810829128013659}
   - component: {fileID: 8327355807263273458}
   - component: {fileID: 8327355807263273459}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,10 +297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &8327355807263273459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -325,7 +330,7 @@ GameObject:
   - component: {fileID: 1034800937423847119}
   - component: {fileID: 3992810829177854932}
   - component: {fileID: 3992810829177854933}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: UI Dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +455,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   raycastLayer:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 128
   turnDuration: 1
   rotationAxis: {x: 0.5, y: 0, z: 0.5}
 --- !u!64 &3992810829177854933
@@ -478,7 +483,7 @@ GameObject:
   - component: {fileID: 3992810829802533494}
   - component: {fileID: 4339897322241977160}
   - component: {fileID: 3992810829802533495}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Dice Slot (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,10 +517,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be9a63f070769046b97c4ad9691b28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 6
+  slotIndex: 0
   hovered: 0
   hoverAnimDuration: 0.2
   hoverAnimDisplacement: {x: 0, y: 0.2, z: 0}
+  attachAnimDuration: 0.2
 --- !u!65 &3992810829802533495
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class DiceForgeMenu : MonoBehaviour
     public DiceEffectConfig newEffect;
     public Transform toAttachContainer;
     private Transform toAttachElement;
+    public System.Action upgradeFinishedDelegate;
 
     void Start()
     {
@@ -29,7 +30,8 @@ public class DiceForgeMenu : MonoBehaviour
             int diceIndex = i;
             dice.diceSlotClickedDelegate += (DiceSlot slot, int slotIndex) => {
                 config.dices[diceIndex].sides[slotIndex] = newEffect;
-                slot.AttachElement(toAttachElement);
+                StartCoroutine(AttachToSlotCoroutine(slot));
+                
             };
         }
     }
@@ -40,5 +42,12 @@ public class DiceForgeMenu : MonoBehaviour
         {
             dices[i].Turn();
         }
+    }
+
+    public IEnumerator AttachToSlotCoroutine(DiceSlot slot)
+    {
+        yield return slot.AttachElementCoroutine(toAttachElement);
+        upgradeFinishedDelegate?.Invoke();
+        Destroy(gameObject);
     }
 }
