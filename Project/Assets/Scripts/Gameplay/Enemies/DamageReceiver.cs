@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
+    public DamageType[] allowedDamageTypes;
     public int health = 2;
     private new Rigidbody rigidbody;
 
@@ -24,9 +25,6 @@ public class DamageReceiver : MonoBehaviour
         if(health <= 0)
         {
             deathDelegate?.Invoke();
-            if(deathPrefab != null)
-                Instantiate(deathPrefab, transform.position, transform.rotation);
-            Destroy(gameObject);
         }
         else
         {
