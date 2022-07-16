@@ -45,9 +45,17 @@ public class DiceSlot : MonoBehaviour
     {
         side.SetParent(transform, true);
         Vector3 startPosition = side.localPosition;
+        Quaternion startRotation = side.localRotation;
         for(float time = 0; time < attachAnimDuration; time += Time.deltaTime)
         {
+            float ratio = time / attachAnimDuration;
+            transform.GetChild(0).localScale = Vector3.one * (1-ratio);
+            side.localPosition = Vector3.Lerp(startPosition, Vector3.zero, ratio);
+            side.localRotation = Quaternion.Lerp(startRotation, Quaternion.identity, ratio);
             yield return null;
         }
+        Destroy(transform.GetChild(0).gameObject);
+        side.localPosition = Vector3.zero;
+        side.localRotation = Quaternion.identity;
     }
 }

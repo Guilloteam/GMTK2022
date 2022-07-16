@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4
 --- !u!1 &4122211698469690229
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +94,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 4
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4
 --- !u!1 &4122211698996252804
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 3
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4
 --- !u!1 &4122211699210561156
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 5
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4
 --- !u!1 &4122211699459483435
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e985dd32f8e766746a2f1f09f1a75b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configs: []
+  diceConfig: {fileID: 0}
 --- !u!114 &1260700222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 2
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4
 --- !u!1 &4122211700058427016
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,3 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 6
+  hovered: 0
+  hoverAnimDuration: 0.2
+  hoverAnimDisplacement: {x: 0, y: 0, z: 0}
+  attachAnimDuration: 0.4

@@ -348,6 +348,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11447715}
   m_CullTransparentMesh: 1
+--- !u!4 &58717529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8573548053605526764, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
+  m_PrefabInstance: {fileID: 1914382156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &60110546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5634008918469998653, guid: 1014f59cf931aed4b9cdfec54ae1ddc1, type: 3}
@@ -5378,11 +5383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8573548053605526764, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.04
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 8573548053605526764, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -2.53
       objectReference: {fileID: 0}
     - target: {fileID: 8573548053605526764, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5412,6 +5417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8573548053605526766, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea78cd2e8ec6b2b4d864e8e90ac1d338, type: 2}
     - target: {fileID: 8573548053605526771, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
       propertyPath: m_Name
       value: Dice Side 1
@@ -6142,6 +6151,7 @@ MonoBehaviour:
   diceOffset: {x: 3, y: 0, z: 0}
   diceContainer: {fileID: 1351323151}
   camera: {fileID: 1600624034}
+  toAttach: {fileID: 58717529}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0
