@@ -23,7 +23,7 @@ Material:
   m_Name: M_Brume_01
   m_Shader: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
   m_ValidKeywords:
-  - _COLORCOLOR_ON
+  - _COLORADDSUBDIFF_ON
   - _EMISSION
   - _RECEIVE_SHADOWS_OFF
   - _SURFACE_TYPE_TRANSPARENT
@@ -112,7 +112,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorMode: 4
+    - _ColorMode: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -149,10 +149,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.80329275, b: 1, a: 1}
-    - _BaseColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 0.6839622, g: 0.93803185, b: 1, a: 1}
+    - _BaseColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.80329275, b: 1, a: 1}
+    - _Color: {r: 0.68396217, g: 0.93803185, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _Color_B: {r: 0.34901962, g: 0.45098042, b: 0.5647059, a: 0}
     - _Color_R: {r: 1, g: 0.2509804, b: 0.3647059, a: 0}

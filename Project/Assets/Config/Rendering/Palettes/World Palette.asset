@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: World Palette
   m_EditorClassIdentifier: 
   color_R: {r: 1, g: 0.2509804, b: 0.3647059, a: 0}
-  color_G: {r: 1, g: 0.94509804, b: 0.8627451, a: 0}
-  color_B: {r: 0.34901962, g: 0.4509804, b: 0.5647059, a: 0}
+  color_G: {r: 1, g: 0.9450981, b: 0.86274517, a: 0}
+  color_B: {r: 0.34901962, g: 0.45098042, b: 0.5647059, a: 0}
