@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.87
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -748,7 +748,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.19
+      value: 0.75
       mode: 0
       spread: 0
       speed:
@@ -10044,7 +10044,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -19546,7 +19546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5736296618559009302}
   m_Layer: 0
-  m_Name: soin
+  m_Name: soin_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34598,7 +34598,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 25
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2

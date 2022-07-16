@@ -5,9 +5,15 @@ using UnityEngine.InputSystem;
 
 public class KeyboardMovement : MonoBehaviour
 {
+    public static KeyboardMovement instance;
     public InputAction horizontalAction;
     public InputAction verticalAction;
     private MovementController movementController;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
