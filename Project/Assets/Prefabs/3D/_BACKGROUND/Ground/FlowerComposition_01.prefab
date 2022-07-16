@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6566307526312214772}
   - component: {fileID: 845627735815839233}
   - component: {fileID: 6412149570153857090}
+  - component: {fileID: 7617128234732031331}
   m_Layer: 0
   m_Name: Flower_01 (1)
   m_TagString: Untagged
@@ -97,6 +98,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7617128234732031331
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804453895202301353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 429744d5a0489b8488ae0a60b4122a6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4531703432172450348
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +129,7 @@ GameObject:
   - component: {fileID: 4207049425709162642}
   - component: {fileID: 857403995033583846}
   - component: {fileID: 8267570433077682756}
+  - component: {fileID: 1540322268977165099}
   m_Layer: 0
   m_Name: Flower_01 (3)
   m_TagString: Untagged
@@ -194,6 +216,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1540322268977165099
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4531703432172450348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 429744d5a0489b8488ae0a60b4122a6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4607472712934562547
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +282,7 @@ GameObject:
   - component: {fileID: 8338597069503764730}
   - component: {fileID: 398908561067031269}
   - component: {fileID: 5258638120357464761}
+  - component: {fileID: 5093931351692374686}
   m_Layer: 0
   m_Name: Flower_01 (2)
   m_TagString: Untagged
@@ -326,6 +369,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5093931351692374686
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868231715589120165}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 429744d5a0489b8488ae0a60b4122a6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7268410216607778943
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +400,7 @@ GameObject:
   - component: {fileID: 2619690190451402590}
   - component: {fileID: 2847443858734660197}
   - component: {fileID: 1700127097938312216}
+  - component: {fileID: 6018869876273818639}
   m_Layer: 0
   m_Name: Flower_01
   m_TagString: Untagged
@@ -423,3 +487,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6018869876273818639
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268410216607778943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 429744d5a0489b8488ae0a60b4122a6e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
