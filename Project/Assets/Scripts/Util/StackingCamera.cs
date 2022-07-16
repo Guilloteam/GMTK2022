@@ -18,7 +18,6 @@ public class StackingCamera : MonoBehaviour
             Camera.main.GetUniversalAdditionalCameraData().cameraStack.Remove(camera);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

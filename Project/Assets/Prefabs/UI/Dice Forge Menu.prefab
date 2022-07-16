@@ -1071,7 +1071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1736a5a46ba8acf45a3c8b14f1d7485d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: bcddf7e5b431945449ad249153fdf600, type: 2}
   dicePrefab: {fileID: 3992810829177854932, guid: 75edcef0c184f6141b59471b8d10bb61, type: 3}
   diceOffset: {x: 3, y: 0, z: 0}
   diceContainer: {fileID: 4687857564259762855}
@@ -1267,6 +1266,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 0}
+  upgrades:
+  - probability: 1
+    effect: {fileID: 11400000, guid: 9e83826737703d449957af3b691cdd39, type: 2}
+  - probability: 1
+    effect: {fileID: 11400000, guid: 595f54d07076c404096b3c4c2ced80c8, type: 2}
+  - probability: 1
+    effect: {fileID: 11400000, guid: cbcee7414cbf8534db820dc9e02c9d0c, type: 2}
+  - probability: 1
+    effect: {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - probability: 1
+    effect: {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
+  - probability: 1
+    effect: {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}
+  - probability: 1
+    effect: {fileID: 0}
   availableUpgrades:
   - {fileID: 11400000, guid: 2d16422ddcc810d4e89fa0539b1bc3b1, type: 2}
   - {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}

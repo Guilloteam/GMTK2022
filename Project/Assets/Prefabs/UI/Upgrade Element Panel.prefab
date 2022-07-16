@@ -258,6 +258,7 @@ MonoBehaviour:
   descriptionText: {fileID: 7358678493171793725}
   button: {fileID: 4277418375072534213}
   iconImage: {fileID: 6198986451391359979}
+  addDiceEffectConfig: {fileID: 11400000, guid: 599c8cabcf0f0ef4bb8355e9cb2d260f, type: 2}
 --- !u!1 &7058481951248738208
 GameObject:
   m_ObjectHideFlags: 0
