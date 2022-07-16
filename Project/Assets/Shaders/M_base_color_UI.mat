@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_base_color_UI
-  m_Shader: {fileID: -6465566751694194690, guid: c32c81fdb8c64884ba23b6d17b28fecc, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f357710e47f930b4e8a9845854f6f78f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
