@@ -54,7 +54,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea78cd2e8ec6b2b4d864e8e90ac1d338, type: 2}
+  - {fileID: 2100000, guid: 16473738dd91dc147b3b67a096421816, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,3 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6445310413163253118, guid: e1e1ba3e3f0f51243a92290a0c887ccb, type: 3}
   diceEffectConfig: {fileID: 11400000, guid: cbcee7414cbf8534db820dc9e02c9d0c, type: 2}
+  attachToSide: 0
+  effectDuration: 1
