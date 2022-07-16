@@ -4919,7 +4919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae58007e121b04748bdf33d3221495f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1708066552}
   animList: {fileID: 11400000, guid: a27e189e731cd26498d7a0adb82806a8, type: 2}
   animIndex: 0
   loopAnim: 1
