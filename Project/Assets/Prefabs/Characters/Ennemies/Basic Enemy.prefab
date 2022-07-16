@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4078694433504660961}
   - component: {fileID: 4078694433504660960}
   - component: {fileID: 7881848168658244810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4078694433504660958}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ac452462e580c174593142291a785525, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96fb0b520e5f184f8c7489a6bdbaf24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilMultiplier: 2
+  health: 2
+  deathPrefab: {fileID: 0}
 --- !u!1 &4078694433783666306
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,8 +199,7 @@ GameObject:
   - component: {fileID: 4078694434231030193}
   - component: {fileID: 4078694434231030192}
   - component: {fileID: 4078694434231030191}
-  - component: {fileID: 3531452020373927839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Basic Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
