@@ -9,8 +9,22 @@ public class DamageZone : MonoBehaviour
     public float repulseMaxForce = 10;
     public float repulseMinForce = 1;
     public LayerMask layerMask;
+    public bool applyOnStart = true;
 
     void Start()
+    {
+        if(applyOnStart)
+        {
+            ApplyDamage();
+        }
+    }
+
+    void Update()
+    {
+        
+    }
+
+    public void ApplyDamage()
     {
         Collider[] inRangeColliders = Physics.OverlapSphere(transform.position, radius, layerMask);
         foreach(Collider collider in inRangeColliders)
@@ -22,10 +36,5 @@ public class DamageZone : MonoBehaviour
                 damageReceiver.OnDamageReceived(damage, direction.normalized * Mathf.Lerp(repulseMaxForce, repulseMinForce, direction.magnitude / radius));
             }
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

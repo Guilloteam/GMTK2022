@@ -43,6 +43,8 @@ public class DiceProjectile : MonoBehaviour
     private void OnGrabbed()
     {
         grabbed = true;
+        if(activeFace >= 0)
+            diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
     }
 
     private void OnReturnToIdleState()
@@ -63,6 +65,8 @@ public class DiceProjectile : MonoBehaviour
         }
         if(activeFace != bestFace)
         {
+            if(activeFace >= 0)
+                diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
             diceSlots.slots[bestFace].activationStartDelegate?.Invoke();
             activeFace = bestFace;
         }

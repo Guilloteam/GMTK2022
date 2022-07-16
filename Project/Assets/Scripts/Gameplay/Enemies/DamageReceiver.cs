@@ -11,6 +11,7 @@ public class DamageReceiver : MonoBehaviour
     public System.Action<int, Vector3> damageReceivedDelegate;
     public System.Action deathDelegate;
     public Transform deathPrefab;
+    public Transform hurtPrefab;
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class DamageReceiver : MonoBehaviour
         }
         else
         {
+            if(hurtPrefab != null)
+                Instantiate(hurtPrefab, transform.position, Quaternion.identity);
             damageReceivedDelegate?.Invoke(damage, forceApplied);
         }
     }
