@@ -53,6 +53,8 @@ public class GrabHand : MonoBehaviour
                 {
                     closestGrabbableInRange.hoverEndDelegate?.Invoke();
                     grabbedElement = closestGrabbableInRange;
+                    inRangeElements.Remove(grabbedElement);
+                    inRangeListChanged = true;
                     StartCoroutine(GrabAnimationCoroutine());
                 }
             }
@@ -66,6 +68,8 @@ public class GrabHand : MonoBehaviour
                     throwDirection.y = 0;
                     grabbedElement.Throw(throwDirection.normalized);
                     grabbedElement = null;
+                    if(closestGrabbableInRange != null)
+                        closestGrabbableInRange.hoverStartDelegate?.Invoke();
                 }
             }
         }

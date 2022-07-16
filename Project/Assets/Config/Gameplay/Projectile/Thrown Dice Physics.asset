@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1490ace0627b4534ea3da129d4254d2c, type: 3}
   m_Name: Thrown Dice Physics
   m_EditorClassIdentifier: 
-  throwStrength: {x: 10, y: 0}
-  throwTorque: -2000
-  drag: {x: 0.8, y: 1, z: 0.8}
+  throwStrength: {x: 30, y: 0}
+  throwTorque: -7
+  drag: {x: 0.2, y: 1, z: 0.2}
   mass: 10
-  gravity: {x: 0, y: -20, z: 0}
+  gravity: {x: 0, y: -30, z: 0}
