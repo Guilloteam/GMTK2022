@@ -22,6 +22,8 @@ public class DiceInstantiateEffect : MonoBehaviour
 
     void StartEffect()
     {
-        Instantiate(prefab, transform.position, prefab.rotation).gameObject.AddComponent<DiceEffectRoot>().config = diceEffectConfig;
+        DiceEffectRoot diceEffectRoot = Instantiate(prefab, transform.position, prefab.rotation).gameObject.AddComponent<DiceEffectRoot>();
+        diceEffectRoot.config = diceEffectConfig;
+        diceEffectRoot.dice = GetComponentInParent<DiceBuilder>();
     }
 }
