@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a02b8ec497ef3148925674cac43480c, type: 3}
   m_Name: D6 Face 1
   m_EditorClassIdentifier: 
-  activateFXTexture: {fileID: 2800000, guid: 31ac20426c5937242819fb7c78d93a19, type: 3}
-  diceSidePrefab: {fileID: 8573548053605526764, guid: 18cd0919fee630c4e8814742788f5fe8, type: 3}
+  activateFXTexture: {fileID: 2800000, guid: 330ffe1a9cf15224c8465a28c0c180a7, type: 3}
+  uiSprite: {fileID: 21300000, guid: 52cf852ef0adbda4a8f380e4e5dc3454, type: 3}
+  description: Triggers an explosion. For each dice already on this face, triggers
+    an additional explosion on them.
+  activateFXColor: {r: 1, g: 0.5529412, b: 0, a: 0}
+  diceSidePrefab: {fileID: 54446106371207416, guid: 5f7e3d1547ff62343ae294657fd89a4b, type: 3}
