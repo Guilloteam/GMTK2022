@@ -4820,6 +4820,7 @@ GameObject:
   - component: {fileID: 1708066551}
   - component: {fileID: 1708066552}
   - component: {fileID: 1708066553}
+  - component: {fileID: 1708066554}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -4906,6 +4907,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1708066554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708066550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae58007e121b04748bdf33d3221495f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  animList: {fileID: 11400000, guid: a27e189e731cd26498d7a0adb82806a8, type: 2}
+  animIndex: 0
+  loopAnim: 1
 --- !u!224 &1743098450 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7955215014883225394, guid: 56d50d819f5389f4ebeae7d894f613ee, type: 3}

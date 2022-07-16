@@ -81,7 +81,8 @@ GameObject:
   - component: {fileID: 4078694433783666307}
   - component: {fileID: 4078694433783666309}
   - component: {fileID: 4078694433783666308}
-  - component: {fileID: 6585825250003026774}
+  - component: {fileID: 7225463811251338613}
+  - component: {fileID: 1305554361590741716}
   m_Layer: 0
   m_Name: Display
   m_TagString: Untagged
@@ -162,10 +163,30 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4078694433783666306}
   m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 145aaf5bfba7dbb44ab03e19337e63a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1305554361590741716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078694433783666306}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Script: {fileID: 11500000, guid: 42b0e71e269665d4d89a0c2b5ba82c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: 7225463811251338613}
 --- !u!1 &4078694434231030190
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +268,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsConfig: {fileID: 11400000, guid: 0df4062f9b13c5c4f939118424b0dde0, type: 2}
   inputDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &3531452020373927839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078694434231030190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - invocationData:
+      displayPath: Capsule/DamageReceiver.damageReceivedDelegate
+      gameObject: {fileID: 4078694433504660958}
+      scriptType: DamageReceiver
+      fieldName: damageReceivedDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 4e7cbdc78e178c7418eaea0253042377, type: 3}
+      - {fileID: 8300000, guid: bb3aa731f461dc641827dda641275755, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.5
+      minIntensity: 1
+      maxIntensity: 1
 --- !u!1 &5125847566517943508
 GameObject:
   m_ObjectHideFlags: 0
