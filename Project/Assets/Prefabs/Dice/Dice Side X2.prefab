@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 54446106371207417}
   - component: {fileID: 4176076841522664936}
   m_Layer: 0
-  m_Name: Dice Side Test
+  m_Name: Dice Side X2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e4f76184242c24c43b2ab2163f2dcdc4, type: 2}
+  - {fileID: 2100000, guid: ee4463912f8220441b8ba05915237d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
