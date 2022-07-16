@@ -1,3 +1,8 @@
 ﻿Project/Packages/packages-lock.json
 Project/.vscode
 Project/Logs
+Sources/3D/BACKGROUND/DiceArena_01/DiceArenaSide_01.spp
+Sources/3D/BACKGROUND/Menhirs/T_Menhirs_01.spp
+Sources/3D/MainDice_01/T_MainDice_01.spp
+*.blend1
+*.spp
