@@ -23,7 +23,7 @@ public class DiceBuilder : MonoBehaviour
     {
         for(int i=0; i<Mathf.Min(slotContainer.slots.Length, diceConfig.sides.Length); i++)
         {
-            Destroy(diceFaces[i]);
+            Destroy(diceFaces[i].gameObject);
             Transform instance = Instantiate(diceConfig.sides[i].diceSidePrefab, slotContainer.slots[i].transform);
             instance.gameObject.layer = gameObject.layer;
             diceFaces[i] = instance;
