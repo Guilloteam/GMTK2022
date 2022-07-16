@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
-    public float recoilMultiplier = 2;
+    public int health = 2;
     private new Rigidbody rigidbody;
 
     public System.Action<int, Vector3> damageReceivedDelegate;
+    public System.Action deathDelegate;
 
     private void Start()
     {
@@ -18,8 +19,15 @@ public class DamageReceiver : MonoBehaviour
     {
         Vector3 direction = forceApplied;
         direction.y = 0;
-        rigidbody.AddForce(direction.normalized * recoilMultiplier);
-        damageReceivedDelegate?.Invoke(damage, forceApplied);
+        health -= damage;
+        if(health <= 0)
+        {
+            deathDelegate?.Invoke();
+        }
+        else
+        {
+            damageReceivedDelegate?.Invoke(damage, forceApplied);
+        }
     }
 
     
