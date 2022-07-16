@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class DiceBuilder : MonoBehaviour
 {
-    public DiceEffectConfig[] configs;
+    public DiceBuild diceConfig;
     private DiceSlots slotContainer;
     void Start()
     {
         slotContainer = GetComponent<DiceSlots>();
-        for(int i=0; i<Mathf.Min(slotContainer.slots.Length, configs.Length); i++)
+        for(int i=0; i<Mathf.Min(slotContainer.slots.Length, diceConfig.sides.Length); i++)
         {
-            Instantiate(configs[i].diceSidePrefab, slotContainer.slots[i].transform);
+            Transform instance = Instantiate(diceConfig.sides[i].diceSidePrefab, slotContainer.slots[i].transform);
+            instance.gameObject.layer = gameObject.layer;
         }
     }
 }
