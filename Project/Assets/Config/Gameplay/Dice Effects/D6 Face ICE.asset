@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a02b8ec497ef3148925674cac43480c, type: 3}
   m_Name: D6 Face ICE
   m_EditorClassIdentifier: 
-  activateFXTexture: {fileID: 2800000, guid: 75bb7fdb5ba4ed24396232ede663eb11, type: 3}
+  activateFXTexture: {fileID: 2800000, guid: 8120344a0601d2e4ba175273bca772d5, type: 3}
   diceSidePrefab: {fileID: 54446106371207416, guid: fc554dac58f805f47b697d2bf3dabebe, type: 3}

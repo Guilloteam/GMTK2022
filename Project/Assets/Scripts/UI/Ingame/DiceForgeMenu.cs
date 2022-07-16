@@ -10,6 +10,7 @@ public class DiceForgeMenu : MonoBehaviour
     public Vector3 diceOffset = Vector3.right;
     public Transform diceContainer;
     public new Camera camera;
+    public Transform toAttach;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class DiceForgeMenu : MonoBehaviour
             dice.transform.position = diceOffset * (i - (config.dices.Count-1) / 2.0f);
             dice.camera = camera;
             dice.diceSlotClickedDelegate += (DiceSlot slot) => {
-
+                slot.AttachElement(toAttach);
             };
         }
     }

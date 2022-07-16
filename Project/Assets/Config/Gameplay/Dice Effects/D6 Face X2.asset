@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a02b8ec497ef3148925674cac43480c, type: 3}
   m_Name: D6 Face X2
   m_EditorClassIdentifier: 
-  activateFXTexture: {fileID: 2800000, guid: 2ff5112788245df47a0218b95ff05e57, type: 3}
+  activateFXTexture: {fileID: 2800000, guid: 6da4e8cfddccbf14693fc556d4fdae1e, type: 3}
   diceSidePrefab: {fileID: 54446106371207416, guid: 1ba7df608adbd03458414ce8d7a51740, type: 3}
