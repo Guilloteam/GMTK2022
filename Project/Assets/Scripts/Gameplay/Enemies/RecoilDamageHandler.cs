@@ -25,7 +25,7 @@ public class RecoilDamageHandler : MonoBehaviour
     {
         Vector3 direction = forceApplied;
         direction.y = 0;
-        rigidbody.AddForce(direction.normalized * knockedDuration);
+        rigidbody.AddForce(forceApplied);
         movementController.physicsConfig = knockedPhysics;
         knockedTime = knockedDuration;
     }

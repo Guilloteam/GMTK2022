@@ -24479,6 +24479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358796905488075267}
+  - component: {fileID: 7314404783064236888}
   m_Layer: 0
   m_Name: Boule de feu
   m_TagString: Untagged
@@ -24508,6 +24509,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7314404783064236888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358796905488075266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0a224c89ae5d44ca1572d721cea73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  damage: 1
+  repulseMaxForce: 1000
+  repulseMinForce: 500
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &358796905550935041
 GameObject:
   m_ObjectHideFlags: 0
