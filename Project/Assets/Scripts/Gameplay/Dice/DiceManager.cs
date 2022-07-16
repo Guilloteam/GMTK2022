@@ -13,9 +13,9 @@ public class DiceManager : MonoBehaviour
 
     [SerializeField]
     private DiceList currentConfig;
-    public DiceForgeMenu diceForgeMenuPrefab;
+    public UpgradeMenu diceForgeMenuPrefab;
 
-    private DiceForgeMenu currentDiceForgeMenu;
+    private UpgradeMenu currentDiceForgeMenu;
     public DiceEffectConfig[] availableDiceEffects;
     public bool gamePaused = false;
 
@@ -68,7 +68,7 @@ public class DiceManager : MonoBehaviour
         gamePaused = true;
         currentDiceForgeMenu = Instantiate(diceForgeMenuPrefab);
         currentDiceForgeMenu.config = currentConfig;
-        currentDiceForgeMenu.newEffect = availableDiceEffects[Random.Range(0, availableDiceEffects.Length)];
+        // currentDiceForgeMenu.available = availableDiceEffects[Random.Range(0, availableDiceEffects.Length)];
         currentDiceForgeMenu.upgradeFinishedDelegate += () => {
             UpdateDiceFaces();
             gamePaused = false;

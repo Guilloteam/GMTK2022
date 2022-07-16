@@ -444,6 +444,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68037579}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &114175331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6442619165886738140, guid: 7a83d9a35f255fb44b26c00f5af2ebf5, type: 3}
+  m_PrefabInstance: {fileID: 2035137138}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &114175333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114175331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bd6f1020ceea141830a0ac0654bf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPalette: {fileID: 11400000, guid: 3728e09a4bd4d7142b65067a269afca0, type: 2}
 --- !u!1 &149420386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5634008917460211379, guid: 1014f59cf931aed4b9cdfec54ae1ddc1, type: 3}
@@ -3877,7 +3895,7 @@ MonoBehaviour:
   - {fileID: 1911573017}
   - {fileID: 1282009853}
   currentConfig: {fileID: 0}
-  diceForgeMenuPrefab: {fileID: 4687857566120817188, guid: b4c6669a9b7e58b4eb3ec5961d10e077, type: 3}
+  diceForgeMenuPrefab: {fileID: 2860754174258389334, guid: b4c6669a9b7e58b4eb3ec5961d10e077, type: 3}
   availableDiceEffects:
   - {fileID: 11400000, guid: 9e83826737703d449957af3b691cdd39, type: 2}
   - {fileID: 11400000, guid: 595f54d07076c404096b3c4c2ced80c8, type: 2}

@@ -14,10 +14,10 @@ public class StackingCamera : MonoBehaviour
 
     void OnDestroy()
     {
-        Camera.main.GetUniversalAdditionalCameraData().cameraStack.Remove(camera);
+        if(Camera.main != null)
+            Camera.main.GetUniversalAdditionalCameraData().cameraStack.Remove(camera);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
