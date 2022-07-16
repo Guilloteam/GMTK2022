@@ -97,10 +97,13 @@ public class GrabHand : MonoBehaviour
     
     private IEnumerator GrabAnimationCoroutine()
     {
+        grabbedElement.grabbedDelegate?.Invoke();
         grabbedElement.grabbed = true;
         Vector3 startOffset = grabbedElement.transform.position - grabPosition.transform.position;
         for(float time=0; time < grabAnimDuration; time += Time.deltaTime)
         {
+            if(grabbedElement == null)
+                break;
             grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / grabAnimDuration);
             yield return null;
         }

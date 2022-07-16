@@ -11,6 +11,9 @@ public class DiceProjectile : MonoBehaviour
     public ProjectilePhysicsSettings thrownPhysicsConfig;
     private DiceSlots diceSlots;
     private int activeFace = -1;
+    private float activableDelay = 0;
+    public float throwActivationDelay = 0.3f;
+    private bool grabbed = false;
     
 
     void Start()
@@ -20,22 +23,32 @@ public class DiceProjectile : MonoBehaviour
         projectilePhysics.returnToIdleStateDelegate += OnReturnToIdleState;
         grabbable = GetComponent<Grabbable>();
         grabbable.throwDelegate += OnThrow;
+        grabbable.grabbedDelegate += OnGrabbed;
         diceSlots = GetComponent<DiceSlots>();
     }
 
     void Update()
     {
-        
+        activableDelay -= Time.deltaTime;
     }
 
     private void OnThrow(Vector3 direction)
     {
         projectilePhysics.physicsConfig = thrownPhysicsConfig;
         activeFace = -1;
+        grabbed = false;
+        activableDelay = throwActivationDelay;
+    }
+
+    private void OnGrabbed()
+    {
+        grabbed = true;
     }
 
     private void OnReturnToIdleState()
     {
+        if(grabbed || activableDelay > 0)
+            return;
         projectilePhysics.physicsConfig = idlePhysicsConfig;
         float maxValue = 0;
         int bestFace = -1;

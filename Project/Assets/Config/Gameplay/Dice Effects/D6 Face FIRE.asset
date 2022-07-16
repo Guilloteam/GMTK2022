@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: D6 Face FIRE
   m_EditorClassIdentifier: 
   activateFXTexture: {fileID: 2800000, guid: 52cf852ef0adbda4a8f380e4e5dc3454, type: 3}
+  activateFXColor: {r: 1, g: 0.553443, b: 0, a: 0}
   diceSidePrefab: {fileID: 54446106371207416, guid: 5f7e3d1547ff62343ae294657fd89a4b, type: 3}

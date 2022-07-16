@@ -20,8 +20,10 @@ public class ProjectilePhysics : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         grabbable = GetComponent<Grabbable>();
         grabbable.throwDelegate += OnThrow;
+        
         movementSamples = new float[sampleCount];
     }
+    
 
     private void FixedUpdate()
     {

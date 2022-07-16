@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: D6 Face HEAL
   m_EditorClassIdentifier: 
   activateFXTexture: {fileID: 2800000, guid: e30d8ffa21ec2ff41be447737ab0a38b, type: 3}
+  activateFXColor: {r: 0.40784314, g: 0.8117647, b: 0.6901961, a: 0}
   diceSidePrefab: {fileID: 54446106371207416, guid: 8f4cbc76f33e4aa46be19597b7049da9, type: 3}

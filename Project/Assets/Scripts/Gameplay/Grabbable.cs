@@ -9,6 +9,7 @@ public class Grabbable : MonoBehaviour
     public System.Action hoverStartDelegate;
     public System.Action hoverEndDelegate;
     public System.Action<Vector3> throwDelegate;
+    public System.Action grabbedDelegate;
 
     private Collider[] colliders;
     private Collider mainCollider;

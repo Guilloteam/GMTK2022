@@ -36,12 +36,7 @@ public class DiceSlot : MonoBehaviour
         transform.GetChild(0).localPosition = hoverAnimDisplacement * hoverAnimTime / hoverAnimDuration;
     }
 
-    public void AttachElement(Transform effect)
-    {
-        StartCoroutine(AttachElementCoroutine(effect));
-    }
-
-    private IEnumerator AttachElementCoroutine(Transform side)
+    public IEnumerator AttachElementCoroutine(Transform side)
     {
         side.SetParent(transform, true);
         Vector3 startPosition = side.localPosition;
