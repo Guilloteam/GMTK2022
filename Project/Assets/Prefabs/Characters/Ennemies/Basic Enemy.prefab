@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 4078694434231030193}
   - component: {fileID: 4078694434231030192}
   - component: {fileID: 4078694434231030191}
+  - component: {fileID: 3531452020373927839}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Untagged
@@ -254,6 +255,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsConfig: {fileID: 11400000, guid: 0df4062f9b13c5c4f939118424b0dde0, type: 2}
   inputDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &3531452020373927839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078694434231030190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - invocationData:
+      displayPath: Capsule/DamageReceiver.damageReceivedDelegate
+      gameObject: {fileID: 4078694433504660958}
+      scriptType: DamageReceiver
+      fieldName: damageReceivedDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 4e7cbdc78e178c7418eaea0253042377, type: 3}
+      - {fileID: 8300000, guid: bb3aa731f461dc641827dda641275755, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.5
+      minIntensity: 1
+      maxIntensity: 1
 --- !u!1 &5125847566517943508
 GameObject:
   m_ObjectHideFlags: 0
