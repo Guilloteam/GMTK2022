@@ -10,6 +10,7 @@ public class Grabbable : MonoBehaviour
     public System.Action hoverEndDelegate;
     public System.Action<Vector3> throwDelegate;
     public System.Action grabbedDelegate;
+    public System.Action thrownDelegate;
 
     private Collider[] colliders;
     private Collider mainCollider;
@@ -50,7 +51,7 @@ public class Grabbable : MonoBehaviour
     public void Throw(Vector3 direction)
     {
         throwDelegate?.Invoke(direction);
-        
+        thrownDelegate?.Invoke();
     }
 
     public void Start()
