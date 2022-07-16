@@ -21,7 +21,7 @@ public class RecoilDamageHandler : MonoBehaviour
         defaultPhysics = movementController.physicsConfig;
     }
 
-    public void OnDamageReceived(int damage, Vector3 forceApplied)
+    public void OnDamageReceived(float damage, Vector3 forceApplied)
     {
         Vector3 direction = forceApplied;
         direction.y = 0;

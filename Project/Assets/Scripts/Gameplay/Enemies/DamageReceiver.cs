@@ -5,10 +5,10 @@ using UnityEngine;
 public class DamageReceiver : MonoBehaviour
 {
     public DamageType[] allowedDamageTypes;
-    public int health = 2;
+    public float health = 2;
     private new Rigidbody rigidbody;
 
-    public System.Action<int, Vector3> damageReceivedDelegate;
+    public System.Action<float, Vector3> damageReceivedDelegate;
     public System.Action deathDelegate;
     public Transform deathPrefab;
     public Transform hurtPrefab;
@@ -18,7 +18,7 @@ public class DamageReceiver : MonoBehaviour
         rigidbody = GetComponentInParent<Rigidbody>();
     }
 
-    public void OnDamageReceived(int damage, Vector3 forceApplied)
+    public void OnDamageReceived(float damage, Vector3 forceApplied)
     {
         Vector3 direction = forceApplied;
         direction.y = 0;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageZone : MonoBehaviour
 {
     public float radius = 5;
-    public int damage = 1;
+    public float damage = 1;
     public float repulseMaxForce = 10;
     public float repulseMinForce = 1;
     public LayerMask layerMask;

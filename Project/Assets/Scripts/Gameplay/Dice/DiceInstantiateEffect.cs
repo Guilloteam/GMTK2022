@@ -47,7 +47,12 @@ public class DiceInstantiateEffect : MonoBehaviour
         diceEffectRoot.config = diceEffectConfig;
         diceEffectRoot.dice = GetComponentInParent<DiceBuilder>();
         
-        for(float time = 0; !effectStopped && (effectDuration == 0 || time < effectDuration); time += Time.deltaTime)
+        float time = 0;
+        for(; !effectStopped && (effectDuration == 0 || time < effectDuration); time += Time.deltaTime)
+            yield return null;
+        if(time >=effectDuration)
+            diceEffectRoot.activationFinishedDelegate?.Invoke();
+        while(!effectStopped)
             yield return null;
         Destroy(diceEffectRoot.gameObject);
     }
