@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ground_01
-  m_Shader: {fileID: -6465566751694194690, guid: cccbbfe9058ac6b4185602900d5e701d, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 3cbb0dbe5c1c8654189debb5b7a73c31, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
