@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class GrabHand : MonoBehaviour
 {
+    public static GrabHand instance;
     private List<Grabbable> inRangeElements = new List<Grabbable>();
     public Grabbable grabbedElement;
     private bool inRangeListChanged = false;
@@ -13,6 +14,11 @@ public class GrabHand : MonoBehaviour
     public InputAction grabAction;
     public float grabAnimDuration = 0.3f;
     public LayerMask raycastLayerMask;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -93,6 +99,18 @@ public class GrabHand : MonoBehaviour
             inRangeElements.Remove(grabbable);
             inRangeListChanged = true;
         }
+    }
+
+    public void ForceGrab(Grabbable toGrab)
+    {
+        if(closestGrabbableInRange != null)
+        {
+            closestGrabbableInRange.hoverEndDelegate?.Invoke();
+        }
+        grabbedElement = toGrab;
+        inRangeElements.Remove(grabbedElement);
+        inRangeListChanged = true;
+        StartCoroutine(GrabAnimationCoroutine());
     }
     
     private IEnumerator GrabAnimationCoroutine()
