@@ -71,7 +71,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedDamageTypes: 0000000002000000
   health: 2
-  deathPrefab: {fileID: 0}
+  deathPrefab: {fileID: 6528600369064226604, guid: 6fddbd9e948b1f74bb75480cc6852055, type: 3}
+  hurtPrefab: {fileID: 0}
 --- !u!114 &306165307899866203
 MonoBehaviour:
   m_ObjectHideFlags: 0
