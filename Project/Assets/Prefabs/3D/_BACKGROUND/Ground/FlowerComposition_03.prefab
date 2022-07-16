@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6566307526312214772}
   - component: {fileID: 845627735815839233}
   - component: {fileID: 2875216555045990381}
+  - component: {fileID: 3937806268697873861}
   m_Layer: 0
   m_Name: Flower_01 (1)
   m_TagString: Untagged
@@ -105,6 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3937806268697873861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804453895202301353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4607472712934562547
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +162,7 @@ GameObject:
   - component: {fileID: 2619690190451402590}
   - component: {fileID: 2847443858734660197}
   - component: {fileID: 3887046985479345213}
+  - component: {fileID: 1603472335720380064}
   m_Layer: 0
   m_Name: Flower_01
   m_TagString: Untagged
@@ -243,3 +257,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1603472335720380064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7268410216607778943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
