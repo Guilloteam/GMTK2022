@@ -6,6 +6,8 @@ using UnityEngine;
 public class DiceEffectConfig : ScriptableObject
 {
     public Texture2D activateFXTexture;
+    public Sprite uiSprite;
+    public string description;
     public Color activateFXColor;
     public Transform diceSidePrefab;
 }
