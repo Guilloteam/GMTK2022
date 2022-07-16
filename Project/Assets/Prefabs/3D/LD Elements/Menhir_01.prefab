@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7743415604742927483}
   - component: {fileID: 888572252888501206}
   - component: {fileID: 7458912973718587162}
+  - component: {fileID: 2663541167607843454}
   m_Layer: 0
   m_Name: Menhir_01_Lierre
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2663541167607843454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2769423727589911441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3822267086969108348
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,8 @@ GameObject:
   - component: {fileID: 3560840016486706107}
   - component: {fileID: 2928042715682586100}
   - component: {fileID: 2799893603162744582}
+  - component: {fileID: 1419481708185553722}
+  - component: {fileID: 6396514795574127218}
   m_Layer: 0
   m_Name: Menhir_01
   m_TagString: Untagged
@@ -166,6 +181,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1419481708185553722
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822267086969108348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6654933727636189932, guid: 398c934f70e0b7d429d97ccee262b0ef, type: 3}
+--- !u!114 &6396514795574127218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822267086969108348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6014207999516336924
 GameObject:
   m_ObjectHideFlags: 0

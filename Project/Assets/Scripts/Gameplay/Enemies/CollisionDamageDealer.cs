@@ -11,7 +11,7 @@ public enum DamageType
 public class CollisionDamageDealer : MonoBehaviour
 {
     public DamageType damageType;
-    public int damage;
+    public float damage;
     public float impactThreshold;
 
     private void OnCollisionEnter(Collision collision)

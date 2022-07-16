@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 836346301161726816}
   - component: {fileID: 2561155870335114383}
   - component: {fileID: 1771478481788502490}
+  - component: {fileID: 1970976722628838951}
   m_Layer: 0
   m_Name: Menhir_02
   m_TagString: Untagged
@@ -98,3 +99,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -883797762297338483, guid: 5d3516a097890e24285f7c420f04a238, type: 3}
+--- !u!114 &1970976722628838951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3861936537059413955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

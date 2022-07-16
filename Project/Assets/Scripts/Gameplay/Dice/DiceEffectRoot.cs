@@ -6,4 +6,6 @@ public class DiceEffectRoot : MonoBehaviour
 {
     public DiceEffectConfig config;
     public DiceBuilder dice;
+    public System.Action activationFinishedDelegate;
+
 }
