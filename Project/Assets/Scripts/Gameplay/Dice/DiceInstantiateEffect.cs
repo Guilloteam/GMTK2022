@@ -6,11 +6,18 @@ public class DiceInstantiateEffect : MonoBehaviour
 {
     public Transform prefab;
     public DiceEffectConfig diceEffectConfig;
+    private DiceSlot slot;
     void Start()
     {
-        DiceSlot slot = GetComponentInParent<DiceSlot>();
+        slot = GetComponentInParent<DiceSlot>();
         if(slot != null)
             slot.activationStartDelegate += StartEffect;
+    }
+
+    void OnDestroy()
+    {
+        if(slot != null)
+            slot.activationStartDelegate -= StartEffect;
     }
 
     void StartEffect()
