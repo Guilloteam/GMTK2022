@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13426e9ead40efb40b3fde96cfad97aa, type: 3}
+  m_Name: Sprite Anim Explosion Death Ennemies
+  m_EditorClassIdentifier: 
+  spriteAnims:
+  - name: Explosion_ennemies
+    spriteAnim:
+      sprites:
+      - {fileID: 21300000, guid: 62319444d5301f0499eac2b609929d38, type: 3}
+      - {fileID: 21300000, guid: dda40863536cdd646b7856207b3e6c9c, type: 3}
+      - {fileID: 21300000, guid: b24414bb1deae4c43932f48e5158d032, type: 3}
+      - {fileID: 21300000, guid: b6fbce6cc85c18f49963a9059505403a, type: 3}
+      - {fileID: 21300000, guid: 5522319c541cebc48917c1e15431e9e4, type: 3}
+      - {fileID: 21300000, guid: 797a242413a0c4c44b25950d339ab18e, type: 3}
+      - {fileID: 21300000, guid: 0e51e749148a28640855f054babd1013, type: 3}
+      - {fileID: 21300000, guid: f0710c29619cbf441aec50fbc00745f2, type: 3}
+      actionPoints: []
+      framePerSecond: 10
+      loop: 1
+  actionPointNames: []
