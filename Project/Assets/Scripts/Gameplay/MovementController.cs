@@ -7,6 +7,14 @@ public class MovementController : MonoBehaviour
     public EntityPhysicsConfig physicsConfig;
     public Vector3 inputDirection;
     private new Rigidbody rigidbody;
+    public static MovementController instance;
+
+
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
