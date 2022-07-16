@@ -10,10 +10,14 @@ public class DiceForgeMenu : MonoBehaviour
     public Vector3 diceOffset = Vector3.right;
     public Transform diceContainer;
     public new Camera camera;
-    public Transform toAttach;
+    public DiceEffectConfig newEffect;
+    public Transform toAttachContainer;
+    private Transform toAttachElement;
 
     void Start()
     {
+        toAttachElement = Instantiate(newEffect.diceSidePrefab, toAttachContainer);
+        toAttachElement.gameObject.layer = gameObject.layer;
         dices = new UIDice[config.dices.Count];
         for(int i=0; i<config.dices.Count; i++)
         {
@@ -21,8 +25,11 @@ public class DiceForgeMenu : MonoBehaviour
             dices[i] = dice;
             dice.transform.position = diceOffset * (i - (config.dices.Count-1) / 2.0f);
             dice.camera = camera;
-            dice.diceSlotClickedDelegate += (DiceSlot slot) => {
-                slot.AttachElement(toAttach);
+            dice.GetComponent<DiceBuilder>().diceConfig = config.dices[i];
+            int diceIndex = i;
+            dice.diceSlotClickedDelegate += (DiceSlot slot, int slotIndex) => {
+                config.dices[diceIndex].sides[slotIndex] = newEffect;
+                slot.AttachElement(toAttachElement);
             };
         }
     }

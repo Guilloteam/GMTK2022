@@ -1,3 +1,6 @@
 ﻿Project/Packages/packages-lock.json
 Project/.vscode
 Project/Logs
+*.blend1
+*.spp
+Builds

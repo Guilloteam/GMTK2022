@@ -8,7 +8,9 @@ public class DiceInstantiateEffect : MonoBehaviour
     public DiceEffectConfig diceEffectConfig;
     void Start()
     {
-        GetComponentInParent<DiceSlot>().activationStartDelegate += StartEffect;
+        DiceSlot slot = GetComponentInParent<DiceSlot>();
+        if(slot != null)
+            slot.activationStartDelegate += StartEffect;
     }
 
     void StartEffect()

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Default Dice List
   m_EditorClassIdentifier: 
   dices:
-  - {fileID: 11400000, guid: fdc2c1f40749a504eaf54114f45a2a35, type: 2}
-  - {fileID: 11400000, guid: fdc2c1f40749a504eaf54114f45a2a35, type: 2}
-  - {fileID: 11400000, guid: fdc2c1f40749a504eaf54114f45a2a35, type: 2}
+  - {fileID: 11400000, guid: 9a5bc7bd3fe144149ab2ddaa5c9d2867, type: 2}
+  - {fileID: 11400000, guid: 9a5bc7bd3fe144149ab2ddaa5c9d2867, type: 2}
+  - {fileID: 11400000, guid: 9a5bc7bd3fe144149ab2ddaa5c9d2867, type: 2}

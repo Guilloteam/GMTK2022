@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DiceSlot : MonoBehaviour
 {
-    public int index;
+    public int slotIndex;
     public System.Action activationStartDelegate;
     public System.Action activationEndDelegate;
     public bool hovered = false;
