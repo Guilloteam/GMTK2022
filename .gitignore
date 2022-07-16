@@ -4,3 +4,4 @@ Project/Logs
 *.blend1
 *.spp
 Builds
+*.painter_lock
