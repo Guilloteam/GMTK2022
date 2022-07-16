@@ -16,5 +16,5 @@ MonoBehaviour:
   throwTorque: -7
   throwTorqueVariation: 2
   drag: {x: 0.2, y: 1, z: 0.2}
-  mass: 1
+  mass: 5
   gravity: {x: 0, y: -20, z: 0}

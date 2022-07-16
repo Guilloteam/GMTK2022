@@ -24,7 +24,7 @@ public class MovementController : MonoBehaviour
     
     void FixedUpdate()
     {
-        rigidbody.AddForce(inputDirection * physicsConfig.acceleration, ForceMode.Acceleration);
+        rigidbody.AddForce(inputDirection * physicsConfig.acceleration + Vector3.down * physicsConfig.gravity, ForceMode.Acceleration);
         rigidbody.velocity = rigidbody.velocity * Mathf.Pow(physicsConfig.inertia, Time.fixedDeltaTime);
         if(rigidbody.velocity.sqrMagnitude > physicsConfig.maxSpeed * physicsConfig.maxSpeed)
         {
