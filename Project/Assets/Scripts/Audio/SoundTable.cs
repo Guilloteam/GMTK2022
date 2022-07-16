@@ -57,10 +57,10 @@ public class SoundTable : MonoBehaviour
                         StartCoroutine(PlaySound(component.gameObject, eventConfig.soundConfig));
                     });
                 }
-                if(field.FieldType.IsSubclassOf(typeof(System.MulticastDelegate)))
+                if(field.FieldType == typeof(System.Action))
                 {
                     var targetDelegate = (target as System.Action);
-                    targetDelegate += () => {
+                    targetDelegate += delegate{
                         StartCoroutine(PlaySound(component.gameObject, eventConfig.soundConfig));
                     };
                     field.SetValue(component, targetDelegate);
@@ -84,7 +84,7 @@ public class SoundTable : MonoBehaviour
             foreach(var member in type.GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance))
             {
                 if( member.FieldType.IsSubclassOf(typeof(UnityEngine.Events.UnityEvent))
-                    || member.FieldType.IsSubclassOf(typeof(System.MulticastDelegate))
+                    || member.FieldType == typeof(System.Action)
                 )
                 {
                     EventInvocationData invocationData = new EventInvocationData();

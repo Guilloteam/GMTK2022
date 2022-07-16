@@ -7,10 +7,15 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: MenhirsLierre_01
+    second: {fileID: 2100000, guid: 1be1868a86fd34f48a292a8c16b90663, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Menhirs_01
     second: {fileID: 2100000, guid: 9657e0c163911dc4cb4ab07ec4956e10, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

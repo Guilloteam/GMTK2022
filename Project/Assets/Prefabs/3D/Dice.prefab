@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 1260700223}
   - component: {fileID: 1260700222}
   - component: {fileID: 8940420454854618077}
+  - component: {fileID: 5463524574942705294}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -429,6 +430,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   impactThreshold: 1
+--- !u!114 &5463524574942705294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122211699459483435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - invocationData:
+      displayPath: Grabbable.thrownDelegate
+      gameObject: {fileID: 4122211699459483435}
+      scriptType: Grabbable
+      fieldName: thrownDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 2bf79d120eaf27747ad59cdaa163179f, type: 3}
+      - {fileID: 8300000, guid: 9645849bdc806de438bd7ffc38d4ecca, type: 3}
+      - {fileID: 8300000, guid: c613140cb5dafd249ad23a747b407fc7, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 0.8
+      maxPitch: 1.2
+      minIntensity: 1
+      maxIntensity: 1
 --- !u!1 &4122211699652914091
 GameObject:
   m_ObjectHideFlags: 0

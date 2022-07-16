@@ -4,9 +4,26 @@ using UnityEngine;
 
 public class PaletteRoot : MonoBehaviour
 {
-    void Start()
+    public PaletteConfig startPalette;
+    private PaletteConfig _palette;
+    public PaletteConfig palette {
+        get {
+            return _palette;
+        }
+
+        set {
+            if(_palette != value)
+            {
+                _palette = value;
+                paletteChangedDelegate?.Invoke();
+            }
+        }
+    }
+    public System.Action paletteChangedDelegate;
+    void Awake()
     {
-        
+        if(startPalette != null)
+            _palette = startPalette;
     }
 
     void Update()

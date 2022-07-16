@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class PaletteApplier : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private PaletteRoot paletteRoot;
+    private new Renderer renderer;
+    private MaterialPropertyBlock propertyBlock; 
     void Start()
     {
-        
+        propertyBlock = new MaterialPropertyBlock();
+        paletteRoot = GetComponentInParent<PaletteRoot>();
+        renderer = GetComponent<Renderer>();
+        renderer.GetPropertyBlock(propertyBlock);
+        paletteRoot.paletteChangedDelegate += UpdateDisplay;
+        UpdateDisplay();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        paletteRoot.paletteChangedDelegate -= UpdateDisplay;
+    }
+
+    void UpdateDisplay()
+    {
+        propertyBlock.SetColor("_Color_R", paletteRoot.palette.color_R);
+        propertyBlock.SetColor("_Color_G", paletteRoot.palette.color_G);
+        propertyBlock.SetColor("_Color_B", paletteRoot.palette.color_B);
+        renderer.SetPropertyBlock(propertyBlock);
     }
 }
