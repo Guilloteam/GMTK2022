@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6445310413163253118, guid: e1e1ba3e3f0f51243a92290a0c887ccb, type: 3}
-  diceEffectConfig: {fileID: 11400000, guid: 281987ceae444bf429f4421944c592ca, type: 2}
+  diceEffectConfig: {fileID: 11400000, guid: 595f54d07076c404096b3c4c2ced80c8, type: 2}
