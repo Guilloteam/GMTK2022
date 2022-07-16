@@ -45,6 +45,7 @@ public class ProjectilePhysics : MonoBehaviour
     private void OnThrow(Vector3 direction)
     {
         rigidbody.velocity = direction * physicsConfig.throwStrength.x + Vector3.up * physicsConfig.throwStrength.y;
-        rigidbody.AddTorque(Vector3.Cross(direction, Vector3.up) * physicsConfig.throwTorque, ForceMode.Acceleration);
+        rigidbody.maxAngularVelocity = physicsConfig.throwTorque;
+        rigidbody.AddTorque(Vector3.Cross(direction, Vector3.up).normalized * physicsConfig.throwTorque, ForceMode.VelocityChange);
     }
 }
