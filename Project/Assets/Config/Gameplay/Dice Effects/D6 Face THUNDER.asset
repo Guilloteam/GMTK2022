@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a02b8ec497ef3148925674cac43480c, type: 3}
   m_Name: D6 Face THUNDER
   m_EditorClassIdentifier: 
-  activateFXTexture: {fileID: 2800000, guid: b0e452abd12955840823d211c447e3c4, type: 3}
+  activateFXTexture: {fileID: 2800000, guid: 131c1fa346c01a34ebd5f4864f289260, type: 3}
   diceSidePrefab: {fileID: 54446106371207416, guid: 61a58901eab9fbf4eaacc954f6cc4698, type: 3}
