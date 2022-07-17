@@ -64,7 +64,7 @@ public class GrabHand : MonoBehaviour
                     inRangeElements.Remove(grabbedElement);
                     inRangeListChanged = true;
                     grabStartedDelegate?.Invoke();
-                    StartCoroutine(GrabAnimationCoroutine());
+                    StartCoroutine(GrabAnimationCoroutine(grabAnimDuration));
                 }
             }
             else
@@ -114,19 +114,19 @@ public class GrabHand : MonoBehaviour
         grabbedElement = toGrab;
         inRangeElements.Remove(grabbedElement);
         inRangeListChanged = true;
-        StartCoroutine(GrabAnimationCoroutine());
+        StartCoroutine(GrabAnimationCoroutine(0));
     }
     
-    private IEnumerator GrabAnimationCoroutine()
+    private IEnumerator GrabAnimationCoroutine(float duration)
     {
         grabbedElement.grabbedDelegate?.Invoke();
         grabbedElement.grabbed = true;
         Vector3 startOffset = grabbedElement.transform.position - grabPosition.transform.position;
-        for(float time=0; time < grabAnimDuration; time += Time.deltaTime)
+        for(float time=0; time < duration; time += Time.deltaTime)
         {
             if(grabbedElement == null)
                 break;
-            grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / grabAnimDuration);
+            grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / duration);
             yield return null;
         }
         while(grabbedElement != null)

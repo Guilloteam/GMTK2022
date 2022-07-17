@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4213763140954630467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 989056774246804868, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: startPalette
+      value: 
+      objectReference: {fileID: 11400000, guid: 79b62d169457d6a4d9d64d7409cc732d, type: 2}
+    - target: {fileID: 3140540571636300698, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd266bb9c5616404faeeea09eb46bb15, type: 2}
+    - target: {fileID: 4078694433783666308, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd266bb9c5616404faeeea09eb46bb15, type: 2}
+    - target: {fileID: 4078694434231030190, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_Name
+      value: Runner Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030191, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: physicsConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 87b1c5be2c7905c42bab5f327917f7c8, type: 2}
+    - target: {fileID: 4078694434231030192, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030193, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: movementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.057126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.73213434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495450973511190875, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: score
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881848168658244810, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882224832454100577, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: xp
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}

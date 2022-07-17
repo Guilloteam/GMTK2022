@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: D6 Config Test_02
   m_EditorClassIdentifier: 
   sides:
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
-  - {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
+  - {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
