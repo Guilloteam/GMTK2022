@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ca885c242287143999aa21c72587ce, type: 3}
   m_Name: Runner Enemy Physics
   m_EditorClassIdentifier: 
-  acceleration: 20
+  acceleration: 9.5
   inertia: 0.01
-  maxSpeed: 6
-  mass: 0.5
+  maxSpeed: 3
+  mass: 2
   gravity: 9.83

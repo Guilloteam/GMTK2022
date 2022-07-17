@@ -6,6 +6,7 @@ public class HurtAnimation : MonoBehaviour
 {
     private DamageReceiver damageReceiver;
     public PaletteConfig hurtPalette;
+    public PaletteConfig healPalette;
     private PaletteConfig defaultPalette;
     private PaletteConfig currentPalette;
     public PaletteRoot paletteRoot;

@@ -15,5 +15,5 @@ MonoBehaviour:
   acceleration: 8.5
   inertia: 0.01
   maxSpeed: 1
-  mass: 2
+  mass: 3
   gravity: 9.83

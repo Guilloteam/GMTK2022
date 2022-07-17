@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a322d0554a7aec748ade4047bd8be176, type: 3}
   m_Name: XP Config
   m_EditorClassIdentifier: 
-  firstXPLevel: 10
-  scaling: 0.05
+  firstXPLevel: 20
+  scaling: 0.2
