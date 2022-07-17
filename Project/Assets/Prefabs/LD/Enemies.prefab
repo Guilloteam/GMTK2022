@@ -152,7 +152,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   spawnRadius: 30
-  startSpawnDelay: 5
+  startSpawnDelay: 7.5
   endSpawnDelay: 2
   minSpawnDelay: 1
   endSpawnTime: 60
