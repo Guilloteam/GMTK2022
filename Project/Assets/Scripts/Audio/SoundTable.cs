@@ -105,11 +105,14 @@ public class SoundTable : MonoBehaviour
         AudioSource source = Instantiate(audioPrefab, emitter.transform.position, emitter.transform.rotation);
         source.volume = Random.Range(soundConfig.minIntensity, soundConfig.maxIntensity);
         source.pitch = Random.Range(soundConfig.minPitch, soundConfig.maxPitch);
-        AudioClip selectedClip = soundConfig.clips[Random.Range(0, soundConfig.clips.Length)];
-        source.clip = selectedClip;
-        source.outputAudioMixerGroup = soundConfig.mixerGroup;
-        source.Play();
-        yield return new WaitForSeconds(selectedClip.length + 1);
+        if(soundConfig.clips.Length > 0)
+        {
+            AudioClip selectedClip = soundConfig.clips[Random.Range(0, soundConfig.clips.Length)];
+            source.clip = selectedClip;
+            source.outputAudioMixerGroup = soundConfig.mixerGroup;
+            source.Play();
+            yield return new WaitForSeconds(selectedClip.length + 1);
+        }
         Destroy(source.gameObject);
     }
 }
