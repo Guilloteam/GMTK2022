@@ -1637,6 +1637,7 @@ GameObject:
   - component: {fileID: 1655875135974885810}
   - component: {fileID: 7345843072996696570}
   - component: {fileID: 4200438949744621493}
+  - component: {fileID: 7089162862291460639}
   m_Layer: 0
   m_Name: Gameover Menu
   m_TagString: Untagged
@@ -1726,6 +1727,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7089162862291460639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655875135974885812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbca7bf6b27f2e0479a1b3dd4063e53c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655875136030946710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,6 +2920,7 @@ GameObject:
   - component: {fileID: 1655875136520215028}
   - component: {fileID: 7768173272134085701}
   - component: {fileID: 9194749707389605269}
+  - component: {fileID: 4089768473223390702}
   m_Layer: 0
   m_Name: Pause Menu
   m_TagString: Untagged
@@ -2996,6 +3010,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4089768473223390702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655875136520215030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbca7bf6b27f2e0479a1b3dd4063e53c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655875136534437609
 GameObject:
   m_ObjectHideFlags: 0

@@ -68,10 +68,10 @@ public class DiceManager : MonoBehaviour
 
     void Update()
     {
-        // if(Keyboard.current.spaceKey.wasPressedThisFrame)
-        // {
-        //     OpenDiceForgeMenu();
-        // }
+        if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            OpenDiceForgeMenu();
+        }
     }
 
     public void OpenDiceForgeMenu()

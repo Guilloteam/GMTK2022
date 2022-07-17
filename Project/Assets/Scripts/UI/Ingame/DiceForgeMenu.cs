@@ -20,8 +20,9 @@ public class DiceForgeMenu : MonoBehaviour
 
     public Button cancelButton;
 
-    void Start()
+    IEnumerator Start()
     {
+        Physics.autoSimulation = false;
         upgradeMenu = GetComponentInParent<UpgradeMenu>();
         toAttachElement = Instantiate(newEffect.diceSidePrefab, toAttachContainer);
         toAttachElement.gameObject.layer = gameObject.layer;
@@ -39,14 +40,18 @@ public class DiceForgeMenu : MonoBehaviour
                 StartCoroutine(AttachToSlotCoroutine(slot));
             };
         }
+        yield return null;
+        Physics.Simulate(Time.fixedDeltaTime);
+    }
+
+    void OnDestroy()
+    {
+        Physics.autoSimulation = true;
     }
 
     public void TurnDices()
     {
-        for(int i=0; i<dices.Length; i++)
-        {
-            dices[i].Turn();
-        }
+        StartCoroutine(TurnCoroutine());
     }
 
     public IEnumerator AttachToSlotCoroutine(DiceSlot slot)
@@ -58,5 +63,15 @@ public class DiceForgeMenu : MonoBehaviour
         {
             Destroy(dice.gameObject);
         }
+    }
+
+    private IEnumerator TurnCoroutine()
+    {
+        for(int i=0; i<dices.Length; i++)
+        {
+            yield return dices[i].TurnCoroutine();
+        }
+        Physics.autoSimulation = false;
+        Physics.Simulate(Time.fixedDeltaTime);
     }
 }
