@@ -40,7 +40,7 @@ public class SlideMenu : MonoBehaviour
         targetScreen.availableSize = screenSizeElement.rect.size;
         if(inTransition)
         {
-            animTime += Time.deltaTime;
+            animTime += Time.unscaledDeltaTime;
             Vector3 targetPosition = - screenContainer.InverseTransformPoint(targetScreen.transform.position);
             float animRatio = animTime / transitionDuration;
             float oneMinusRatio = 1 - animRatio;
