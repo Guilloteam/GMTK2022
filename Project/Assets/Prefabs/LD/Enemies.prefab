@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3952144419155691217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3952144419155691219}
+  - component: {fileID: 3952144419155691218}
+  - component: {fileID: 3952144419155691052}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3952144419155691219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952144419155691217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3952144419155691218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952144419155691217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bd6f1020ceea141830a0ac0654bf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPalette: {fileID: 11400000, guid: 3728e09a4bd4d7142b65067a269afca0, type: 2}
+--- !u!114 &3952144419155691052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952144419155691217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7b08beaf9004646a16abe16283e0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easyWaves:
+  - enemies:
+    - {fileID: 8483938052247878097, guid: ba409e064c44a774983683d48a034a73, type: 3}
+  mediumWaves:
+  - enemies:
+    - {fileID: 8483938052247878097, guid: ba409e064c44a774983683d48a034a73, type: 3}
+  hardWaves:
+  - enemies:
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+  easyWaveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.008262634
+      value: 0.99765015
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9793396
+      value: 0.0047187805
+      inSlope: -2.6288996
+      outSlope: -2.6288996
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.14042613
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mediumWaveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hardWaveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.42267662
+      value: 0.0012074821
+      inSlope: 0.026409648
+      outSlope: 0.026409648
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.5359754
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 3.5672147
+      outSlope: 3.5672147
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.057260577
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawnRadius: 30
+  startSpawnDelay: 5
+  endSpawnDelay: 2
+  minSpawnDelay: 1
+  endSpawnTime: 60
+  spawnTime: 10
+  spawnParent: {fileID: 3952144419155691219}
+  difficultyDuration: 120
