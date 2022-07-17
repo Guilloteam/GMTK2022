@@ -61,7 +61,8 @@ public class DiceForgeMenu : MonoBehaviour
         pieceSnapStartDelegate?.Invoke();
         yield return slot.AttachElementCoroutine(toAttachElement);
         pieceSnapEndDelegate?.Invoke();
-        yield return new WaitForSeconds(0.5f);
+        for(float time = 0; time < 0.5f; time += Time.unscaledDeltaTime)
+            yield return null;
         upgradeFinishedDelegate?.Invoke();
         Destroy(gameObject);
         foreach(UIDice dice in dices)
