@@ -65,6 +65,8 @@ MonoBehaviour:
   mediumWaves:
   - enemies:
     - {fileID: 8483938052247878097, guid: ccc91e408a2eb2e4e8ec3bd6f38e537b, type: 3}
+    - {fileID: 8483938052247878097, guid: 5c80d3122aaeb0442a6c330e5a30a801, type: 3}
+    - {fileID: 8483938052247878097, guid: 31a8a2cd65290754ba77a7ce9e6fc379, type: 3}
   hardWaves:
   - enemies:
     - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
@@ -154,6 +156,6 @@ MonoBehaviour:
   endSpawnDelay: 2
   minSpawnDelay: 1
   endSpawnTime: 60
-  spawnTime: 10
+  spawnTime: 0
   spawnParent: {fileID: 3952144419155691219}
-  difficultyDuration: 120
+  difficultyDuration: 180

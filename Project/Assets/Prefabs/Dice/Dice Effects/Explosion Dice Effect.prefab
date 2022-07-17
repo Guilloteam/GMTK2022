@@ -60,7 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  damage: 1
+  damage: 2
+  duration: 0
   repulseMaxForce: 1000
   repulseMinForce: 500
   layerMask:
