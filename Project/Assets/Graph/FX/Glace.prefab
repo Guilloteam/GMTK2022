@@ -29367,7 +29367,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358796905488075267}
-  - component: {fileID: 7314404783064236888}
   - component: {fileID: 6668154611426956698}
   - component: {fileID: 2579151007564839960}
   m_Layer: 0
@@ -29394,27 +29393,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7314404783064236888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358796905488075266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a0a224c89ae5d44ca1572d721cea73d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  damage: 0.5
-  duration: 0
-  repulseMaxForce: 1000
-  repulseMinForce: 500
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  applyOnStart: 1
 --- !u!114 &6668154611426956698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29427,9 +29405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a224c89ae5d44ca1572d721cea73d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 8
+  radius: 6.2
   damage: 0.5
-  duration: 10
+  duration: 5.5
   repulseMaxForce: 0
   repulseMinForce: 0
   layerMask:
