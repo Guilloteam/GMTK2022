@@ -24540,7 +24540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config:
-    intensity: 1
+    intensity: 0.8
     duration: 0.5
   playOnStart: 1
 --- !u!1 &358796905550935041
