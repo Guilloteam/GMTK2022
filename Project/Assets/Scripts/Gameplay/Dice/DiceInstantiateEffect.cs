@@ -50,7 +50,7 @@ public class DiceInstantiateEffect : MonoBehaviour
         float time = 0;
         for(; !effectStopped && (effectDuration == 0 || time < effectDuration); time += Time.deltaTime)
             yield return null;
-        if(time >=effectDuration)
+        if(time >= effectDuration)
             diceEffectRoot.activationFinishedDelegate?.Invoke();
         while(!effectStopped)
             yield return null;

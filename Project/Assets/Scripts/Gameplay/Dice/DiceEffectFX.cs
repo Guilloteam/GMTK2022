@@ -29,6 +29,5 @@ public class DiceEffectFX : MonoBehaviour
             meshRenderer.SetPropertyBlock(propertyBlock);
             yield return null;
         }
-        Destroy(gameObject);
     }
 }

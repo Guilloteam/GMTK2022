@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class RandomAnimStart : MonoBehaviour
 {
-    public Animator Animator; // Assign in Inspector
+    public Animator animator; 
     
     public void Start()
     {
-        Animator.Play("ANM_basic_ennemy", -1, Random.Range(0.0f, 1.0f));
+        animator = GetComponent<Animator>();
+        animator.Play("ANM_basic_ennemy", -1, Random.Range(0.0f, 1.0f));
     }
 
 }

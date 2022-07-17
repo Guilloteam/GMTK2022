@@ -17,7 +17,9 @@ public class DiceManager : MonoBehaviour
 
     private UpgradeMenu currentDiceForgeMenu;
     public DiceEffectConfig[] availableDiceEffects;
+    public DiceBuild emptyDiceConfig;
     public bool gamePaused = false;
+    public Vector3 newDiceSpawnOffset;
 
     void Awake()
     {
@@ -37,6 +39,14 @@ public class DiceManager : MonoBehaviour
             dice.diceConfig = currentConfig.dices[i];
             spawnedDices.Add(dice);
         }
+    }
+
+    public void AddEmptyDice()
+    {
+        DiceBuilder dice = Instantiate(dicePrefab, KeyboardMovement.instance.transform.position + newDiceSpawnOffset, Quaternion.identity);
+        dice.diceConfig = Instantiate(emptyDiceConfig);
+        currentConfig.dices.Add(dice.diceConfig);
+        spawnedDices.Add(dice);
     }
 
     public void UpdateDiceFaces()

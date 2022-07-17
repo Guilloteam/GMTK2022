@@ -43,10 +43,19 @@ public class UpgradeMenu : MonoBehaviour
 
     public void ShowDiceForgePanel(int upgradeIndex)
     {
-        diceForgeMenu.newEffect = elements[upgradeIndex].upgrade;
-        diceForgeMenu.gameObject.SetActive(true);
-        mainUpgradePanel.SetActive(false);
-        UICamera.gameObject.SetActive(true);
+        if(elements[upgradeIndex].upgrade == null)
+        {
+            DiceManager.instance.AddEmptyDice();
+            Destroy(gameObject);
+            upgradeFinishedDelegate?.Invoke();
+        }
+        else
+        {
+            diceForgeMenu.newEffect = elements[upgradeIndex].upgrade;
+            diceForgeMenu.gameObject.SetActive(true);
+            mainUpgradePanel.SetActive(false);
+            UICamera.gameObject.SetActive(true);
+        }
     }
 
     public void ReturnToUpgradeSelect()
