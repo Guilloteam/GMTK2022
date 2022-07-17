@@ -67,10 +67,13 @@ public class DiceForgeMenu : MonoBehaviour
 
     private IEnumerator TurnCoroutine()
     {
+        List<Coroutine> coroutines = new List<Coroutine>();
         for(int i=0; i<dices.Length; i++)
         {
-            yield return dices[i].TurnCoroutine();
+            coroutines.Add(StartCoroutine(dices[i].TurnCoroutine()));
         }
+        foreach(Coroutine coroutine in coroutines)
+            yield return coroutine;
         Physics.autoSimulation = false;
         Physics.Simulate(Time.fixedDeltaTime);
     }
