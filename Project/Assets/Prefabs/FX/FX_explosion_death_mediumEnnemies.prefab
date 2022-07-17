@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6528600369064226604}
   - component: {fileID: 6528600369064226605}
   - component: {fileID: 6528600369064226606}
+  - component: {fileID: 3676687213385894652}
   m_Layer: 0
   m_Name: FX_explosion_death_mediumEnnemies
   m_TagString: Untagged
@@ -53,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e8187f16429cba4e992e2bd882c34cc, type: 2}
+  - {fileID: 2100000, guid: f1daae40dcc84024a8c3bf6d366e91f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3676687213385894652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528600369064226607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5e0126ed0126641b0b1214d17f14a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
