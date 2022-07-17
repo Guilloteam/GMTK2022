@@ -27,6 +27,11 @@ public class DamageReceiver : MonoBehaviour
         rigidbody = GetComponentInParent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        soundEventTime -= Time.deltaTime;
+    }
+
     public void OnDamageReceived(float damage, Vector3 forceApplied)
     {
         Vector3 direction = forceApplied;
@@ -46,7 +51,6 @@ public class DamageReceiver : MonoBehaviour
         {
             if(hurtPrefab != null)
                 Instantiate(hurtPrefab, transform.position, Quaternion.identity);
-            soundEventTime -= Time.deltaTime;
             if(soundEventTime <= 0)
             {
                 if(damage > 0)
