@@ -1073,6 +1073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dicePrefab: {fileID: 3992810829177854932, guid: 75edcef0c184f6141b59471b8d10bb61, type: 3}
   diceOffset: {x: 3, y: 0, z: 0}
+  secondRowOffset: {x: 0, y: 2, z: 0}
   diceContainer: {fileID: 4687857564259762855}
   camera: {fileID: 4687857564148881674}
   newEffect: {fileID: 11400000, guid: 97f3e905b9ed86e4eadb5da7f4d1cbca, type: 2}

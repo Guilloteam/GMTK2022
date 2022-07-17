@@ -6,6 +6,7 @@ public class DamageReceiver : MonoBehaviour
 {
     public DamageType[] allowedDamageTypes;
     public float health = 2;
+    private float startHealth;
     private new Rigidbody rigidbody;
 
     public System.Action<float, Vector3> damageReceivedDelegate;
@@ -14,8 +15,11 @@ public class DamageReceiver : MonoBehaviour
     public Transform deathPrefab;
     public Transform hurtPrefab;
 
+    public float healthRatio { get { return health / startHealth; } }
+
     private void Start()
     {
+        startHealth = health;
         rigidbody = GetComponentInParent<Rigidbody>();
     }
 

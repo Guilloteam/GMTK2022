@@ -30,7 +30,7 @@ public class DiceForgeMenu : MonoBehaviour
         {
             UIDice dice = Instantiate(dicePrefab, diceContainer);
             dices[i] = dice;
-            dice.transform.position = diceOffset / 2 * (i - (upgradeMenu.config.dices.Count-1) / 2.0f) + secondRowOffset * (i%2);
+            dice.transform.position = diceOffset / 2 * (i - (upgradeMenu.config.dices.Count-1) / 2.0f) + secondRowOffset * ((i+1)%2);
             dice.camera = camera;
             dice.GetComponent<DiceBuilder>().diceConfig = upgradeMenu.config.dices[i];
             int diceIndex = i;
