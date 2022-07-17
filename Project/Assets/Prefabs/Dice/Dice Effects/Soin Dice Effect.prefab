@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   damage: 1
+  duration: 0
   repulseMaxForce: 1000
   repulseMinForce: 500
   layerMask:
@@ -77,9 +78,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5bd62180fd038154d950e9faca935f74, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1e24b75b367c951459c514f1d2655dd3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.719
+  m_Volume: 0.389
   m_Pitch: 1
   Loop: 0
   Mute: 0
