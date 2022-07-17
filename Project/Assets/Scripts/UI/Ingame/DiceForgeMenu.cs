@@ -17,6 +17,8 @@ public class DiceForgeMenu : MonoBehaviour
     private Transform toAttachElement;
     public System.Action upgradeFinishedDelegate;
     public System.Action cancelUpgradeDelegate;
+    public System.Action pieceSnapStartDelegate;
+    public System.Action pieceSnapEndDelegate;
 
     public Button cancelButton;
 
@@ -56,7 +58,10 @@ public class DiceForgeMenu : MonoBehaviour
 
     public IEnumerator AttachToSlotCoroutine(DiceSlot slot)
     {
+        pieceSnapStartDelegate?.Invoke();
         yield return slot.AttachElementCoroutine(toAttachElement);
+        pieceSnapEndDelegate?.Invoke();
+        yield return new WaitForSeconds(0.5f);
         upgradeFinishedDelegate?.Invoke();
         Destroy(gameObject);
         foreach(UIDice dice in dices)

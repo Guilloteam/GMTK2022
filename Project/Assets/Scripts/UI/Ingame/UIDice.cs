@@ -10,6 +10,9 @@ public class UIDice : MonoBehaviour
     public float turnDuration;
     public Vector3 rotationAxis = (Vector3.right + Vector3.forward)/2;
     private int hoveredSlotIndex;
+    public System.Action faceHoverStartDelegate;
+    public System.Action faceHoverEndDelegate;
+    public System.Action faceClickDelegate;
     public System.Action<DiceSlot, int> diceSlotClickedDelegate;
     private List<Coroutine> pendingCoroutines = new List<Coroutine>();
     private DiceSlots slots;
@@ -27,19 +30,27 @@ public class UIDice : MonoBehaviour
             if(slot != null && slot.transform.parent == transform)
             {
                 if(hoveredSlotIndex >= 0 && hoveredSlotIndex != slot.slotIndex)
+                {
                     slots.slots[hoveredSlotIndex].hovered = false;
+                    faceHoverEndDelegate?.Invoke();
+                }
                 slot.hovered = true;
+                faceHoverStartDelegate?.Invoke();
                 hoveredSlotIndex = slot.slotIndex;
                 if(Mouse.current.leftButton.wasPressedThisFrame)
                 {
                     diceSlotClickedDelegate?.Invoke(slots.slots[hoveredSlotIndex], hoveredSlotIndex);
+                    faceClickDelegate?.Invoke();
                 }
             }
         }
         else
         {
             if(hoveredSlotIndex >= 0)
+            {
                 slots.slots[hoveredSlotIndex].hovered = false;
+                faceHoverEndDelegate?.Invoke();
+            }
             hoveredSlotIndex = -1;
         }
     }
