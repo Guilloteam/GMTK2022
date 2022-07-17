@@ -113,6 +113,7 @@ public class SoundTable : MonoBehaviour
             source.Play();
             yield return new WaitForSeconds(selectedClip.length + 1);
         }
-        Destroy(source.gameObject);
+        if(source != null)
+            Destroy(source.gameObject);
     }
 }

@@ -678,9 +678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 910eb1845bee17d40be4d7b47b8603d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 0
-  maxIntensity: 1
-  maxDisplacement: 1
+  maxIntensity: 6
+  maxDisplacement: 4
 --- !u!1 &5418886797467418058
 GameObject:
   m_ObjectHideFlags: 0
