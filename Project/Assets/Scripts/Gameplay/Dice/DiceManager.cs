@@ -33,6 +33,7 @@ public class DiceManager : MonoBehaviour
 
     void Start()
     {
+        XPSystem.instance.levelUpDelegate += OpenDiceForgeMenu;
         for(int i=0; i<currentConfig.dices.Count; i++)
         {
             DiceBuilder dice = Instantiate(dicePrefab, diceSpawnPoints[i].position, Quaternion.identity);
@@ -67,10 +68,10 @@ public class DiceManager : MonoBehaviour
 
     void Update()
     {
-        if(Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            OpenDiceForgeMenu();
-        }
+        // if(Keyboard.current.spaceKey.wasPressedThisFrame)
+        // {
+        //     OpenDiceForgeMenu();
+        // }
     }
 
     public void OpenDiceForgeMenu()

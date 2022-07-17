@@ -9,6 +9,7 @@ public class DiceForgeMenu : MonoBehaviour
     private UIDice[] dices;
     public UIDice dicePrefab;
     public Vector3 diceOffset = Vector3.right;
+    public Vector3 secondRowOffset = Vector3.forward;
     public Transform diceContainer;
     public new Camera camera;
     public DiceEffectConfig newEffect;
@@ -29,7 +30,7 @@ public class DiceForgeMenu : MonoBehaviour
         {
             UIDice dice = Instantiate(dicePrefab, diceContainer);
             dices[i] = dice;
-            dice.transform.position = diceOffset * (i - (upgradeMenu.config.dices.Count-1) / 2.0f);
+            dice.transform.position = diceOffset / 2 * (i - (upgradeMenu.config.dices.Count-1) / 2.0f) + secondRowOffset * ((i+1)%2);
             dice.camera = camera;
             dice.GetComponent<DiceBuilder>().diceConfig = upgradeMenu.config.dices[i];
             int diceIndex = i;
