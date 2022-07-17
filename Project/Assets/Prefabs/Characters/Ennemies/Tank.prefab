@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7881848168658244810}
   - component: {fileID: 306165307899866203}
   - component: {fileID: 129242072016332346}
-  - component: {fileID: 8882224832454100577}
   m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
@@ -55,7 +54,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: ac452462e580c174593142291a785525, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 1.7739692
   m_Direction: 1
   m_Center: {x: 0, y: 0.3100326, z: 0}
@@ -72,8 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowedDamageTypes: 0000000002000000
-  health: 2
-  deathPrefab: {fileID: 6528600369064226604, guid: 6fddbd9e948b1f74bb75480cc6852055, type: 3}
+  health: 6
+  deathPrefab: {fileID: 6528600369064226604, guid: 0f6ae2abb8bd8ce41a6f3c6395d1a497, type: 3}
   hurtPrefab: {fileID: 0}
 --- !u!114 &306165307899866203
 MonoBehaviour:
@@ -109,19 +108,6 @@ MonoBehaviour:
   shakeTransform: {fileID: 4078694433783666307}
   shakeDirections: {x: 1, y: 0, z: 1}
   minHurtValue: 0.3
---- !u!114 &8882224832454100577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4078694433504660958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e2541c2cecc674384447eff92a2c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: 1
 --- !u!1 &4078694433783666306
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 4078694433783666306}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.369, z: 0.076}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4078694434231030194}
@@ -186,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a1c14ab3d73dde45b2c208929b472c8, type: 2}
+  - {fileID: 2100000, guid: 5060db97c598efd4296f4ad9d03f9170, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,7 +234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4078694433783666306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
@@ -269,7 +255,7 @@ GameObject:
   - component: {fileID: 3136213858263204893}
   - component: {fileID: 989056774246804868}
   m_Layer: 9
-  m_Name: Basic Enemy
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf1817be736a7640a00a00879ed9888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  movementSpeed: 0.7
   target: {fileID: 0}
 --- !u!54 &4078694434231030192
 Rigidbody:
@@ -315,7 +301,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4078694434231030190}
   serializedVersion: 2
-  m_Mass: 0.2
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -335,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f3419fb9c00a04093b42828603c11f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  physicsConfig: {fileID: 11400000, guid: 0df4062f9b13c5c4f939118424b0dde0, type: 2}
+  physicsConfig: {fileID: 11400000, guid: 90f9305835163d743a538ca9718ef601, type: 2}
   inputDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &3531452020373927839
 MonoBehaviour:
@@ -366,21 +352,17 @@ MonoBehaviour:
       minIntensity: 0.2
       maxIntensity: 0.4
   - invocationData:
-      displayPath: Capsule/DamageReceiver.damageReceivedSoundEvent
-      gameObject: {fileID: 4078694433504660958}
-      scriptType: DamageReceiver
-      fieldName: damageReceivedSoundEvent
+      displayPath: PaletteRoot.paletteChangedDelegate
+      gameObject: {fileID: 4078694434231030190}
+      scriptType: PaletteRoot
+      fieldName: paletteChangedDelegate
     soundConfig:
-      clips:
-      - {fileID: 8300000, guid: 4e7cbdc78e178c7418eaea0253042377, type: 3}
-      - {fileID: 8300000, guid: bb3aa731f461dc641827dda641275755, type: 3}
-      - {fileID: 8300000, guid: b7f6daf564e7a514899d060af5845253, type: 3}
-      - {fileID: 8300000, guid: 3a53646b0c8f33241b2a13ae68c1f865, type: 3}
+      clips: []
       mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
       minPitch: 1
       maxPitch: 1.5
-      minIntensity: 0.2
-      maxIntensity: 0.4
+      minIntensity: 1
+      maxIntensity: 1
   - invocationData:
       displayPath: Capsule/DamageReceiver.damageReceivedDelegate
       gameObject: {fileID: 4078694433504660958}
@@ -422,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98bd6f1020ceea141830a0ac0654bf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPalette: {fileID: 11400000, guid: 3728e09a4bd4d7142b65067a269afca0, type: 2}
+  startPalette: {fileID: 11400000, guid: 0e6ad9c32d6e0c9498896ec207ddf225, type: 2}
 --- !u!1 &5125847566517943508
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 5125847566517943508}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -27.949453, y: -3.5350482, z: 5.041363}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4078694434231030194}
@@ -484,7 +466,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4a1c14ab3d73dde45b2c208929b472c8, type: 2}
+  - {fileID: 2100000, guid: 5060db97c598efd4296f4ad9d03f9170, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
