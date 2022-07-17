@@ -797,13 +797,14 @@ GameObject:
   - component: {fileID: 4687857564361865871}
   - component: {fileID: 4687857564361865870}
   - component: {fileID: 4293716457906753567}
+  - component: {fileID: 9204289248799082692}
   m_Layer: 5
   m_Name: Dice Forge Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4687857564361865857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,7 +879,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4687857564361865869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -900,6 +901,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4c20678a369694fbfa078de449285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9204289248799082692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687857564361865869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - invocationData:
+      displayPath: Dice Forge Screen/Turn Button/Button.m_OnClick
+      gameObject: {fileID: 4687857565948316585}
+      scriptType: UnityEngine.UI.Button
+      fieldName: m_OnClick
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 134ae2198ad3934468cae0e6174490e4, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 0.9
+      maxPitch: 1.1
+      minIntensity: 1
+      maxIntensity: 1
+  - invocationData:
+      displayPath: Dice Forge Screen/DiceForgeMenu.pieceSnapStartDelegate
+      gameObject: {fileID: 4687857565659705089}
+      scriptType: DiceForgeMenu
+      fieldName: pieceSnapStartDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: d68aaa11c91a290418bd5f38489b06b2, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 0.8
+      maxPitch: 1.1
+      minIntensity: 1
+      maxIntensity: 1
 --- !u!1 &4687857565203739657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4687857565659705090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1291,6 +1331,7 @@ GameObject:
   - component: {fileID: 4687857566120817187}
   - component: {fileID: 2860754174258389334}
   - component: {fileID: 5229392737011157902}
+  - component: {fileID: 6058361041759115301}
   m_Layer: 7
   m_Name: Dice Forge Menu
   m_TagString: Untagged
@@ -1370,6 +1411,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbca7bf6b27f2e0479a1b3dd4063e53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6058361041759115301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687857566120817186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: []
 --- !u!1 &5258575585642223581
 GameObject:
   m_ObjectHideFlags: 0
