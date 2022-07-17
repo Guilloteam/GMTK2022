@@ -9771,7 +9771,7 @@ GameObject:
   - component: {fileID: 358796904138220919}
   - component: {fileID: 358796904138220918}
   m_Layer: 0
-  m_Name: Particle System (3)
+  m_Name: sol glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63739,14 +63739,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2869230015780982955}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 12
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -63921,7 +63921,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.105882354}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.38431373}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -73498,14 +73498,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4123086806818877492}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 12
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -73742,7 +73742,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -83292,12 +83292,12 @@ GameObject:
   - component: {fileID: 7713580239952331942}
   - component: {fileID: 3069727845020795282}
   m_Layer: 0
-  m_Name: Particle System (6)
+  m_Name: sol glace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2735205422574641766
 Transform:
   m_ObjectHideFlags: 0
@@ -93132,7 +93132,7 @@ GameObject:
   - component: {fileID: 1071906587761104076}
   - component: {fileID: 2779432871138791345}
   m_Layer: 0
-  m_Name: "fum\xE9 boule (3)"
+  m_Name: Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98050,7 +98050,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5595663845327647024}
   serializedVersion: 8
-  lengthInSec: 15
+  lengthInSec: 12
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -98125,7 +98125,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -107807,15 +107807,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d0896f62ecf864788b9a29abfb87db, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02323077
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d0896f62ecf864788b9a29abfb87db, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.02323077
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d0896f62ecf864788b9a29abfb87db, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.02323077
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d0896f62ecf864788b9a29abfb87db, type: 3}
       propertyPath: m_LocalPosition.x
