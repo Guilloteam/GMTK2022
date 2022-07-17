@@ -93,8 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   target: {fileID: 0}
-  shootingMinRange: 10
-  shootingMaxRange: 20
+  shootingMinRange: 5
+  shootingMaxRange: 18
   loadingDuration: 3
   projectilePrefab: {fileID: 757643521106547486, guid: 86ec40aea6715c6438fb91f428b1bcfc, type: 3}
-  projectileSpeed: 1
+  projectileSpeed: 3

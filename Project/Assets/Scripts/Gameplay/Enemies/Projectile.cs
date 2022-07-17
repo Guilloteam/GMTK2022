@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float damage = 1;
+    public float recoil = 10;
+    private new Rigidbody rigidbody;
     void Start()
+    {
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider other)
     {
-        
+        DamageReceiver receiver = other.GetComponent<DamageReceiver>();
+        if(receiver != null)
+        {
+            receiver.OnDamageReceived(damage, recoil * rigidbody.velocity.normalized);
+            Destroy(gameObject);
+        }
     }
 }
