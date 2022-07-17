@@ -28,6 +28,10 @@ public class DamageReceiver : MonoBehaviour
         Vector3 direction = forceApplied;
         direction.y = 0;
         health -= damage;
+        if(health >= startHealth)
+        {
+            health = startHealth;
+        }
         if(health <= 0)
         {
             if(deathPrefab != null)
