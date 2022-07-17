@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: D6 Face FIRE
   m_EditorClassIdentifier: 
   activateFXTexture: {fileID: 2800000, guid: 52cf852ef0adbda4a8f380e4e5dc3454, type: 3}
-  uiSprite: {fileID: 21300000, guid: 52cf852ef0adbda4a8f380e4e5dc3454, type: 3}
-  description: Triggers an explosion. For each dice already on this face, triggers
-    an additional explosion on them.
+  uiSprite: {fileID: 21300000, guid: 9606aa1098b45a5479e4458dfa1b10f1, type: 3}
+  description: Triggers an explosion. Triggers all FIRE faces around.
   activateFXColor: {r: 1, g: 0.553443, b: 0, a: 0}
   diceSidePrefab: {fileID: 54446106371207416, guid: 5f7e3d1547ff62343ae294657fd89a4b, type: 3}
