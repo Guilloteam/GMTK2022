@@ -23,13 +23,13 @@ public class DiceSlot : MonoBehaviour
     {
         if(hovered)
         {
-            hoverAnimTime += Time.deltaTime;
+            hoverAnimTime += Time.unscaledDeltaTime;
             if(hoverAnimTime > hoverAnimDuration)
                 hoverAnimTime = hoverAnimDuration;
         }
         else
         {
-            hoverAnimTime -= Time.deltaTime;
+            hoverAnimTime -= Time.unscaledDeltaTime;
             if(hoverAnimTime < 0)
                 hoverAnimTime = 0;
         }
@@ -41,7 +41,7 @@ public class DiceSlot : MonoBehaviour
         side.SetParent(transform, true);
         Vector3 startPosition = side.localPosition;
         Quaternion startRotation = side.localRotation;
-        for(float time = 0; time < attachAnimDuration; time += Time.deltaTime)
+        for(float time = 0; time < attachAnimDuration; time += Time.unscaledDeltaTime)
         {
             float ratio = time / attachAnimDuration;
             transform.GetChild(0).localScale = Vector3.one * (1-ratio);

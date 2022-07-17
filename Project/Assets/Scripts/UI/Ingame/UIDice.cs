@@ -44,16 +44,12 @@ public class UIDice : MonoBehaviour
         }
     }
 
-    public void Turn()
+    public IEnumerator TurnCoroutine()
     {
-        StartCoroutine(TurnCoroutine());
-    }
-
-    private IEnumerator TurnCoroutine()
-    {
+        Physics.autoSimulation = false;
         Quaternion startRotation = transform.rotation;
         
-        for(float time = 0; time < turnDuration; time += Time.deltaTime)
+        for(float time = 0; time < turnDuration; time += Time.unscaledDeltaTime)
         {
             float ratio = time / turnDuration;
             ratio = 1 - (1-ratio) * (1 - ratio);
@@ -61,5 +57,6 @@ public class UIDice : MonoBehaviour
             yield return null;
         }
         transform.rotation = startRotation * Quaternion.AngleAxis(180, rotationAxis);
+        Physics.autoSimulation = true;
     }
 }

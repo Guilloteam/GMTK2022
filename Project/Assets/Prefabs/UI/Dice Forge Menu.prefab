@@ -1372,6 +1372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4687857566120817187}
   - component: {fileID: 2860754174258389334}
+  - component: {fileID: 5229392737011157902}
   m_Layer: 7
   m_Name: Dice Forge Menu
   m_TagString: Untagged
@@ -1440,6 +1441,18 @@ MonoBehaviour:
   diceForgeMenu: {fileID: 3649941443767256108}
   mainUpgradePanel: {fileID: 1760357869628227401}
   UICamera: {fileID: 4687857564148881674}
+--- !u!114 &5229392737011157902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687857566120817186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbca7bf6b27f2e0479a1b3dd4063e53c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5258575585642223581
 GameObject:
   m_ObjectHideFlags: 0
