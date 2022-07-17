@@ -13,6 +13,7 @@ public class Particle_System_ShapeChange : MonoBehaviour
     void Start()
     {
         Vent = GetComponent<ParticleSystem>();
+	
     }
 
     // Update is called once per frame
@@ -32,11 +33,11 @@ public class Particle_System_ShapeChange : MonoBehaviour
 
 	ParticleSystem.MainModule psMain = Vent.main;
 	ParticleSystem.ShapeModule psShape = Vent.shape;
-	psMain.startLifetime = 1.0f;
-	psMain.startSpeed = 2;
+	psMain.startLifetime = Vent.startLifetime;
+	psMain.startSpeed = Vent.startSpeed;
 	psShape.radius = ShapeRadius;
 
-	Vent.Emit (1);
+	//Vent.Emit (1);
 	
     }
 }
