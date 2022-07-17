@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505245980932009729}
   - component: {fileID: 909782623913688332}
+  - component: {fileID: -258797326644842466}
   m_Layer: 0
   m_Name: Return Dice Effect
   m_TagString: Untagged
@@ -46,3 +47,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fxPrefab: {fileID: 1505245980932009729, guid: 24f0d7e9d664a9c4b8116219790a584c, type: 3}
   disappearDelay: 0.2
+--- !u!114 &-258797326644842466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120823711205492216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda986a3ee41f8648acd8c73074b6474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - invocationData:
+      displayPath: ReturnEffect.diceReappearDelegate
+      gameObject: {fileID: 8120823711205492216}
+      scriptType: ReturnEffect
+      fieldName: diceReappearDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 189f8ac971edf5a458d1359659a234b8, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.3
+      minIntensity: 0.3
+      maxIntensity: 0.4
+  - invocationData:
+      displayPath: ReturnEffect.diceDisappearDelegate
+      gameObject: {fileID: 8120823711205492216}
+      scriptType: ReturnEffect
+      fieldName: diceDisappearDelegate
+    soundConfig:
+      clips: []
+      mixerGroup: {fileID: 0}
+      minPitch: 1
+      maxPitch: 1.3
+      minIntensity: 1
+      maxIntensity: 1
