@@ -24,6 +24,7 @@ public class PaletteApplier : MonoBehaviour
 
     void UpdateDisplay()
     {
+        renderer.GetPropertyBlock(propertyBlock);
         propertyBlock.SetColor("_Color_R", paletteRoot.palette.color_R);
         propertyBlock.SetColor("_Color_V", paletteRoot.palette.color_G);
         propertyBlock.SetColor("_Color_B", paletteRoot.palette.color_B);

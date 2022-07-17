@@ -3259,6 +3259,7 @@ GameObject:
   - component: {fileID: 1194309700}
   - component: {fileID: 1194309701}
   - component: {fileID: 1194309702}
+  - component: {fileID: 1194309703}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3533,6 +3534,21 @@ MonoBehaviour:
   shakeTransform: {fileID: 1708066551}
   shakeDirections: {x: 1, y: 0, z: 1}
   minHurtValue: 0.3
+--- !u!114 &1194309703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194309689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3f939db5ca6f545bf89042f509ffad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatedSprite: {fileID: 1708066554}
+  grabHand: {fileID: 68037581}
+  playerState: 0
 --- !u!1 &1282009852
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,7 +5038,7 @@ GameObject:
   - component: {fileID: 1708066553}
   - component: {fileID: 1708066554}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Player Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
