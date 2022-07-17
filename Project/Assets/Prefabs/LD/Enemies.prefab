@@ -69,6 +69,15 @@ MonoBehaviour:
     - {fileID: 8483938052247878097, guid: 31a8a2cd65290754ba77a7ce9e6fc379, type: 3}
   hardWaves:
   - enemies:
+    - {fileID: 4119085691551718964, guid: 32b087265db788f42a77eaa3c77e5985, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
+    - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
     - {fileID: 4119085691551718964, guid: 43c9cf0922bc33844896be925a4eb54a, type: 3}
   easyWaveCurve:
     serializedVersion: 2
