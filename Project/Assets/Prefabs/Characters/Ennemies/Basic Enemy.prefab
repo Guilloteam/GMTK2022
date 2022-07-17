@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7881848168658244810}
   - component: {fileID: 306165307899866203}
   - component: {fileID: 129242072016332346}
-  - component: {fileID: 6241916338559845451}
   m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
@@ -109,19 +108,6 @@ MonoBehaviour:
   shakeTransform: {fileID: 4078694433783666307}
   shakeDirections: {x: 1, y: 0, z: 1}
   minHurtValue: 0.3
---- !u!114 &6241916338559845451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4078694433504660958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e2541c2cecc674384447eff92a2c4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: 1
 --- !u!1 &4078694433783666306
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +336,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
+  - invocationData:
+      displayPath: Capsule/DamageReceiver.deathDelegate
+      gameObject: {fileID: 4078694433504660958}
+      scriptType: DamageReceiver
+      fieldName: deathDelegate
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 5f20f35a656205c49ae9a62724cc4cf7, type: 3}
+      - {fileID: 8300000, guid: 27d620cfac1b28c489f40fed8811b6c0, type: 3}
+      - {fileID: 8300000, guid: a478a10cc75632544917389337da29ee, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.5
+      minIntensity: 0.2
+      maxIntensity: 0.4
+  - invocationData:
+      displayPath: PaletteRoot.paletteChangedDelegate
+      gameObject: {fileID: 4078694434231030190}
+      scriptType: PaletteRoot
+      fieldName: paletteChangedDelegate
+    soundConfig:
+      clips: []
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.5
+      minIntensity: 1
+      maxIntensity: 1
   - invocationData:
       displayPath: Capsule/DamageReceiver.damageReceivedDelegate
       gameObject: {fileID: 4078694433504660958}
