@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ebaa2b28a29d94394ff9d00489076f, type: 3}
   m_Name: Tank Enemy Palette
   m_EditorClassIdentifier: 
-  color_R: {r: 0.4528302, g: 0, b: 0.068754375, a: 0}
-  color_G: {r: 1, g: 0.2509804, b: 0.3647059, a: 0}
-  color_B: {r: 0.34901962, g: 0.45098042, b: 0.5647059, a: 0}
+  color_R: {r: 0, g: 0.4781739, b: 0.6886792, a: 0}
+  color_G: {r: 1, g: 0.8980393, b: 0.89019614, a: 0}
+  color_B: {r: 0.227451, g: 0.22352943, b: 0.22352943, a: 0}
