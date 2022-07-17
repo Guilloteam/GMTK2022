@@ -355,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowedDamageTypes: 01000000
   health: 10
+  maxSoundEventDelay: 1
   deathPrefab: {fileID: 0}
   hurtPrefab: {fileID: 358796905488075267, guid: ea1268920ec090440b0763e42fd384fa, type: 3}
 --- !u!114 &5418886796978799480
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hurtPalette: {fileID: 11400000, guid: b0a933304cfe08241b2f4b370d09de3a, type: 2}
+  healPalette: {fileID: 0}
   paletteRoot: {fileID: 0}
   maxHurtDamage: 1
   maxShake: 0.3
@@ -430,9 +432,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.49999997
-  m_Height: 1.3015039
+  m_Height: 1.1587405
   m_Direction: 1
-  m_Center: {x: 0, y: 0.15075172, z: 0}
+  m_Center: {x: 0, y: 0.07936989, z: 0}
 --- !u!114 &1901246742
 MonoBehaviour:
   m_ObjectHideFlags: 0
