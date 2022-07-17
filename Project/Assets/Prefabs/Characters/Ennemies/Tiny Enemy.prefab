@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3466074484324202763
+--- !u!1001 &201892332991769246
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,38 +10,30 @@ PrefabInstance:
     - target: {fileID: 989056774246804868, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: startPalette
       value: 
-      objectReference: {fileID: 11400000, guid: 0e6ad9c32d6e0c9498896ec207ddf225, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d258c924533a8540be6f7dcc89982d8, type: 2}
     - target: {fileID: 2560058522222312131, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 325f155b756059c408204527e3a65f2c, type: 2}
-    - target: {fileID: 3136213858263204893, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
-      propertyPath: damage
-      value: 3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: e111358dab1ad9e42af3712ee736db5e, type: 2}
     - target: {fileID: 3140540571636300698, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5060db97c598efd4296f4ad9d03f9170, type: 2}
-    - target: {fileID: 4078694433504660960, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
-      propertyPath: m_Radius
-      value: 1.35
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: b7a2eaeeac60bc240ad715bdc2198cd2, type: 2}
     - target: {fileID: 4078694433783666307, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4078694433783666307, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4078694433783666308, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5060db97c598efd4296f4ad9d03f9170, type: 2}
+      objectReference: {fileID: 2100000, guid: b7a2eaeeac60bc240ad715bdc2198cd2, type: 2}
     - target: {fileID: 4078694434231030190, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_Name
-      value: Tank Enemy
+      value: Tiny Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_RootOrder
@@ -49,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.562878
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.46950436
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -87,17 +79,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4541925401282274784, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2398839326136651869}
     - target: {fileID: 6495450973511190875, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: score
-      value: 50
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7881848168658244810, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: health
-      value: 15
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8882224832454100577, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: xp
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+--- !u!95 &2398839326136651869 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2560058522222312131, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+  m_PrefabInstance: {fileID: 201892332991769246}
+  m_PrefabAsset: {fileID: 0}
