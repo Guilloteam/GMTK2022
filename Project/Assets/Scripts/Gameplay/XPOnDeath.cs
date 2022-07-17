@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class XPOnDeath : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private DamageReceiver damageReceiver;
+    public int xp;
     void Start()
     {
-        
+        damageReceiver = GetComponent<DamageReceiver>();
+        damageReceiver.deathDelegate += () => {
+            XPSystem.instance.AddXP(xp);
+        };
     }
 
-    // Update is called once per frame
     void Update()
     {
         
