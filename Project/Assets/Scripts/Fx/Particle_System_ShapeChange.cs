@@ -12,7 +12,7 @@ public class Particle_System_ShapeChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Vent = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
