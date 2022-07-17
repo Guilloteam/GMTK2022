@@ -14,6 +14,8 @@ public class GrabHand : MonoBehaviour
     public InputAction grabAction;
     public float grabAnimDuration = 0.3f;
     public LayerMask raycastLayerMask;
+    public System.Action grabStartedDelegate;
+    public System.Action<Vector3> throwDelegate;
 
     private void Awake()
     {
@@ -61,6 +63,7 @@ public class GrabHand : MonoBehaviour
                     grabbedElement = closestGrabbableInRange;
                     inRangeElements.Remove(grabbedElement);
                     inRangeListChanged = true;
+                    grabStartedDelegate?.Invoke();
                     StartCoroutine(GrabAnimationCoroutine());
                 }
             }
@@ -74,6 +77,7 @@ public class GrabHand : MonoBehaviour
                     throwDirection.y = 0;
                     grabbedElement.Throw(throwDirection.normalized);
                     grabbedElement = null;
+                    throwDelegate?.Invoke(throwDirection.normalized);
                     if(closestGrabbableInRange != null)
                         closestGrabbableInRange.hoverStartDelegate?.Invoke();
                 }

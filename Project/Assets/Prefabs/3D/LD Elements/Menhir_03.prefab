@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8330874837932344899}
   - component: {fileID: 5489162045426683202}
   - component: {fileID: 3604541906067291993}
-  - component: {fileID: 3923204524645319403}
   - component: {fileID: 8175846346652523698}
+  - component: {fileID: 8234420333399574881}
   m_Layer: 0
   m_Name: Menhir_03
   m_TagString: Untagged
@@ -85,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3923204524645319403
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477293009754982619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1561318273012934706, guid: 7779b455650fc084c9823afc30365d66, type: 3}
 --- !u!114 &8175846346652523698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &8234420333399574881
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477293009754982619}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.55
+  m_Height: 2.36
+  m_Direction: 1
+  m_Center: {x: -0.0000900626, y: 0.48280263, z: 0.011539745}

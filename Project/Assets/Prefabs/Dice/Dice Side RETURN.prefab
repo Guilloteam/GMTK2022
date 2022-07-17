@@ -96,7 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8e8cc7abdae5b47b06b9396ccd1f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4948541839602772610, guid: 561140263ff800c459b7109fba329a66, type: 3}
+  prefab: {fileID: 1505245980932009729, guid: 249ec2003488b7544a161cc0a110c5b9, type: 3}
   diceEffectConfig: {fileID: 11400000, guid: ffccd56628efba9479c60134cb1cc1c7, type: 2}
-  attachToSide: 0
-  effectDuration: 1
