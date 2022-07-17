@@ -8,9 +8,13 @@ public class DamageReceiver : MonoBehaviour
     public float health = 2;
     private float startHealth;
     private new Rigidbody rigidbody;
+    public float maxSoundEventDelay = 1;
+    private float soundEventTime;
 
     public System.Action<float, Vector3> damageReceivedDelegate;
+    public System.Action<float> healReceivedDelegate;
     public System.Action damageReceivedSoundEvent;
+    public System.Action healReceivedSoundEvent;
     public System.Action deathDelegate;
     public Transform deathPrefab;
     public Transform hurtPrefab;
@@ -42,8 +46,21 @@ public class DamageReceiver : MonoBehaviour
         {
             if(hurtPrefab != null)
                 Instantiate(hurtPrefab, transform.position, Quaternion.identity);
-            damageReceivedDelegate?.Invoke(damage, forceApplied);
-            damageReceivedSoundEvent?.Invoke();
+            soundEventTime -= Time.deltaTime;
+            if(soundEventTime <= 0)
+            {
+                if(damage > 0)
+                {
+                    damageReceivedDelegate?.Invoke(damage, forceApplied);
+                    damageReceivedSoundEvent?.Invoke();
+                }
+                else 
+                {
+                    
+                    healReceivedSoundEvent?.Invoke();
+                }
+                soundEventTime = maxSoundEventDelay;
+            }
         }
     }
 
