@@ -366,6 +366,22 @@ MonoBehaviour:
       minIntensity: 0.2
       maxIntensity: 0.4
   - invocationData:
+      displayPath: Capsule/DamageReceiver.damageReceivedSoundEvent
+      gameObject: {fileID: 4078694433504660958}
+      scriptType: DamageReceiver
+      fieldName: damageReceivedSoundEvent
+    soundConfig:
+      clips:
+      - {fileID: 8300000, guid: 4e7cbdc78e178c7418eaea0253042377, type: 3}
+      - {fileID: 8300000, guid: bb3aa731f461dc641827dda641275755, type: 3}
+      - {fileID: 8300000, guid: b7f6daf564e7a514899d060af5845253, type: 3}
+      - {fileID: 8300000, guid: 3a53646b0c8f33241b2a13ae68c1f865, type: 3}
+      mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
+      minPitch: 1
+      maxPitch: 1.5
+      minIntensity: 0.2
+      maxIntensity: 0.4
+  - invocationData:
       displayPath: Capsule/DamageReceiver.damageReceivedDelegate
       gameObject: {fileID: 4078694433504660958}
       scriptType: DamageReceiver
