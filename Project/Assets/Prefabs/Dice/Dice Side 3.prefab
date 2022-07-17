@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8573548053605526764}
   - component: {fileID: 8573548053605526766}
   - component: {fileID: 8573548053605526765}
+  - component: {fileID: 2786699535678346881}
   m_Layer: 0
   m_Name: Dice Side 3
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8573548053605526771}
   m_Mesh: {fileID: 7378029608650140396, guid: d5b030f7efa4bcc44bbeb15aa1a7b6d2, type: 3}
+--- !u!114 &2786699535678346881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573548053605526771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e8cc7abdae5b47b06b9396ccd1f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 365832826154176193, guid: 3a352696bcbf2c64484acc582ded8c3c, type: 3}
+  diceEffectConfig: {fileID: 11400000, guid: 42a47c12febf7bb47b08c08c5756156c, type: 2}
+  attachToSide: 0
+  effectDuration: 1

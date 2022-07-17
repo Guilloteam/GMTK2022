@@ -82,7 +82,7 @@ public class LeaderboardMenu : MonoBehaviour
         WWWForm form = new WWWForm();
         UnityWebRequest webRequest = null;
         if(showLocalScore)
-           webRequest = LeaderboardUtility.GetLeaderboardRequest(EncryptionService.instance.projectId, showTop, pageSize, ScoreSystem.instance.scoreId, ScoreSystem.instance.score, ScoreSystem.instance.username);
+           webRequest = LeaderboardUtility.GetLeaderboardRequest(EncryptionService.instance.projectId, showTop, pageSize, ScoreSystem.instance.scoreId, (int)ScoreSystem.instance.score, ScoreSystem.instance.username);
         else
            webRequest = LeaderboardUtility.GetLeaderboardRequest(EncryptionService.instance.projectId, showTop, pageSize, ScoreSystem.instance.scoreId);
         yield return webRequest.SendWebRequest();

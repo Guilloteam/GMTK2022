@@ -6,7 +6,7 @@ public class ScoreSystem : MonoBehaviour
 {
     public static ScoreSystem instance;
 
-    public int score;
+    public float score;
     public int scoreId;
     public string username;
 

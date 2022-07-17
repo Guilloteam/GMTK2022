@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 54446106371207414}
   - component: {fileID: 54446106371207417}
   - component: {fileID: 4176076841522664936}
+  - component: {fileID: -9107645822805265531}
   m_Layer: 0
   m_Name: Dice Side X2
   m_TagString: Untagged
@@ -98,3 +99,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6445310413163253118, guid: e1e1ba3e3f0f51243a92290a0c887ccb, type: 3}
   diceEffectConfig: {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}
+  attachToSide: 0
+  effectDuration: 1
+--- !u!114 &-9107645822805265531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54446106371207419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8e8cc7abdae5b47b06b9396ccd1f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 365832826154176193, guid: 7db05fcf6fa27654aa47e2b59f2d541e, type: 3}
+  diceEffectConfig: {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}
+  attachToSide: 0
+  effectDuration: 0
