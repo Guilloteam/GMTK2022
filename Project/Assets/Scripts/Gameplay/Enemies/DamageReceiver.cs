@@ -26,7 +26,7 @@ public class DamageReceiver : MonoBehaviour
         if(health <= 0)
         {
             if(deathPrefab != null)
-                Instantiate(deathPrefab, transform.position, Quaternion.identity);
+                Instantiate(deathPrefab, transform.position, deathPrefab.rotation);
             deathDelegate?.Invoke();
         }
         else
