@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365832826154176193}
   - component: {fileID: 8203395487594641423}
-  - component: {fileID: -5571683214459678858}
+  - component: {fileID: 6884729587710172757}
   m_Layer: 0
   m_Name: Multiply Dice Effect
   m_TagString: Untagged
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 2
---- !u!82 &-5571683214459678858
+--- !u!82 &6884729587710172757
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +58,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
   m_audioClip: {fileID: 8300000, guid: bba0df48811f5d645b2734981fa9799c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.424
+  m_Volume: 0.44
   m_Pitch: 1
   Loop: 0
   Mute: 0
