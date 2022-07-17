@@ -24480,6 +24480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358796905488075267}
   - component: {fileID: 4789912783481962403}
+  - component: {fileID: 720144687485467427}
   m_Layer: 0
   m_Name: Boule de feu
   m_TagString: Untagged
@@ -24526,6 +24527,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
+--- !u!114 &720144687485467427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358796905488075266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bafd62d21aab049b0318d75478e630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config:
+    intensity: 1
+    duration: 0.5
+  playOnStart: 1
 --- !u!1 &358796905550935041
 GameObject:
   m_ObjectHideFlags: 0
