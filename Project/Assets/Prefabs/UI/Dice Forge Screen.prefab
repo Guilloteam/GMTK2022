@@ -393,8 +393,8 @@ MonoBehaviour:
       mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
       minPitch: 1
       maxPitch: 1
-      minIntensity: 1
-      maxIntensity: 1
+      minIntensity: 0.5
+      maxIntensity: 0.5
 --- !u!1 &4334194545076427530
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +572,8 @@ MonoBehaviour:
       mixerGroup: {fileID: 1058102080258693171, guid: 7371a39c93339bb41ab3162e59cf47b6, type: 2}
       minPitch: 1
       maxPitch: 1
-      minIntensity: 1
-      maxIntensity: 1
+      minIntensity: 0.5
+      maxIntensity: 0.5
 --- !u!1 &6541825297286187875
 GameObject:
   m_ObjectHideFlags: 0
