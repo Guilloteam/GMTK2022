@@ -9,6 +9,7 @@ public class DamageReceiver : MonoBehaviour
     private new Rigidbody rigidbody;
 
     public System.Action<float, Vector3> damageReceivedDelegate;
+    public System.Action damageReceivedSoundEvent;
     public System.Action deathDelegate;
     public Transform deathPrefab;
     public Transform hurtPrefab;
@@ -34,6 +35,7 @@ public class DamageReceiver : MonoBehaviour
             if(hurtPrefab != null)
                 Instantiate(hurtPrefab, transform.position, Quaternion.identity);
             damageReceivedDelegate?.Invoke(damage, forceApplied);
+            damageReceivedSoundEvent?.Invoke();
         }
     }
 

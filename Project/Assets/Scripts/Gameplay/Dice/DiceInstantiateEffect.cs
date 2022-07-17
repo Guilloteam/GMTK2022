@@ -10,6 +10,7 @@ public class DiceInstantiateEffect : MonoBehaviour
     public bool attachToSide = false;
     public float effectDuration = 1;
     private bool effectStopped = false;
+    private DiceEffectRoot diceEffectRoot;
     
     void Start()
     {
@@ -23,6 +24,9 @@ public class DiceInstantiateEffect : MonoBehaviour
 
     void OnDestroy()
     {
+        StopAllCoroutines();
+        if(diceEffectRoot != null)
+            Destroy(diceEffectRoot.gameObject);
         if(slot != null)
         {
             slot.activationStartDelegate -= StartEffect;
@@ -43,7 +47,7 @@ public class DiceInstantiateEffect : MonoBehaviour
     private IEnumerator EffectCoroutine()
     {
         effectStopped = false;
-        DiceEffectRoot diceEffectRoot = Instantiate(prefab, transform.position, prefab.rotation, attachToSide ? transform : null).gameObject.AddComponent<DiceEffectRoot>();
+        diceEffectRoot = Instantiate(prefab, transform.position, prefab.rotation, attachToSide ? transform : null).gameObject.AddComponent<DiceEffectRoot>();
         diceEffectRoot.config = diceEffectConfig;
         diceEffectRoot.dice = GetComponentInParent<DiceBuilder>();
         
