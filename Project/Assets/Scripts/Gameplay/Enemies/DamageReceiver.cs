@@ -49,7 +49,7 @@ public class DamageReceiver : MonoBehaviour
         }
         else
         {
-            if(hurtPrefab != null)
+            if(damage > 0 && hurtPrefab != null)
                 Instantiate(hurtPrefab, transform.position, Quaternion.identity);
             if(soundEventTime <= 0)
             {

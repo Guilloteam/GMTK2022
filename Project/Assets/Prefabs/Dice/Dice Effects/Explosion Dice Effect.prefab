@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxPrefab: {fileID: 358796905488075266, guid: 123edcca233f2f54db2e4ad860788bdd, type: 3}
+  explosionGroup: Fire
 --- !u!114 &-8041768999137053666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   applyOnStart: 0
+  bypassWeight: 0
 --- !u!82 &-164117438399585597
 AudioSource:
   m_ObjectHideFlags: 0

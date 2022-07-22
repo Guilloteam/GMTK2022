@@ -19,11 +19,11 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.mass = physicsConfig.mass;
     }
     
     void FixedUpdate()
     {
+        rigidbody.mass = physicsConfig.mass;
         rigidbody.AddForce(inputDirection * physicsConfig.acceleration + Vector3.down * physicsConfig.gravity, ForceMode.Acceleration);
         rigidbody.velocity = rigidbody.velocity * Mathf.Pow(physicsConfig.inertia, Time.fixedDeltaTime);
         if(rigidbody.velocity.sqrMagnitude > physicsConfig.maxSpeed * physicsConfig.maxSpeed)

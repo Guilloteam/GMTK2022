@@ -11,6 +11,7 @@ public class DamageZone : MonoBehaviour
     public float repulseMinForce = 1;
     public LayerMask layerMask;
     public bool applyOnStart = true;
+    public bool bypassWeight = false;
 
     void Start()
     {

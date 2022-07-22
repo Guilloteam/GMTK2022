@@ -260,9 +260,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsConfig: {fileID: 11400000, guid: 2735c1b2073b82148a277545581ef53f, type: 2}
   sampleCount: 10
-  immobileThreshold: 1
-  immobile: 0
+  alignmentThreshold: 0.01
   angularSpeedThresholdMultiplier: 10
+  leaveIdlestateThreshold: 0.5
+  immobileThreshold: 0.1
 --- !u!33 &4122211699459483431
 MeshFilter:
   m_ObjectHideFlags: 0

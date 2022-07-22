@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ca885c242287143999aa21c72587ce, type: 3}
   m_Name: Tank Enemy Physics
   m_EditorClassIdentifier: 
-  acceleration: 8.5
-  inertia: 0.01
+  acceleration: 30
+  inertia: 0
   maxSpeed: 1
-  mass: 3
+  mass: 50
   gravity: 9.83

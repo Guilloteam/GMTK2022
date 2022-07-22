@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RecoilDamageHandler : MonoBehaviour
 {
-    public float recoilIntensity = 200;
+    public float recoilRatio = 1;
     private new Rigidbody rigidbody;
     private MovementController movementController;
     public EntityPhysicsConfig knockedPhysics;
@@ -25,7 +25,7 @@ public class RecoilDamageHandler : MonoBehaviour
     {
         Vector3 direction = forceApplied;
         direction.y = 0;
-        rigidbody.AddForce(forceApplied);
+        rigidbody.AddForce(forceApplied * recoilRatio);
         movementController.physicsConfig = knockedPhysics;
         knockedTime = knockedDuration;
     }

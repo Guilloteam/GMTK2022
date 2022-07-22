@@ -7,14 +7,23 @@ public class ExplosionEffect : MonoBehaviour
     private DamageZone damageZone;
     private static List<ExplosionEffect> activeEffects = new List<ExplosionEffect>();
     public GameObject fxPrefab;
+    public string explosionGroup;
 
     void Start()
     {
         damageZone = GetComponent<DamageZone>();
         activeEffects.Add(this);
-        foreach(ExplosionEffect effect in activeEffects)
+        if(explosionGroup != "")
         {
-            effect.PlayEffect();
+            foreach(ExplosionEffect effect in activeEffects)
+            {
+                if(effect.explosionGroup == explosionGroup)
+                    effect.PlayEffect();
+            }
+        }
+        else
+        {
+            PlayEffect();
         }
     }
 

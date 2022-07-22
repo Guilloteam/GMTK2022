@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ProjectileState
+{
+    Idle,
+    Moving
+}
+
 public class ProjectilePhysics : MonoBehaviour
 {
     public ProjectilePhysicsSettings physicsConfig;
@@ -10,10 +16,14 @@ public class ProjectilePhysics : MonoBehaviour
     public int sampleCount = 10;
     private float[] movementSamples;
     private int movementSampleCursor = 0;
-    public float immobileThreshold = 1;
-    public bool immobile = false;
+    ProjectileState currentState;
+    public float alignmentThreshold = 0.01f;
     public float angularSpeedThresholdMultiplier = 10;
     public System.Action returnToIdleStateDelegate;
+    public System.Action leaveIdleStateDelegate;
+    public float leaveIdlestateThreshold = 0.5f;
+    private int verticalDirectionIndex;
+    public float immobileThreshold = 1;
 
     public void Start()
     {
@@ -27,17 +37,35 @@ public class ProjectilePhysics : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movementSamples[(movementSampleCursor++) % movementSamples.Length] = Mathf.Max(rigidbody.velocity.sqrMagnitude, rigidbody.angularVelocity.sqrMagnitude * angularSpeedThresholdMultiplier);
-        float sum = 0;
-        for(int i=0; i<movementSamples.Length; i++)
+        Vector3[] directionsArray = new Vector3[]{transform.right, transform.up, transform.forward};
+        switch(currentState)
         {
-            sum += movementSamples[i];
-        }
-        bool wasImmobile = immobile;
-        immobile = sum < immobileThreshold;
-        if(!wasImmobile && immobile)
-        {
-            returnToIdleStateDelegate?.Invoke();
+            case ProjectileState.Idle:
+                float verticalDirection = directionsArray[verticalDirectionIndex].y;
+                if(Mathf.Abs(verticalDirection) < leaveIdlestateThreshold)
+                {
+                    currentState = ProjectileState.Moving;
+                    leaveIdleStateDelegate?.Invoke();
+                }
+            break;
+            case ProjectileState.Moving:
+                
+                if(Mathf.Max(rigidbody.velocity.sqrMagnitude, rigidbody.angularVelocity.sqrMagnitude * angularSpeedThresholdMultiplier) < immobileThreshold)
+                {
+                    for(int i=0; i<directionsArray.Length; i++)
+                    {
+                        if(Mathf.Abs(directionsArray[i].y) > 1-alignmentThreshold)
+                        {
+                            currentState = ProjectileState.Idle;
+                            returnToIdleStateDelegate?.Invoke();
+                            verticalDirectionIndex = i;
+                            break;
+                        }
+                    }
+                }
+
+                
+            break;
         }
         rigidbody.mass = physicsConfig.mass;
         rigidbody.velocity = Vector3.Scale(rigidbody.velocity, new Vector3(Mathf.Pow(physicsConfig.drag.x, Time.fixedDeltaTime), Mathf.Pow(physicsConfig.drag.y, Time.fixedDeltaTime), Mathf.Pow(physicsConfig.drag.z, Time.fixedDeltaTime))) ;

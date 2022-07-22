@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 358796905488075267}
   - component: {fileID: 7314404783064236888}
   - component: {fileID: 8514083151143398722}
+  - component: {fileID: 7909403210808903090}
   m_Layer: 0
   m_Name: Hurt FX
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
-  damage: 0
+  damage: 0.001
   duration: 0
   repulseMaxForce: 1000
   repulseMinForce: 500
@@ -54,6 +55,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   applyOnStart: 1
+  bypassWeight: 0
 --- !u!114 &8514083151143398722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,4 +68,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5e0126ed0126641b0b1214d17f14a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1
+  duration: 2
+--- !u!114 &7909403210808903090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358796905488075266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bafd62d21aab049b0318d75478e630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config:
+    intensity: 1
+    duration: 0.5
+  playOnStart: 1

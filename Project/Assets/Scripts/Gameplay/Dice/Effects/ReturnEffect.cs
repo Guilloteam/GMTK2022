@@ -20,6 +20,7 @@ public class ReturnEffect : MonoBehaviour
     {
         while(!grabbable || GrabHand.instance.grabbedElement != null)
             yield return null;
+        GrabHand.instance.canGrab = false;
         Instantiate(fxPrefab, grabbable.transform.position, fxPrefab.rotation);
         diceDisappearDelegate?.Invoke();
         yield return new WaitForSeconds(disappearDelay);
@@ -27,5 +28,6 @@ public class ReturnEffect : MonoBehaviour
         GrabHand.instance.ForceGrab(grabbable);
         Instantiate(fxPrefab, grabbable.transform.position, fxPrefab.rotation);
         diceReappearDelegate?.Invoke();
+        GrabHand.instance.canGrab = true;
     }
 }

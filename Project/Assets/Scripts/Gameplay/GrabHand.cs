@@ -16,6 +16,7 @@ public class GrabHand : MonoBehaviour
     public LayerMask raycastLayerMask;
     public System.Action grabStartedDelegate;
     public System.Action<Vector3> throwDelegate;
+    public bool canGrab = true;
 
     private void Awake()
     {
@@ -53,7 +54,7 @@ public class GrabHand : MonoBehaviour
                 closestGrabbableInRange = newClosestGrabbable;
             }
         }
-        if(grabAction.WasPressedThisFrame())
+        if(grabAction.WasPressedThisFrame() && canGrab)
         {
             if(grabbedElement == null)
             {

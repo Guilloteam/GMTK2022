@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3125509688762719635}
   - component: {fileID: 3125509688762719634}
   - component: {fileID: 3125509688762719645}
+  - component: {fileID: 3532267638871339291}
   m_Layer: 0
   m_Name: Score Bonus FX
   m_TagString: Untagged
@@ -189,3 +190,16 @@ MonoBehaviour:
   bonus: 10
   velocity: {x: 0, y: 0.5, z: 0.5}
   fadeDuration: 3
+--- !u!114 &3532267638871339291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125509688762719644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5e0126ed0126641b0b1214d17f14a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5

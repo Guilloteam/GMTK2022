@@ -56,6 +56,7 @@ public class DiceInstantiateEffect : MonoBehaviour
             yield return null;
         if(time >= effectDuration)
             diceEffectRoot.activationFinishedDelegate?.Invoke();
+        bool activationFinished = time >= effectDuration;
         while(!effectStopped)
             yield return null;
         Destroy(diceEffectRoot.gameObject);

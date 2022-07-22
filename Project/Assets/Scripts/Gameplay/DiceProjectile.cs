@@ -21,6 +21,7 @@ public class DiceProjectile : MonoBehaviour
         projectilePhysics = GetComponent<ProjectilePhysics>();
         projectilePhysics.physicsConfig = idlePhysicsConfig;
         projectilePhysics.returnToIdleStateDelegate += OnReturnToIdleState;
+        projectilePhysics.leaveIdleStateDelegate += OnLeaveIdleState;
         grabbable = GetComponent<Grabbable>();
         grabbable.throwDelegate += OnThrow;
         grabbable.grabbedDelegate += OnGrabbed;
@@ -70,5 +71,12 @@ public class DiceProjectile : MonoBehaviour
             diceSlots.slots[bestFace].activationStartDelegate?.Invoke();
             activeFace = bestFace;
         }
+    }
+
+    private void OnLeaveIdleState()
+    {
+        if(activeFace >= 0)
+            diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
+        activeFace = -1;
     }
 }

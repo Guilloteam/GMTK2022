@@ -43,6 +43,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030191, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: physicsConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 90f9305835163d743a538ca9718ef601, type: 2}
+    - target: {fileID: 4078694434231030192, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -98,6 +106,22 @@ PrefabInstance:
     - target: {fileID: 4261676645721699854, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247110763392177723, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: recoilRatio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247110763392177723, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: knockedPhysics
+      value: 
+      objectReference: {fileID: 11400000, guid: 47c032727a215574ca617d7d0f991ec1, type: 2}
+    - target: {fileID: 5247110763392177723, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: knockedDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247110763392177723, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: recoilIntensity
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6495450973511190875, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: score

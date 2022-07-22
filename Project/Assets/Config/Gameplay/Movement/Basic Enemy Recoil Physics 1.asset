@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41ca885c242287143999aa21c72587ce, type: 3}
-  m_Name: Tank Enemy Recoil Physics
+  m_Name: Basic Enemy Recoil Physics 1
   m_EditorClassIdentifier: 
   acceleration: 0
-  inertia: 0.05
-  maxSpeed: 1000
-  mass: 50
+  inertia: 0.2
+  maxSpeed: 10
+  mass: 3
   gravity: 9.83
