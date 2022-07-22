@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852890946708026792}
   m_LocalRotation: {x: 0.7071066, y: -0, z: -0, w: 0.707107}
-  m_LocalPosition: {x: 0, y: 0.156, z: -0.408}
+  m_LocalPosition: {x: 0, y: 0.15600014, z: -0.4080001}
   m_LocalScale: {x: 0.31057, y: 0.31057, z: 0.31057}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4078694434231030194}
-  m_RootOrder: 2
+  m_Father: {fileID: 2719826077933808375}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &243810229917561133
 SpriteRenderer:
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441235402ac8a7f4abb6d18a31eaa85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilIntensity: 150
+  recoilRatio: 1
   knockedPhysics: {fileID: 11400000, guid: 22abbde945c82e64991bfd9a8fa22636, type: 2}
   knockedDuration: 1
 --- !u!1 &4078694433783666306
@@ -371,7 +371,6 @@ Transform:
   m_Children:
   - {fileID: 2719826077933808375}
   - {fileID: 4078694433504660959}
-  - {fileID: 4261676645721699854}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -536,6 +535,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4078694433783666307}
+  - {fileID: 4261676645721699854}
   m_Father: {fileID: 4078694434231030194}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electricArcPrefab: {fileID: 419954341140876846, guid: 7ca89ef06dad1344ca1dd0af0869f4cf, type: 3}
-  damagePerSecond: 4
+  damagePerSecond: 6
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 512

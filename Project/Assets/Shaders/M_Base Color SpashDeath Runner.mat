@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Base Color SpashDeath
+  m_Name: M_Base Color SpashDeath Runner
   m_Shader: {fileID: -6465566751694194690, guid: d07aa2c47e96dbf4dbd3451536569ebe, type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON
@@ -140,9 +140,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color_B: {r: 0.34901962, g: 0.45167074, b: 0.5647059, a: 0}
-    - _Color_R: {r: 1, g: 0.25098038, b: 0.36475846, a: 0}
-    - _Color_V: {r: 1, g: 0.9456853, b: 0.8632076, a: 0}
+    - _Color_B: {r: 0.34901962, g: 0.45098042, b: 0.5647059, a: 0}
+    - _Color_R: {r: 0.7019608, g: 0, b: 1, a: 0}
+    - _Color_V: {r: 1, g: 0.9450981, b: 0.86274517, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

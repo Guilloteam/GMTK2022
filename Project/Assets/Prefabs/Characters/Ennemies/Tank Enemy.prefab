@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: health
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7881848168658244810, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: deathPrefab
+      value: 
+      objectReference: {fileID: 6528600369064226604, guid: 4ddebd75c8dc8a84da1d5fa165c6bbe6, type: 3}
     - target: {fileID: 8882224832454100577, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: xp
       value: 10

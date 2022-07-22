@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxPrefab: {fileID: 358796905488075266, guid: 8ffd7b335f9f8464b8f7d526a806165c, type: 3}
+  explosionGroup: 
 --- !u!114 &-8041768999137053666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,9 +61,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 5
   damage: 1
-  repulseMaxForce: 1000
-  repulseMinForce: 500
+  duration: 0
+  repulseMaxForce: 500
+  repulseMinForce: 250
   layerMask:
     serializedVersion: 2
     m_Bits: 512
   applyOnStart: 0
+  bypassWeight: 0
