@@ -18,7 +18,7 @@ public class ProjectilePhysics : MonoBehaviour
     private int movementSampleCursor = 0;
     ProjectileState currentState;
     public float alignmentThreshold = 0.01f;
-    public float angularSpeedThresholdMultiplier = 10;
+    public float angularSpeedThreshold = 0.05f;
     public System.Action returnToIdleStateDelegate;
     public System.Action leaveIdleStateDelegate;
     public float leaveIdlestateThreshold = 0.5f;
@@ -50,7 +50,7 @@ public class ProjectilePhysics : MonoBehaviour
             break;
             case ProjectileState.Moving:
                 
-                if(Mathf.Max(rigidbody.velocity.sqrMagnitude, rigidbody.angularVelocity.sqrMagnitude * angularSpeedThresholdMultiplier) < immobileThreshold)
+                if(rigidbody.velocity.sqrMagnitude < immobileThreshold * immobileThreshold && rigidbody.angularVelocity.sqrMagnitude < angularSpeedThreshold * angularSpeedThreshold)
                 {
                     for(int i=0; i<directionsArray.Length; i++)
                     {
@@ -74,6 +74,7 @@ public class ProjectilePhysics : MonoBehaviour
 
     private void OnThrow(Vector3 direction)
     {
+        currentState = ProjectileState.Moving;
         rigidbody.velocity = direction * physicsConfig.throwStrength.x + Vector3.up * physicsConfig.throwStrength.y;
         rigidbody.maxAngularVelocity = physicsConfig.throwTorque + physicsConfig.throwTorqueVariation;
         rigidbody.AddTorque(Vector3.Cross(direction, Vector3.up).normalized * (physicsConfig.throwTorque + Random.Range(-physicsConfig.throwTorqueVariation, physicsConfig.throwTorqueVariation)), ForceMode.VelocityChange);

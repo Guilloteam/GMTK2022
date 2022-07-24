@@ -20,6 +20,7 @@ public class DiceManager : MonoBehaviour
     public DiceBuild emptyDiceConfig;
     public bool gamePaused = false;
     public Vector3 newDiceSpawnOffset;
+    public PaletteConfig[] palettes;
 
     void Awake()
     {
@@ -37,6 +38,7 @@ public class DiceManager : MonoBehaviour
         for(int i=0; i<currentConfig.dices.Count; i++)
         {
             DiceBuilder dice = Instantiate(dicePrefab, diceSpawnPoints[i].position, Quaternion.identity);
+            dice.GetComponent<PaletteRoot>().palette = palettes[spawnedDices.Count];
             dice.diceConfig = currentConfig.dices[i];
             spawnedDices.Add(dice);
         }
@@ -45,6 +47,7 @@ public class DiceManager : MonoBehaviour
     public void AddEmptyDice()
     {
         DiceBuilder dice = Instantiate(dicePrefab, KeyboardMovement.instance.transform.position + newDiceSpawnOffset, Quaternion.identity);
+        dice.GetComponent<PaletteRoot>().palette = palettes[spawnedDices.Count];
         dice.diceConfig = Instantiate(emptyDiceConfig);
         currentConfig.dices.Add(dice.diceConfig);
         spawnedDices.Add(dice);
@@ -58,6 +61,7 @@ public class DiceManager : MonoBehaviour
             if(i >= spawnedDices.Count)
             {
                 dice = Instantiate(dicePrefab, diceSpawnPoints[i].position, Quaternion.identity);
+                dice.GetComponent<PaletteRoot>().palette = palettes[spawnedDices.Count];
                 dice.diceConfig = currentConfig.dices[i];
             }
             else dice = spawnedDices[i];

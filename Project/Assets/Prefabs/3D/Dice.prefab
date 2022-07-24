@@ -217,6 +217,8 @@ GameObject:
   - component: {fileID: 1260700222}
   - component: {fileID: 5463524574942705294}
   - component: {fileID: 886647071841364544}
+  - component: {fileID: 3352023489523817446}
+  - component: {fileID: 5073960219045581839}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Untagged
@@ -260,8 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsConfig: {fileID: 11400000, guid: 2735c1b2073b82148a277545581ef53f, type: 2}
   sampleCount: 10
-  alignmentThreshold: 0.01
-  angularSpeedThresholdMultiplier: 10
+  alignmentThreshold: 0.5
+  angularSpeedThresholdMultiplier: 50
   leaveIdlestateThreshold: 0.5
   immobileThreshold: 0.1
 --- !u!33 &4122211699459483431
@@ -385,7 +387,6 @@ MonoBehaviour:
   projectilePhysics: {fileID: 0}
   idlePhysicsConfig: {fileID: 11400000, guid: 2735c1b2073b82148a277545581ef53f, type: 2}
   thrownPhysicsConfig: {fileID: 11400000, guid: 697d7e874ec4abe409cc8b0bd4eaaee0, type: 2}
-  throwActivationDelay: 0.3
 --- !u!114 &1260700223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +462,31 @@ MonoBehaviour:
   damageType: 0
   damage: 1
   impactThreshold: 10
+--- !u!114 &3352023489523817446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122211699459483435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5073960219045581839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122211699459483435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bd6f1020ceea141830a0ac0654bf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPalette: {fileID: 11400000, guid: 508ce0c73a0ec2f4e917455c4fc268ab, type: 2}
 --- !u!1 &4122211699652914091
 GameObject:
   m_ObjectHideFlags: 0

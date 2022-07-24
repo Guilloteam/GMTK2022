@@ -32,6 +32,7 @@ public class DiceForgeMenu : MonoBehaviour
         for(int i=0; i<upgradeMenu.config.dices.Count; i++)
         {
             UIDice dice = Instantiate(dicePrefab, diceContainer);
+            dice.GetComponent<PaletteRoot>().palette = DiceManager.instance.palettes[i];
             dices[i] = dice;
             dice.transform.position = diceOffset / 2 * (i - (upgradeMenu.config.dices.Count-1) / 2.0f) + secondRowOffset * ((i+1)%2);
             dice.camera = camera;

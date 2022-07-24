@@ -330,6 +330,8 @@ GameObject:
   - component: {fileID: 1034800937423847119}
   - component: {fileID: 3992810829177854932}
   - component: {fileID: 3992810829177854933}
+  - component: {fileID: 5741150752962216236}
+  - component: {fileID: 2012537465727385864}
   m_Layer: 7
   m_Name: UI Dice
   m_TagString: Untagged
@@ -472,6 +474,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5794354381508248827, guid: d5b030f7efa4bcc44bbeb15aa1a7b6d2, type: 3}
+--- !u!114 &5741150752962216236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992810829177854938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e312031c38ee8f7408c1d45375b14248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2012537465727385864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992810829177854938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bd6f1020ceea141830a0ac0654bf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPalette: {fileID: 11400000, guid: 501a637a1899d71409f9be14b36fc6bc, type: 2}
 --- !u!1 &3992810829802533497
 GameObject:
   m_ObjectHideFlags: 0

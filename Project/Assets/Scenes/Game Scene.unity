@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28341207, g: 0.36986157, b: 0.5010881, a: 1}
+  m_IndirectSpecularColor: {r: 0.28341195, g: 0.36986113, b: 0.5010873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -808,6 +808,15 @@ MonoBehaviour:
   emptyDiceConfig: {fileID: 11400000, guid: e9c242f71552e9b4c82cc59605978b6c, type: 2}
   gamePaused: 0
   newDiceSpawnOffset: {x: -2, y: 5, z: 0}
+  palettes:
+  - {fileID: 11400000, guid: 501a637a1899d71409f9be14b36fc6bc, type: 2}
+  - {fileID: 11400000, guid: a5c67008af377f94991275c5d2ef0366, type: 2}
+  - {fileID: 11400000, guid: 16ea19aa1acd0cf4a9a5bcc501293d9d, type: 2}
+  - {fileID: 11400000, guid: ef9a0860000b6db4793cbb4771887bdb, type: 2}
+  - {fileID: 11400000, guid: f424f693fd7617b478942427bc02191f, type: 2}
+  - {fileID: 11400000, guid: 6bd02176b804e7a4baef6135cfa3259a, type: 2}
+  - {fileID: 11400000, guid: fbeb562ec1096d5469c60472c70b6e25, type: 2}
+  - {fileID: 11400000, guid: 508ce0c73a0ec2f4e917455c4fc268ab, type: 2}
 --- !u!4 &1332626606
 Transform:
   m_ObjectHideFlags: 0
