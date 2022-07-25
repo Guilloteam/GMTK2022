@@ -49,7 +49,8 @@ public class ElectricEffect : MonoBehaviour
             foreach(RaycastHit hit in hits)
             {
                 DamageReceiver damageReceiver = hit.collider.GetComponent<DamageReceiver>();
-                damageReceiver.OnDamageReceived(damagePerSecond * Time.deltaTime, Vector3.zero);
+                if(damageReceiver != null)
+                    damageReceiver.OnDamageReceived(damagePerSecond * Time.deltaTime, Vector3.zero);
             }
         }
     }

@@ -14,6 +14,7 @@ public class SplatterSpawner : MonoBehaviour
         damageReceiver = GetComponent<DamageReceiver>();
         damageReceiver.deathDelegate += OnDeath;
         damageReceiver.damageReceivedDelegate += OnDamageReceived;
+        paletteRoot = GetComponentInParent<PaletteRoot>();
     }
 
     void Update()
@@ -23,7 +24,8 @@ public class SplatterSpawner : MonoBehaviour
 
     private void OnDeath()
     {
-        Instantiate(splatterPrefab, transform.position, Quaternion.LookRotation(lastDamageDirection));
+        Transform splatter = Instantiate(splatterPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.LookRotation(lastDamageDirection));
+        splatter.gameObject.GetComponent<PaletteRoot>().palette = paletteRoot.palette;
     }
 
     private void OnDamageReceived(float damage, Vector3 direction)

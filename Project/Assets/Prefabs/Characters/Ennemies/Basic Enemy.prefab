@@ -192,9 +192,9 @@ MonoBehaviour:
   hurtPalette: {fileID: 11400000, guid: 18c06149006c97b4389c4eadad755c42, type: 2}
   healPalette: {fileID: 0}
   paletteRoot: {fileID: 0}
-  maxHurtDamage: 1
-  maxShake: 0.1
-  damageCountDecrease: 0.5
+  maxHurtDamage: 0.5
+  maxShake: 0.5
+  damageCountDecrease: 0.3
   shakeTransform: {fileID: 4078694433783666307}
   shakeDirections: {x: 1, y: 0, z: 1}
   minHurtValue: 0.3
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441235402ac8a7f4abb6d18a31eaa85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilRatio: 1
+  recoilRatio: 0
   knockedPhysics: {fileID: 11400000, guid: 22abbde945c82e64991bfd9a8fa22636, type: 2}
   knockedDuration: 1
 --- !u!114 &2247247932904079792

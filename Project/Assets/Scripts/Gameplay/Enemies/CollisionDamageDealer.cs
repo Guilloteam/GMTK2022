@@ -23,7 +23,7 @@ public class CollisionDamageDealer : MonoBehaviour
             {
                 if(damageReceiver.allowedDamageTypes[i] == damageType)
                 {
-                    damageReceiver.OnDamageReceived(damage, -collision.impulse);
+                    damageReceiver.OnDamageReceived(damage, collision.impulse.normalized);
                     return;
                 }
             }

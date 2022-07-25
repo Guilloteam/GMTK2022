@@ -47,7 +47,10 @@ public class HurtAnimation : MonoBehaviour
         {
             damageCount -= damageCountDecrease * Time.deltaTime;
             float damageRatio = Mathf.Clamp01(damageCount / maxHurtDamage);
-            shakeTransform.localPosition = startLocalPos + damageRatio * maxShake * new Vector3(shakeDirections.x * Random.Range(-1, 1), shakeDirections.y * Random.Range(-1, 1), shakeDirections.z * Random.Range(-1, 1));
+            if(Time.timeScale > 0)
+            {
+                shakeTransform.localPosition = startLocalPos + damageRatio * maxShake * new Vector3(shakeDirections.x * Random.Range(-1, 1), shakeDirections.y * Random.Range(-1, 1), shakeDirections.z * Random.Range(-1, 1));
+            }
             currentPalette.color_R = Color.Lerp(defaultPalette.color_R, hurtPalette.color_R, damageRatio);
             currentPalette.color_G = Color.Lerp(defaultPalette.color_G, hurtPalette.color_G, damageRatio);
             currentPalette.color_B = Color.Lerp(defaultPalette.color_B, hurtPalette.color_B, damageRatio);
