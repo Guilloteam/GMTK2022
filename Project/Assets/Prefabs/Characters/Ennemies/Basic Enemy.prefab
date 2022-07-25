@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 8882224832454100577}
   - component: {fileID: 6495450973511190875}
   - component: {fileID: 5247110763392177723}
+  - component: {fileID: 2247247932904079792}
   m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
@@ -239,6 +240,19 @@ MonoBehaviour:
   recoilRatio: 1
   knockedPhysics: {fileID: 11400000, guid: 22abbde945c82e64991bfd9a8fa22636, type: 2}
   knockedDuration: 1
+--- !u!114 &2247247932904079792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078694433504660958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e57cb837314632646abbb6600e879540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splatterPrefab: {fileID: 3598685267329149074, guid: 3ea2ea82cff843646800bda1c00e27df, type: 3}
 --- !u!1 &4078694433783666306
 GameObject:
   m_ObjectHideFlags: 0
