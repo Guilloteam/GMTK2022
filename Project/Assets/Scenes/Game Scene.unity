@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28341195, g: 0.36986113, b: 0.5010873, a: 1}
+  m_IndirectSpecularColor: {r: 0.28341207, g: 0.36986157, b: 0.5010881, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1184,6 +1184,134 @@ PrefabInstance:
       propertyPath: gameoverMenu
       value: 
       objectReference: {fileID: 1311998258}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[3].m_Id
+      value: ed0b9414-adf8-49a8-a7fd-0dfea0d3872a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[4].m_Id
+      value: 5d771448-1a9f-407c-881f-97f645a79761
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[5].m_Id
+      value: f75bf0fe-e686-4a9d-9aae-94d344cc5be9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[3].m_Id
+      value: ee311f95-a65f-4e6a-adfe-da43f1112eaa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[4].m_Id
+      value: a398893a-87fc-4044-aca3-13543dbfb7ab
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[5].m_Id
+      value: 9675972a-c482-4cc2-bd83-e9ddce59ca0c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[3].m_Name
+      value: 1D Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[3].m_Path
+      value: 1DAxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[4].m_Name
+      value: negative
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[4].m_Path
+      value: <Keyboard>/downArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[5].m_Name
+      value: positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[5].m_Path
+      value: <Keyboard>/upArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[3].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[4].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[5].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[3].m_Name
+      value: 1D Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[3].m_Path
+      value: 1DAxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[4].m_Name
+      value: negative
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[4].m_Path
+      value: <Keyboard>/leftArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[5].m_Name
+      value: positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[5].m_Path
+      value: <Keyboard>/rightArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[3].m_Action
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[4].m_Action
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: verticalAction.m_SingletonActionBindings.Array.data[5].m_Action
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[3].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[4].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[5].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[3].m_Action
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[4].m_Action
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: horizontalAction.m_SingletonActionBindings.Array.data[5].m_Action
+      value: Horizontal
+      objectReference: {fileID: 0}
     - target: {fileID: 5418886797453688551, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2935
