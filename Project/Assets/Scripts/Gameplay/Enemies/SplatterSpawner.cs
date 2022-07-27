@@ -6,7 +6,7 @@ public class SplatterSpawner : MonoBehaviour
 {
     public Transform splatterPrefab;
     private DamageReceiver damageReceiver;
-    private PaletteRoot paletteRoot;
+    private HurtAnimation hurtAnimation;
     private Vector3 lastDamageDirection;
 
     void Start()
@@ -14,7 +14,7 @@ public class SplatterSpawner : MonoBehaviour
         damageReceiver = GetComponent<DamageReceiver>();
         damageReceiver.deathDelegate += OnDeath;
         damageReceiver.damageReceivedDelegate += OnDamageReceived;
-        paletteRoot = GetComponentInParent<PaletteRoot>();
+        hurtAnimation = GetComponentInParent<HurtAnimation>();
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class SplatterSpawner : MonoBehaviour
     private void OnDeath()
     {
         Transform splatter = Instantiate(splatterPrefab, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.LookRotation(lastDamageDirection));
-        splatter.gameObject.GetComponent<PaletteRoot>().palette = paletteRoot.palette;
+        splatter.gameObject.GetComponent<PaletteRoot>().palette = hurtAnimation.defaultPalette;
     }
 
     private void OnDamageReceived(float damage, Vector3 direction)

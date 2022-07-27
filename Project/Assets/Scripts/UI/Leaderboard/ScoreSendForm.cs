@@ -41,10 +41,10 @@ public class ScoreSendForm : MonoBehaviour
         form.AddField("project", EncryptionService.instance.projectId);
 
         string requestPath = "https://webservice.guilloteam.fr/score/add/";
-        if(ScoreSystem.instance.scoreId >= 0)
-        {
-            requestPath = "https://webservice.guilloteam.fr/score/update/";
-        }
+        // if(ScoreSystem.instance.scoreId >= 0)
+        // {
+        //     requestPath = "https://webservice.guilloteam.fr/score/update/";
+        // }
         UnityWebRequest webRequest = UnityWebRequest.Post(requestPath,  form);
         
         yield return webRequest.SendWebRequest();

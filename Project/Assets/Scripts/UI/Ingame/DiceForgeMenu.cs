@@ -47,6 +47,16 @@ public class DiceForgeMenu : MonoBehaviour
         Physics.Simulate(Time.fixedDeltaTime);
     }
 
+    private void OnEnable()
+    {
+        if(toAttachElement != null)
+        {
+            Destroy(toAttachElement.gameObject);
+            toAttachElement = Instantiate(newEffect.diceSidePrefab, toAttachContainer);
+            toAttachElement.gameObject.layer = gameObject.layer;
+        }
+    }
+
     void OnDestroy()
     {
         Physics.autoSimulation = true;

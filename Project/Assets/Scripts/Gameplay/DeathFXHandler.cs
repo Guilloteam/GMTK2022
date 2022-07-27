@@ -15,7 +15,15 @@ public class DeathFXHandler : MonoBehaviour
     private void OnDeath()
     {
         if(fxPrefab != null)
-            Instantiate(fxPrefab, transform.position, Quaternion.identity);
+        {
+            Transform fx = Instantiate(fxPrefab, transform.position, Quaternion.identity);
+            PaletteRoot paletteRoot = fx.GetComponent<PaletteRoot>();
+            if(paletteRoot)
+            {
+                paletteRoot.palette = GetComponentInParent<PaletteRoot>().palette;
+            }
+        }
+
         if(toDestroy != null)
         {
             Destroy(toDestroy);
