@@ -40,10 +40,17 @@ public class DamageZone : MonoBehaviour
         foreach(Collider collider in inRangeColliders)
         {
             DamageReceiver damageReceiver = collider.GetComponent<DamageReceiver>();
+            RecoilDamageHandler recoilHandler = collider.GetComponent<RecoilDamageHandler>();
             if(damageReceiver != null)
             {
                 Vector3 direction = collider.transform.position - transform.position;
                 damageReceiver.OnDamageReceived(damage, direction.normalized * Mathf.Lerp(repulseMaxForce, repulseMinForce, direction.magnitude / radius));
+            }
+
+            if(recoilHandler != null)
+            {
+                Vector3 direction = collider.transform.position - transform.position;
+                recoilHandler.OnPushback(direction.normalized * Mathf.Lerp(repulseMaxForce, repulseMinForce, direction.magnitude / radius));
             }
         }
     }

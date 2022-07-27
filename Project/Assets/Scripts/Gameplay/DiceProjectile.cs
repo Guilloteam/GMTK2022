@@ -12,6 +12,7 @@ public class DiceProjectile : MonoBehaviour
     private DiceSlots diceSlots;
     private int activeFace = -1;
     private bool grabbed = false;
+    private CollisionDamageDealer damageBox;
     
 
     void Start()
@@ -24,6 +25,7 @@ public class DiceProjectile : MonoBehaviour
         grabbable.throwDelegate += OnThrow;
         grabbable.grabbedDelegate += OnGrabbed;
         diceSlots = GetComponent<DiceSlots>();
+        damageBox = GetComponentInChildren<CollisionDamageDealer>();
     }
 
     void Update()
@@ -35,6 +37,7 @@ public class DiceProjectile : MonoBehaviour
         projectilePhysics.physicsConfig = thrownPhysicsConfig;
         activeFace = -1;
         grabbed = false;
+        damageBox.enabled = true;
     }
 
     private void OnGrabbed()
@@ -46,6 +49,8 @@ public class DiceProjectile : MonoBehaviour
 
     private void OnReturnToIdleState()
     {
+        damageBox.enabled = false;
+        damageBox.ResetHurtTargets();
         if(grabbed)
             return;
         projectilePhysics.physicsConfig = idlePhysicsConfig;
@@ -71,6 +76,7 @@ public class DiceProjectile : MonoBehaviour
 
     private void OnLeaveIdleState()
     {
+        damageBox.enabled = true;
         if(activeFace >= 0)
             diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
         activeFace = -1;

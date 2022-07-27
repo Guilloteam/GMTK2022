@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtPalette: {fileID: 11400000, guid: 18c06149006c97b4389c4eadad755c42, type: 2}
   healPalette: {fileID: 0}
+  defaultPalette: {fileID: 0}
   paletteRoot: {fileID: 0}
   maxHurtDamage: 0.5
   maxShake: 0.3
@@ -243,6 +244,8 @@ MonoBehaviour:
   recoilRatio: 0
   knockedPhysics: {fileID: 11400000, guid: 22abbde945c82e64991bfd9a8fa22636, type: 2}
   knockedDuration: 1
+  maxForce: 1000
+  forceRatio: 1
 --- !u!114 &2247247932904079792
 MonoBehaviour:
   m_ObjectHideFlags: 0

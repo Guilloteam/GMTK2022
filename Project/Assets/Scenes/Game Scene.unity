@@ -346,19 +346,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: -1.2190982e+10
+      value: 8.3e-44
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1.5320568e+31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 61.09907
+      value: 0.00000015281466
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 1.1046268e+27
+      value: 6.98e-43
       objectReference: {fileID: 0}
     - target: {fileID: 1371639367818638802, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_RootOrder
@@ -672,7 +672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8248732818171505775, guid: 20f2a5d8449d458419793f2431415cdf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -79.76
+      value: -79.76001
       objectReference: {fileID: 0}
     - target: {fileID: 8342047664358421075, guid: 20f2a5d8449d458419793f2431415cdf, type: 3}
       propertyPath: m_AnchorMax.y
@@ -872,6 +872,11 @@ MonoBehaviour:
   xpConfig: {fileID: 11400000, guid: aff1a482c3d7fb34eab24149e3e06b36, type: 2}
   currentXP: 0
   level: 1
+--- !u!4 &1500410190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5418886796978799362, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+  m_PrefabInstance: {fileID: 5418886795919522620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1508825554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,6 +1209,10 @@ PrefabInstance:
       propertyPath: gameoverMenu
       value: 
       objectReference: {fileID: 1311998258}
+    - target: {fileID: 5418886796978799482, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
+      propertyPath: shakeRotationTransform
+      value: 
+      objectReference: {fileID: 1500410190}
     - target: {fileID: 5418886796978799484, guid: 55dadbc2614ba364d82aa0c0dee48886, type: 3}
       propertyPath: verticalAction.m_SingletonActionBindings.Array.size
       value: 6
