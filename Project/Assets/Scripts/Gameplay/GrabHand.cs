@@ -17,6 +17,7 @@ public class GrabHand : MonoBehaviour
     public System.Action grabStartedDelegate;
     public System.Action<Vector3> throwDelegate;
     public bool canGrab = true;
+    private bool canThrow = false;
 
     private void Awake()
     {
@@ -68,7 +69,7 @@ public class GrabHand : MonoBehaviour
                     StartCoroutine(GrabAnimationCoroutine(grabAnimDuration));
                 }
             }
-            else
+            else if(canThrow)
             {
                 grabbedElement.grabbed = false;
                 RaycastHit hit;
@@ -120,6 +121,7 @@ public class GrabHand : MonoBehaviour
     
     private IEnumerator GrabAnimationCoroutine(float duration)
     {
+        canThrow = false;
         grabbedElement.grabbedDelegate?.Invoke();
         grabbedElement.grabbed = true;
         Vector3 startOffset = grabbedElement.transform.position - grabPosition.transform.position;
@@ -130,6 +132,7 @@ public class GrabHand : MonoBehaviour
             grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / duration);
             yield return null;
         }
+        canThrow = true;
         while(grabbedElement != null)
         {
             grabbedElement.transform.position = grabPosition.transform.position;
