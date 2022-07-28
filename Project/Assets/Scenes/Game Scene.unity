@@ -346,7 +346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 8.3e-44
+      value: 3.4e-44
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.x
@@ -354,11 +354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0.00000015281466
+      value: 3.4e-44
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 6.98e-43
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1371639367818638802, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_RootOrder
@@ -1100,6 +1100,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3952144419155691052, guid: e9fd6eddfb3959447899f523236fdfd1, type: 3}
+      propertyPath: endMaxWaveCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3952144419155691052, guid: e9fd6eddfb3959447899f523236fdfd1, type: 3}
+      propertyPath: difficultyDuration
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3952144419155691217, guid: e9fd6eddfb3959447899f523236fdfd1, type: 3}
       propertyPath: m_Name
       value: Enemies
