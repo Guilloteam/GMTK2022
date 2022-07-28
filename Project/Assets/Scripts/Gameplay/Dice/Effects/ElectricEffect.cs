@@ -15,12 +15,14 @@ public class ElectricEffect : MonoBehaviour
         GetComponent<DiceEffectRoot>().activationFinishedDelegate += OnActivationFinished;
         ElectricArc arc = Instantiate(electricArcPrefab, transform);
         electricArcInstances.Add(arc);
-        arc.target = KeyboardMovement.instance.transform;
+        arc.target = KeyboardMovement.instance.gameObject;
+        arc.origin = gameObject;
         foreach(ElectricEffect effect in activeEffects)
         {
             arc = Instantiate(electricArcPrefab, transform);
             electricArcInstances.Add(arc);
-            arc.target = effect.transform;
+            arc.target = effect.gameObject;
+            arc.origin = gameObject;
         }
         activeEffects.Add(this);
     }
@@ -42,9 +44,17 @@ public class ElectricEffect : MonoBehaviour
 
     private void Update()
     {
+        for(int i=electricArcInstances.Count-1; i>=0; i--)
+        {
+            if(electricArcInstances[i].target == null || electricArcInstances[i].origin == null)
+            {
+                Destroy(electricArcInstances[i].gameObject);
+                electricArcInstances.RemoveAt(i);
+            }
+        }
         foreach(ElectricArc arc in electricArcInstances)
         {
-            Vector3 direction = arc.target.position - arc.transform.position;
+            Vector3 direction = arc.target.transform.position - arc.origin.transform.position;
             RaycastHit[] hits = Physics.RaycastAll(arc.transform.position, direction, direction.magnitude, enemyLayerMask);
             foreach(RaycastHit hit in hits)
             {

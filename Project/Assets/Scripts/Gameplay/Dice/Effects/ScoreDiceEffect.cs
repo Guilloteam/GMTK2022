@@ -11,6 +11,7 @@ public class ScoreDiceEffect : MonoBehaviour
     {
         float multiplier = ScoreMultiplierEffect.GetCurrentMultiplier();
         ScoreSystem.instance.score += score * multiplier;
+        XPSystem.instance.AddXP(score * multiplier);
         Instantiate(bonusPrefab, transform.position, bonusPrefab.transform.rotation).bonus = (int)(score * multiplier);
     }
 }

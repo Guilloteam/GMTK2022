@@ -43,6 +43,7 @@ public class CollisionDamageDealer : MonoBehaviour
                     RecoilDamageHandler recoilHandler = damageReceiver.GetComponent<RecoilDamageHandler>();
                     Vector3 pushbackDirection = collision.impulse;
                     pushbackDirection.y = 0;
+                    if(recoilHandler != null)
                     recoilHandler.OnPushback(pushbackDirection.normalized * pushbackForce);
                     hurtTargets.Add(damageReceiver);
                     return;
