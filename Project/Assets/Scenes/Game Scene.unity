@@ -346,15 +346,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 3.4e-44
+      value: -2.7010174
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 9.23194e-40
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 3.4e-44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2138677392, guid: 3c8f5021057a996419c1b58a11c4a7bf, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -1106,7 +1106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952144419155691052, guid: e9fd6eddfb3959447899f523236fdfd1, type: 3}
       propertyPath: difficultyDuration
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3952144419155691217, guid: e9fd6eddfb3959447899f523236fdfd1, type: 3}
       propertyPath: m_Name

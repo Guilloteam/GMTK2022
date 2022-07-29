@@ -262,10 +262,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   physicsConfig: {fileID: 11400000, guid: 2735c1b2073b82148a277545581ef53f, type: 2}
   sampleCount: 10
-  alignmentThreshold: 0.5
-  angularSpeedThresholdMultiplier: 50
+  alignmentThreshold: 0.1
+  angularSpeedThreshold: 0.5
   leaveIdlestateThreshold: 0.5
-  immobileThreshold: 0.1
+  immobileThreshold: 0.5
 --- !u!33 &4122211699459483431
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -462,6 +462,7 @@ MonoBehaviour:
   damageType: 0
   damage: 1
   impactThreshold: 10
+  pushbackForce: 50
 --- !u!114 &3352023489523817446
 MonoBehaviour:
   m_ObjectHideFlags: 0

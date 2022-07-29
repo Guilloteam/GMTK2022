@@ -21,6 +21,8 @@ public class DiceForgeMenu : MonoBehaviour
     public System.Action pieceSnapEndDelegate;
 
     public Button cancelButton;
+    private List<IEnumerator> turnCoroutineStack = new List<IEnumerator>();
+    public float diceTurnOffset = 0.05f;
 
     IEnumerator Start()
     {
@@ -87,10 +89,10 @@ public class DiceForgeMenu : MonoBehaviour
         List<Coroutine> coroutines = new List<Coroutine>();
         for(int i=0; i<dices.Length; i++)
         {
-            coroutines.Add(StartCoroutine(dices[i].TurnCoroutine()));
+            dices[i].Turn();
+            yield return new WaitForSecondsRealtime(diceTurnOffset);
         }
-        foreach(Coroutine coroutine in coroutines)
-            yield return coroutine;
+        yield return new WaitForSecondsRealtime(dices[0].turnDuration);
         Physics.autoSimulation = false;
         Physics.Simulate(Time.fixedDeltaTime);
     }

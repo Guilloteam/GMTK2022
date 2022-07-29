@@ -16,9 +16,16 @@ public class UIDice : MonoBehaviour
     public System.Action<DiceSlot, int> diceSlotClickedDelegate;
     private List<Coroutine> pendingCoroutines = new List<Coroutine>();
     private DiceSlots slots;
+    private float turnStart = 0;
+    private float turnTarget = 0;
+    private Quaternion startRotation;
+    private float turnValue = 0;
+    private float turnTime = 0;
     void Start()
     {
         slots = GetComponent<DiceSlots>();
+        
+        startRotation = transform.rotation;
     }
 
     private void Update()
@@ -53,21 +60,27 @@ public class UIDice : MonoBehaviour
             }
             hoveredSlotIndex = -1;
         }
+        UpdateTurn();
     }
 
-    public IEnumerator TurnCoroutine()
+    public void Turn()
+    {
+        turnTime = 0;
+        turnTarget += 1;
+        turnStart = turnValue;
+    }
+
+    public void UpdateTurn()
     {
         Physics.autoSimulation = false;
-        Quaternion startRotation = transform.rotation;
         
-        for(float time = 0; time < turnDuration; time += Time.unscaledDeltaTime)
+        if(turnTime < turnDuration)
         {
-            float ratio = time / turnDuration;
+            turnTime += Time.unscaledDeltaTime;
+            float ratio = turnTime / turnDuration;
             ratio = 1 - (1-ratio) * (1 - ratio);
-            transform.rotation = startRotation * Quaternion.AngleAxis(180 * ratio, rotationAxis);
-            yield return null;
+            turnValue = Mathf.Lerp(turnStart, turnTarget, ratio);
         }
-        transform.rotation = startRotation * Quaternion.AngleAxis(180, rotationAxis);
-        Physics.autoSimulation = true;
+        transform.rotation = startRotation * Quaternion.AngleAxis(180 * turnValue, rotationAxis);
     }
 }
