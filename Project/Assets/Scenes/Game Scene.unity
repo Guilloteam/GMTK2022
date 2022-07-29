@@ -817,6 +817,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6bd02176b804e7a4baef6135cfa3259a, type: 2}
   - {fileID: 11400000, guid: fbeb562ec1096d5469c60472c70b6e25, type: 2}
   - {fileID: 11400000, guid: 508ce0c73a0ec2f4e917455c4fc268ab, type: 2}
+  levelUpFXPrefab: {fileID: 3125509688762719632, guid: b5c6b8a3f5bf88a4597e943de62f7624, type: 3}
 --- !u!4 &1332626606
 Transform:
   m_ObjectHideFlags: 0

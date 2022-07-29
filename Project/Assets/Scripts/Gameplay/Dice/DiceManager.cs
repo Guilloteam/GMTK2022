@@ -21,6 +21,7 @@ public class DiceManager : MonoBehaviour
     public bool gamePaused = false;
     public Vector3 newDiceSpawnOffset;
     public PaletteConfig[] palettes;
+    public Transform levelUpFXPrefab;
 
     void Awake()
     {
@@ -34,7 +35,7 @@ public class DiceManager : MonoBehaviour
 
     void Start()
     {
-        XPSystem.instance.levelUpDelegate += OpenDiceForgeMenu;
+        XPSystem.instance.levelUpDelegate += LevelUp;
         for(int i=0; i<currentConfig.dices.Count; i++)
         {
             DiceBuilder dice = Instantiate(dicePrefab, diceSpawnPoints[i].position, Quaternion.identity);
@@ -78,8 +79,16 @@ public class DiceManager : MonoBehaviour
         // }
     }
 
-    public void OpenDiceForgeMenu()
+    public void LevelUp()
     {
+        StartCoroutine(LevelUpCoroutine());
+        
+    }
+
+    public IEnumerator LevelUpCoroutine()
+    {
+        Instantiate(levelUpFXPrefab, KeyboardMovement.instance.transform.position, levelUpFXPrefab.transform.rotation);
+        yield return new WaitForSeconds(3);
         gamePaused = true;
         currentDiceForgeMenu = Instantiate(diceForgeMenuPrefab);
         currentDiceForgeMenu.config = currentConfig;

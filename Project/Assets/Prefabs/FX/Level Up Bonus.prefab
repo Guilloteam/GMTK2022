@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3125509688762719632}
   - component: {fileID: 3125509688762719635}
   - component: {fileID: 3125509688762719634}
-  - component: {fileID: 3125509688762719645}
   - component: {fileID: 3532267638871339291}
+  - component: {fileID: 1962114192878077336}
   m_Layer: 0
-  m_Name: Score Bonus FX
+  m_Name: Level Up Bonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,22 +174,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3125509688762719635}
   m_maskType: 0
---- !u!114 &3125509688762719645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3125509688762719644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d2ead439216f4418f50a58239aa4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 3125509688762719634}
-  bonus: 10
-  velocity: {x: 0, y: 0.5, z: 0.5}
-  fadeDuration: 3
 --- !u!114 &3532267638871339291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
+--- !u!114 &1962114192878077336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125509688762719644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0938e92b3141c4aaf3bd7e1c393313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3125509688762719634}
+  message: Level up !
+  velocity: {x: 0, y: 0.5, z: 0.5}
+  fadeDuration: 3
