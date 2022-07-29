@@ -25,6 +25,9 @@ public class WaveSpawner : MonoBehaviour
     public Transform spawnParent;
     private float difficultyTime = 0;
     public float difficultyDuration = 120;
+    public float startMaxWaveCount = 1;
+    public float endMaxWaveCount = 5;
+    public List<Wave> spawnedWaves = new List<Wave>();
 
     void Start()
     {
@@ -38,7 +41,30 @@ public class WaveSpawner : MonoBehaviour
         float spawnTimeRatio = Mathf.Max(0, (difficultyTime - difficultyDuration) / endSpawnTime);
         float spawnDelay = startSpawnDelay + Mathf.Max(minSpawnDelay, (endSpawnDelay - startSpawnDelay) * spawnTimeRatio);
         spawnTime -= Time.deltaTime;
-        if(spawnTime < 0)
+        for(int i=spawnedWaves.Count-1; i>=0; i--)
+        {
+            bool enemyAlive = false;
+            for(int j=0; j<spawnedWaves[i].enemies.Length; j++)
+            {
+                if(spawnedWaves[i].enemies[j] != null)
+                {
+                    if(spawnedWaves[i].enemies[j].childCount == 0)
+                    {
+                        Destroy(spawnedWaves[i].enemies[j].gameObject);
+                        break;
+                    }
+
+                    enemyAlive = true;
+                    break;
+                }
+            }
+            if(!enemyAlive)
+            {
+                spawnedWaves.RemoveAt(i);
+            }
+        }
+        float maxWaveCount = Mathf.Lerp(startMaxWaveCount, endMaxWaveCount, difficultyRatio);
+        if(spawnTime < 0 && spawnedWaves.Count + 1 < maxWaveCount)
         {
             spawnTime += spawnDelay;
             float easyWeight = easyWaveCurve.Evaluate(difficultyRatio);
@@ -64,15 +90,18 @@ public class WaveSpawner : MonoBehaviour
             int waveIndex = Random.Range(0, waves.Length);
             List<Transform> availableSpawnPoints = new List<Transform>();
             
+            Wave wave = new Wave();
+            wave.enemies = new Transform[waves[waveIndex].enemies.Length];
             for(int i=0; i<waves[waveIndex].enemies.Length; i++)
             {
                 Transform[] enemies = waves[waveIndex].enemies;
                 int spawnPointIndex = Random.Range(0, availableSpawnPoints.Count);
                 float spawnAngle = Random.Range(0, 360);
                 Vector3 spawnPosition = transform.position + new Vector3(Mathf.Cos(spawnAngle) * spawnRadius, 0, Mathf.Sin(spawnAngle) * spawnRadius);
-                
-                Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPosition, Quaternion.identity, spawnParent);
+                Transform spawnedEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPosition, Quaternion.identity, spawnParent);
+                wave.enemies[i] = spawnedEnemy;
             }
+            spawnedWaves.Add(wave);
         }
     }
 }

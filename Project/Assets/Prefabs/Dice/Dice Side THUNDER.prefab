@@ -116,4 +116,4 @@ MonoBehaviour:
   prefab: {fileID: 6101687688835589645, guid: 7712ca9c457740548ac6c12d3051ffc0, type: 3}
   diceEffectConfig: {fileID: 11400000, guid: d998e8085c8c44d439ac8b8a9db57867, type: 2}
   attachToSide: 1
-  effectDuration: 5
+  effectDuration: 8

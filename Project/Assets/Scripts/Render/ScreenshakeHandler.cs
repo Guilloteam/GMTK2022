@@ -46,7 +46,8 @@ public class ScreenshakeHandler : MonoBehaviour
                 activeEffects[i].time += Time.deltaTime;
             }
         }
-        transform.localPosition = initialPosition + Random.insideUnitSphere * Mathf.Lerp(0, maxDisplacement, intensity / maxIntensity);
+        if(Time.timeScale > 0)
+            transform.localPosition = initialPosition + Random.insideUnitSphere * Mathf.Lerp(0, maxDisplacement, intensity / maxIntensity);
     }
 
     public void AddEffect(ScreenshakeConfig config)

@@ -7,6 +7,7 @@ public class PaletteApplier : MonoBehaviour
     private PaletteRoot paletteRoot;
     private new Renderer renderer;
     private MaterialPropertyBlock propertyBlock; 
+    public System.Action<MaterialPropertyBlock> updatePropertyBlockDelegate;
     void Start()
     {
         propertyBlock = new MaterialPropertyBlock();
@@ -22,12 +23,13 @@ public class PaletteApplier : MonoBehaviour
         paletteRoot.paletteChangedDelegate -= UpdateDisplay;
     }
 
-    void UpdateDisplay()
+    public void UpdateDisplay()
     {
         renderer.GetPropertyBlock(propertyBlock);
         propertyBlock.SetColor("_Color_R", paletteRoot.palette.color_R);
         propertyBlock.SetColor("_Color_V", paletteRoot.palette.color_G);
         propertyBlock.SetColor("_Color_B", paletteRoot.palette.color_B);
+        updatePropertyBlockDelegate?.Invoke(propertyBlock);
         renderer.SetPropertyBlock(propertyBlock);
     }
 }

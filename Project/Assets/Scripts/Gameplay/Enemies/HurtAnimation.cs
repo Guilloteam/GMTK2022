@@ -7,7 +7,7 @@ public class HurtAnimation : MonoBehaviour
     private DamageReceiver damageReceiver;
     public PaletteConfig hurtPalette;
     public PaletteConfig healPalette;
-    private PaletteConfig defaultPalette;
+    public PaletteConfig defaultPalette;
     private PaletteConfig currentPalette;
     public PaletteRoot paletteRoot;
     public float maxHurtDamage = 1;
@@ -15,12 +15,16 @@ public class HurtAnimation : MonoBehaviour
     public float damageCountDecrease = 0.2f;
     private float damageCount = 0;
     public Transform shakeTransform;
+    public Transform shakeRotationTransform;
     public Vector3 shakeDirections = new Vector3(1, 0, 1);
+    public Vector3 shakeRotationAxis = new Vector3(0, 1, 0);
+    public float maxShakeRotation = 10;
     private Vector3 startLocalPos;
     public float minHurtValue = 0.3f;
+    private Quaternion startRotation;
 
 
-    void Start()
+    IEnumerator Start()
     {
         paletteRoot = GetComponentInParent<PaletteRoot>();
         defaultPalette = paletteRoot.palette;
@@ -39,6 +43,9 @@ public class HurtAnimation : MonoBehaviour
             }
         };
         startLocalPos = shakeTransform.localPosition;
+        yield return null;
+        
+        startRotation = shakeRotationTransform.localRotation;
     }
 
     void Update()
@@ -47,7 +54,11 @@ public class HurtAnimation : MonoBehaviour
         {
             damageCount -= damageCountDecrease * Time.deltaTime;
             float damageRatio = Mathf.Clamp01(damageCount / maxHurtDamage);
-            shakeTransform.localPosition = startLocalPos + damageRatio * maxShake * new Vector3(shakeDirections.x * Random.Range(-1, 1), shakeDirections.y * Random.Range(-1, 1), shakeDirections.z * Random.Range(-1, 1));
+            if(Time.timeScale > 0)
+            {
+                shakeTransform.localPosition = startLocalPos + damageRatio * maxShake * new Vector3(shakeDirections.x * Random.Range(-1, 1), shakeDirections.y * Random.Range(-1, 1), shakeDirections.z * Random.Range(-1, 1));
+                shakeRotationTransform.localRotation = Quaternion.AngleAxis(Random.Range(-1, 1) * maxShakeRotation * damageRatio, shakeRotationAxis) * startRotation;
+            }
             currentPalette.color_R = Color.Lerp(defaultPalette.color_R, hurtPalette.color_R, damageRatio);
             currentPalette.color_G = Color.Lerp(defaultPalette.color_G, hurtPalette.color_G, damageRatio);
             currentPalette.color_B = Color.Lerp(defaultPalette.color_B, hurtPalette.color_B, damageRatio);
@@ -56,6 +67,7 @@ public class HurtAnimation : MonoBehaviour
         else
         {
             shakeTransform.localPosition = startLocalPos;
+            shakeRotationTransform.localRotation = startRotation;
         }
     }
 }

@@ -17,6 +17,7 @@ public class GrabHand : MonoBehaviour
     public System.Action grabStartedDelegate;
     public System.Action<Vector3> throwDelegate;
     public bool canGrab = true;
+    private bool canThrow = false;
 
     private void Awake()
     {
@@ -54,33 +55,37 @@ public class GrabHand : MonoBehaviour
                 closestGrabbableInRange = newClosestGrabbable;
             }
         }
-        if(grabAction.WasPressedThisFrame() && canGrab)
+        if(Time.timeScale > 0)
         {
-            if(grabbedElement == null)
+
+            if(grabAction.WasPressedThisFrame() && canGrab)
             {
-                if(closestGrabbableInRange != null)
+                if(grabbedElement == null)
                 {
-                    closestGrabbableInRange.hoverEndDelegate?.Invoke();
-                    grabbedElement = closestGrabbableInRange;
-                    inRangeElements.Remove(grabbedElement);
-                    inRangeListChanged = true;
-                    grabStartedDelegate?.Invoke();
-                    StartCoroutine(GrabAnimationCoroutine(grabAnimDuration));
-                }
-            }
-            else
-            {
-                grabbedElement.grabbed = false;
-                RaycastHit hit;
-                if(Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out hit, 1000, raycastLayerMask))
-                {
-                    Vector3 throwDirection = hit.point - grabPosition.position;
-                    throwDirection.y = 0;
-                    grabbedElement.Throw(throwDirection.normalized);
-                    grabbedElement = null;
-                    throwDelegate?.Invoke(throwDirection.normalized);
                     if(closestGrabbableInRange != null)
-                        closestGrabbableInRange.hoverStartDelegate?.Invoke();
+                    {
+                        closestGrabbableInRange.hoverEndDelegate?.Invoke();
+                        grabbedElement = closestGrabbableInRange;
+                        inRangeElements.Remove(grabbedElement);
+                        inRangeListChanged = true;
+                        grabStartedDelegate?.Invoke();
+                        StartCoroutine(GrabAnimationCoroutine(grabAnimDuration));
+                    }
+                }
+                else
+                {
+                    grabbedElement.grabbed = false;
+                    RaycastHit hit;
+                    if(Physics.Raycast(Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue()), out hit, 1000, raycastLayerMask))
+                    {
+                        Vector3 throwDirection = hit.point - grabPosition.position;
+                        throwDirection.y = 0;
+                        grabbedElement.Throw(throwDirection.normalized);
+                        grabbedElement = null;
+                        throwDelegate?.Invoke(throwDirection.normalized);
+                        if(closestGrabbableInRange != null)
+                            closestGrabbableInRange.hoverStartDelegate?.Invoke();
+                    }
                 }
             }
         }
@@ -120,6 +125,7 @@ public class GrabHand : MonoBehaviour
     
     private IEnumerator GrabAnimationCoroutine(float duration)
     {
+        canThrow = false;
         grabbedElement.grabbedDelegate?.Invoke();
         grabbedElement.grabbed = true;
         Vector3 startOffset = grabbedElement.transform.position - grabPosition.transform.position;
@@ -130,6 +136,7 @@ public class GrabHand : MonoBehaviour
             grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / duration);
             yield return null;
         }
+        canThrow = true;
         while(grabbedElement != null)
         {
             grabbedElement.transform.position = grabPosition.transform.position;

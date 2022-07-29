@@ -29405,8 +29405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0a224c89ae5d44ca1572d721cea73d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6.2
-  damage: 0.5
+  radius: 5.5
+  damage: 0.2
   duration: 5.5
   repulseMaxForce: 0
   repulseMinForce: 0
@@ -29414,6 +29414,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   applyOnStart: 1
+  bypassWeight: 0
 --- !u!114 &2579151007564839960
 MonoBehaviour:
   m_ObjectHideFlags: 0

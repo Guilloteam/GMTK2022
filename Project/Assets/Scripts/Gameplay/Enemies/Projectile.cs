@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
         DamageReceiver receiver = other.GetComponent<DamageReceiver>();
         if(receiver != null)
         {
-            receiver.OnDamageReceived(damage, recoil * rigidbody.velocity.normalized);
+            receiver.OnDamageReceived(damage, rigidbody.velocity.normalized);
             Destroy(gameObject);
         }
     }

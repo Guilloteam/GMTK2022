@@ -45,6 +45,7 @@ public class DamageReceiver : MonoBehaviour
         {
             if(deathPrefab != null)
                 Instantiate(deathPrefab, transform.position, deathPrefab.rotation);
+            damageReceivedDelegate?.Invoke(damage, forceApplied);
             deathDelegate?.Invoke();
         }
         else
@@ -60,7 +61,6 @@ public class DamageReceiver : MonoBehaviour
                 }
                 else 
                 {
-                    
                     healReceivedSoundEvent?.Invoke();
                 }
                 soundEventTime = maxSoundEventDelay;

@@ -9,18 +9,27 @@ public class ReturnEffect : MonoBehaviour
     public float disappearDelay = 0.2f;
     public System.Action diceDisappearDelegate;
     public System.Action diceReappearDelegate;
-    void Start()
+    private List<Coroutine> coroutines = new List<Coroutine>();
+    private bool grabDisabled = false;
+    private IEnumerator Start()
     {
         DiceBuilder diceBuilder = GetComponent<DiceEffectRoot>().dice;
         grabbable = diceBuilder.GetComponent<Grabbable>();
-        StartCoroutine(ReturnAnimCoroutine());
+        yield return ReturnAnimCoroutine();
+    }
+
+    private void OnDestroy()
+    {
+        if(grabDisabled)
+            GrabHand.instance.canGrab = true;
     }
 
     private IEnumerator ReturnAnimCoroutine()
     {
-        while(!grabbable || GrabHand.instance.grabbedElement != null)
+        while(!grabbable || GrabHand.instance.grabbedElement != null || !GrabHand.instance.canGrab)
             yield return null;
         GrabHand.instance.canGrab = false;
+        grabDisabled = true;
         Instantiate(fxPrefab, grabbable.transform.position, fxPrefab.rotation);
         diceDisappearDelegate?.Invoke();
         yield return new WaitForSeconds(disappearDelay);
@@ -29,5 +38,6 @@ public class ReturnEffect : MonoBehaviour
         Instantiate(fxPrefab, grabbable.transform.position, fxPrefab.rotation);
         diceReappearDelegate?.Invoke();
         GrabHand.instance.canGrab = true;
+        grabDisabled = false;
     }
 }

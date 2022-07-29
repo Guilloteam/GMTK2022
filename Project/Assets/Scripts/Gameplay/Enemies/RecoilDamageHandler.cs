@@ -11,21 +11,25 @@ public class RecoilDamageHandler : MonoBehaviour
     private EntityPhysicsConfig defaultPhysics;
     private float knockedTime;
     public float knockedDuration = 1;
+    public float maxForce = 10;
+    public float forceRatio = 1;
 
     private void Start()
     {
         rigidbody = GetComponentInParent<Rigidbody>();
         movementController = GetComponentInParent<MovementController>();
         DamageReceiver damageReceiver = GetComponentInParent<DamageReceiver>();
-        damageReceiver.damageReceivedDelegate += OnDamageReceived;
         defaultPhysics = movementController.physicsConfig;
     }
 
-    public void OnDamageReceived(float damage, Vector3 forceApplied)
+    public void OnPushback(Vector3 forceApplied)
     {
+        
         Vector3 direction = forceApplied;
         direction.y = 0;
-        rigidbody.AddForce(forceApplied * recoilRatio);
+        float intensity = direction.magnitude * forceRatio;
+        rigidbody.AddForce(direction.normalized * Mathf.Clamp(intensity, 0, maxForce));
+        // rigidbody.AddForce(forceApplied * recoilRatio);
         movementController.physicsConfig = knockedPhysics;
         knockedTime = knockedDuration;
     }
