@@ -17,8 +17,8 @@ TagManager:
   - Enemy
   - PlayerBlocker
   - Projectile
-  - 
-  - 
+  - Player
+  - Thrown
   - 
   - 
   - 

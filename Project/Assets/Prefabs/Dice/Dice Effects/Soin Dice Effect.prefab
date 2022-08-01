@@ -53,7 +53,7 @@ MonoBehaviour:
   repulseMinForce: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4096
   applyOnStart: 1
   bypassWeight: 0
 --- !u!82 &-164117438399585597

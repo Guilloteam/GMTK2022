@@ -81,4 +81,9 @@ public class DiceProjectile : MonoBehaviour
             diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
         activeFace = -1;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("COLLISION DICE/" + collision.collider.gameObject);
+    }
 }

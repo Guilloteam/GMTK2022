@@ -14,6 +14,7 @@ public class Grabbable : MonoBehaviour
 
     private Collider[] colliders;
     private Collider mainCollider;
+    int startLayer;
 
     public bool hovered { 
         get {
@@ -38,6 +39,10 @@ public class Grabbable : MonoBehaviour
         }
 
         set {
+            if(value)
+            {
+                gameObject.layer = LayerMask.NameToLayer("Thrown");
+            }
             rigidbody.isKinematic = value;
             _grabbed = value;
             mainCollider.enabled = !value;
@@ -50,13 +55,33 @@ public class Grabbable : MonoBehaviour
 
     public void Throw(Vector3 direction)
     {
+        StartCoroutine(ThrownCoroutine(direction));
+    }
+
+    public IEnumerator ThrownCoroutine(Vector3 direction)
+    {
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
+        
         throwDelegate?.Invoke(direction);
         thrownDelegate?.Invoke();
+        yield return new WaitForSeconds(0.3f);
+        gameObject.layer = startLayer;
     }
 
     public void Start()
     {
         mainCollider = GetComponent<Collider>();
         colliders = GetComponentsInChildren<Collider>();
+        startLayer = gameObject.layer;
+    }
+
+    public void Update()
+    {
+        if(_grabbed)
+        {
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+        }
     }
 }

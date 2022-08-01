@@ -116,10 +116,10 @@ Material:
     - _Cutoff: 0.359
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortionBlend: 0.5
+    - _DistortionBlend: 0.663
     - _DistortionEnabled: 0
-    - _DistortionStrength: 1
-    - _DistortionStrengthScaled: 0
+    - _DistortionStrength: 100
+    - _DistortionStrengthScaled: 10
     - _DstBlend: 10
     - _EmissionEnabled: 0
     - _EnvironmentReflections: 1

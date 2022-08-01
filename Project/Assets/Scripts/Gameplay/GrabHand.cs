@@ -57,7 +57,6 @@ public class GrabHand : MonoBehaviour
         }
         if(Time.timeScale > 0)
         {
-
             if(grabAction.WasPressedThisFrame() && canGrab)
             {
                 if(grabbedElement == null)
@@ -128,18 +127,28 @@ public class GrabHand : MonoBehaviour
         canThrow = false;
         grabbedElement.grabbedDelegate?.Invoke();
         grabbedElement.grabbed = true;
+        
+        Quaternion startRotation = grabbedElement.transform.rotation;
+        Vector3 targetEulerAngles = grabbedElement.transform.rotation.eulerAngles;
+        Quaternion targetRotation = Quaternion.Euler(
+            Mathf.RoundToInt(targetEulerAngles.x/90) * 90,
+            Mathf.RoundToInt(targetEulerAngles.y/90) * 90,
+            Mathf.RoundToInt(targetEulerAngles.z/90) * 90
+        );
         Vector3 startOffset = grabbedElement.transform.position - grabPosition.transform.position;
         for(float time=0; time < duration; time += Time.deltaTime)
         {
             if(grabbedElement == null)
                 break;
             grabbedElement.transform.position = grabPosition.transform.position + startOffset * (1 - time / duration);
+            grabbedElement.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, time / duration);
             yield return null;
         }
         canThrow = true;
         while(grabbedElement != null)
         {
             grabbedElement.transform.position = grabPosition.transform.position;
+            grabbedElement.transform.rotation = targetRotation;
             yield return null;
         }
     }

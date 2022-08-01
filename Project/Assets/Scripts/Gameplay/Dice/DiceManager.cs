@@ -39,7 +39,7 @@ public class DiceManager : MonoBehaviour
         for(int i=0; i<currentConfig.dices.Count; i++)
         {
             DiceBuilder dice = Instantiate(dicePrefab, diceSpawnPoints[i].position, Quaternion.identity);
-            dice.GetComponent<PaletteRoot>().palette = palettes[spawnedDices.Count];
+            dice.GetComponent<PaletteRoot>().palette = palettes[spawnedDices.Count%palettes.Length];
             dice.diceConfig = currentConfig.dices[i];
             spawnedDices.Add(dice);
         }
@@ -88,7 +88,7 @@ public class DiceManager : MonoBehaviour
     public IEnumerator LevelUpCoroutine()
     {
         Instantiate(levelUpFXPrefab, KeyboardMovement.instance.transform.position, levelUpFXPrefab.transform.rotation);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         gamePaused = true;
         currentDiceForgeMenu = Instantiate(diceForgeMenuPrefab);
         currentDiceForgeMenu.config = currentConfig;

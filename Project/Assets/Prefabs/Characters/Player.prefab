@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1839106287899263673}
   - component: {fileID: 6687100977558600534}
   - component: {fileID: 9202434699952943455}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Shadow Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5418886795688529991}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grab Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5418886795688529990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.02, z: 1.61}
+  m_LocalPosition: {x: 0, y: 1.5, z: 1.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 5418886795852534003}
   - component: {fileID: 5418886795852534002}
   - component: {fileID: 5418886795852534001}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grab Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,6 +218,7 @@ MonoBehaviour:
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  canGrab: 1
 --- !u!1 &5418886796978799365
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +241,7 @@ GameObject:
   - component: {fileID: 5418886796978799483}
   - component: {fileID: 5418886796978799476}
   - component: {fileID: 1901246742}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,6 +393,30 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Horizontal
       m_Flags: 8
+    - m_Name: 1D Axis
+      m_Id: ee311f95-a65f-4e6a-adfe-da43f1112eaa
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: a398893a-87fc-4044-aca3-13543dbfb7ab
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 9675972a-c482-4cc2-bd83-e9ddce59ca0c
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Horizontal
+      m_Flags: 8
     m_Flags: 0
   verticalAction:
     m_Name: Vertical
@@ -420,6 +445,30 @@ MonoBehaviour:
     - m_Name: positive
       m_Id: 9fd4f132-1ede-40a1-b053-ff925a6037e9
       m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical
+      m_Flags: 8
+    - m_Name: 1D Axis
+      m_Id: ed0b9414-adf8-49a8-a7fd-0dfea0d3872a
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 5d771448-1a9f-407c-881f-97f645a79761
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Vertical
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: f75bf0fe-e686-4a9d-9aae-94d344cc5be9
+      m_Path: <Keyboard>/upArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -497,12 +546,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hurtPalette: {fileID: 11400000, guid: b0a933304cfe08241b2f4b370d09de3a, type: 2}
   healPalette: {fileID: 0}
+  defaultPalette: {fileID: 0}
   paletteRoot: {fileID: 0}
   maxHurtDamage: 1
   maxShake: 0.3
   damageCountDecrease: 1
   shakeTransform: {fileID: 5418886797467418059}
+  shakeRotationTransform: {fileID: 5418886796978799362}
   shakeDirections: {x: 1, y: 0, z: 1}
+  shakeRotationAxis: {x: 0, y: 1, z: 0}
+  maxShakeRotation: 10
   minHurtValue: 0.3
 --- !u!114 &5418886796978799483
 MonoBehaviour:
@@ -574,7 +627,7 @@ GameObject:
   - component: {fileID: 5418886797054012155}
   - component: {fileID: 5418886797054012149}
   - component: {fileID: 5418886797054012148}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: POINT_Hero (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +744,7 @@ GameObject:
   - component: {fileID: 5418886797453688551}
   - component: {fileID: 5418886797453688550}
   - component: {fileID: 2173259893501697711}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -752,7 +805,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 887
+    m_Bits: 15223
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -823,7 +876,7 @@ GameObject:
   - component: {fileID: 5418886797467418052}
   - component: {fileID: 5418886797467418053}
   - component: {fileID: 5418886797467418054}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
