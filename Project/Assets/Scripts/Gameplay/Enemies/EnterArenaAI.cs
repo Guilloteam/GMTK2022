@@ -20,20 +20,21 @@ public class EnterArenaAI : MonoBehaviour
 
     void Update()
     {
-        Vector3 direction = (arenaCenter - transform.position);
+        Vector3 direction = arenaCenter - transform.position;
         direction.y = 0;
-
-        movementController.inputDirection = direction.normalized;
-        
-        
-        if(direction.x < 0)
-            meshRenderer.transform.rotation = Quaternion.Euler(90, 0, 0);
-        else meshRenderer.transform.rotation = Quaternion.Euler(-90, 0, 180);
-
-        if(direction.sqrMagnitude < arenaSize * arenaSize)
+        if(direction.sqrMagnitude > arenaSize * arenaSize)
+        {
+            movementController.inputDirection = direction.normalized;
+            
+            if(direction.x < 0)
+                meshRenderer.transform.rotation = Quaternion.Euler(90, 0, 0);
+            else meshRenderer.transform.rotation = Quaternion.Euler(-90, 0, 180);
+            nextAIScript.enabled = false;
+        }
+        else
         {
             nextAIScript.enabled = true;
-            enabled = false;
         }
+
     }
 }

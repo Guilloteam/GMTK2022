@@ -7,17 +7,21 @@ public class BasicEnemyAI : MonoBehaviour
     private MovementController movementController;
     private MeshRenderer meshRenderer;
     public Transform target;
+    public float angleOffsetMin = 0;
+    public float angleOffsetMax = 0;
+    private float angleOffset;
     
     void Start()
     {
         movementController = GetComponent<MovementController>();
         target = KeyboardMovement.instance.transform;
         meshRenderer = GetComponentInChildren<MeshRenderer>();
+        angleOffset = Random.Range(angleOffsetMin, angleOffsetMax);
     }
 
     void Update()
     {
-        Vector3 direction = (target.position - transform.position);
+        Vector3 direction = Quaternion.AngleAxis(angleOffset, Vector3.up) * (target.position - transform.position);
         direction.y = 0;
         movementController.inputDirection = direction.normalized;
         

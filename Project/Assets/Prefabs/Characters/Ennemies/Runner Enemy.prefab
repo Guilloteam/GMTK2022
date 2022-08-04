@@ -59,6 +59,14 @@ PrefabInstance:
       propertyPath: movementSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030193, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: angleOffsetMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4078694434231030193, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
+      propertyPath: angleOffsetMin
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 4078694434231030194, guid: eef733c412e2ad946bbcce8614e25b2a, type: 3}
       propertyPath: m_RootOrder
       value: 0

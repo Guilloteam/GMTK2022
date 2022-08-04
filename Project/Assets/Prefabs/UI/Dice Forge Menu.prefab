@@ -543,6 +543,8 @@ MonoBehaviour:
     effect: {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}
   - probability: 1
     effect: {fileID: 0}
+  - probability: 1
+    effect: {fileID: 11400000, guid: f85b0e18c98c11841a16896bf27c87c0, type: 2}
   availableUpgrades:
   - {fileID: 11400000, guid: 2d16422ddcc810d4e89fa0539b1bc3b1, type: 2}
   - {fileID: 11400000, guid: ac93a47442bb5cb459cd884f6f10df7f, type: 2}

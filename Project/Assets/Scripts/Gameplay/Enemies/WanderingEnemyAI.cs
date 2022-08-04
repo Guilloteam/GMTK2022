@@ -21,12 +21,11 @@ public class WanderingEnemyAI : MonoBehaviour
     public float maxStepDelay = 3;
     
     
-    IEnumerator Start()
+    void Start()
     {
         movementController = GetComponent<MovementController>();
         target = KeyboardMovement.instance.transform;
         meshRenderer = GetComponentInChildren<MeshRenderer>();
-        yield return StepCoroutine();
     }
 
     void Update()
@@ -50,6 +49,16 @@ public class WanderingEnemyAI : MonoBehaviour
         if(direction.x < 0)
             meshRenderer.transform.rotation = Quaternion.Euler(90, 0, 0);
         else meshRenderer.transform.rotation = Quaternion.Euler(-90, 0, 180);
+    }
+
+    void OnEnable()
+    {
+        StartCoroutine(StepCoroutine());
+    }
+
+    void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator StepCoroutine()

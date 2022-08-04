@@ -511,9 +511,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  detectionRange: 8
-  stopFollowingRange: 12
+  detectionRange: 5
+  stopFollowingRange: 8
   stopFollowingDelay: 2
+  minStepDuration: 0.5
+  maxStepDuration: 3
+  minStepDelay: 0.3
+  maxStepDelay: 3
 --- !u!114 &739849149295767639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a5a8ce287bf7142a40bdd07ba723d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arenaSize: 20
+  arenaSize: 15
   nextAIScript: {fileID: -6107206730048919541}
   arenaCenter: {x: 0, y: 0, z: 0}
 --- !u!114 &65174126057540562
