@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum DiceEffectType
+{
+    StopOnGrab,
+    StopOnThrow,
+}
+
 public class DiceInstantiateEffect : MonoBehaviour
 {
     public Transform prefab;
+    public DiceEffectType effectType;
     public DiceEffectConfig diceEffectConfig;
     private DiceSlot slot;
     public bool attachToSide = false;
@@ -18,7 +25,18 @@ public class DiceInstantiateEffect : MonoBehaviour
         if(slot != null)
         {
             slot.activationStartDelegate += StartEffect;
-            slot.activationEndDelegate += StopEffect;
+            switch(effectType)
+            {
+                case DiceEffectType.StopOnGrab:
+                    slot.grabbedDelegate += StopEffect;
+                    slot.activeFaceTurnedDelegate += StopEffect;
+                    break;
+                case DiceEffectType.StopOnThrow:
+                    slot.thrownDelegate += StopEffect;
+                    slot.activeFaceTurnedDelegate += StopEffect;
+                    break;
+
+            }
         }
     }
 
@@ -30,7 +48,8 @@ public class DiceInstantiateEffect : MonoBehaviour
         if(slot != null)
         {
             slot.activationStartDelegate -= StartEffect;
-            slot.activationEndDelegate -= StopEffect;
+            slot.grabbedDelegate -= StopEffect;
+            slot.activeFaceTurnedDelegate -= StopEffect;
         }
     }
 
@@ -42,6 +61,7 @@ public class DiceInstantiateEffect : MonoBehaviour
     private void StopEffect()
     {
         effectStopped = true;
+        Debug.Log("Effect Stopped");
     }
 
     private IEnumerator EffectCoroutine()

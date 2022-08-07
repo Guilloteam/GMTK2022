@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class AcidEffect : MonoBehaviour
 {
-    public Transform effectPrefab;
+    public AcidPool effectPrefab;
+    private AcidPool activeEffect;
+    public float range = 1;
 
     public void Start()
     {
-        Instantiate(effectPrefab, transform.position, effectPrefab.rotation);
+        activeEffect = Instantiate(effectPrefab, transform.position, effectPrefab.transform.rotation);
+    }
+
+    private void Update()
+    {
+        if(activeEffect != null)
+        {
+            activeEffect.quantity += Time.deltaTime;
+        }
+        if(Vector3.SqrMagnitude(transform.position - activeEffect.transform.position) > range * range)
+        {
+            activeEffect = Instantiate(effectPrefab, transform.position, effectPrefab.transform.rotation);
+        }
     }
 }

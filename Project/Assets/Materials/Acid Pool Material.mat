@@ -12,7 +12,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -38,14 +38,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Normal_Strength: 0.2
-    - _OscilationScale: 0.15
+    - _Normal_Strength: 0.05
+    - _OscilationScale: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Threshold: 0.17
     - _Time_Scale: 0.2
     m_Colors:
-    - _AlphaRange: {r: 0.16, g: 0.33, b: 0, a: 0}
+    - _AlphaRange: {r: 0, g: 0.08, b: 0, a: 0}
     - _Screen_Oscilation_Scale: {r: 0.1, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2341403523061319949

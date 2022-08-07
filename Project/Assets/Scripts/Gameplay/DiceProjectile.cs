@@ -34,6 +34,8 @@ public class DiceProjectile : MonoBehaviour
 
     private void OnThrow(Vector3 direction)
     {
+        if(activeFace >= 0)
+            diceSlots.slots[activeFace].thrownDelegate?.Invoke();
         projectilePhysics.physicsConfig = thrownPhysicsConfig;
         activeFace = -1;
         grabbed = false;
@@ -44,7 +46,7 @@ public class DiceProjectile : MonoBehaviour
     {
         grabbed = true;
         if(activeFace >= 0)
-            diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
+            diceSlots.slots[activeFace].grabbedDelegate?.Invoke();
     }
 
     private void OnReturnToIdleState()
@@ -68,7 +70,7 @@ public class DiceProjectile : MonoBehaviour
         if(activeFace != bestFace)
         {
             if(activeFace >= 0)
-                diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
+                diceSlots.slots[activeFace].activeFaceTurnedDelegate?.Invoke();
             diceSlots.slots[bestFace].activationStartDelegate?.Invoke();
             activeFace = bestFace;
         }
@@ -78,7 +80,7 @@ public class DiceProjectile : MonoBehaviour
     {
         damageBox.enabled = true;
         if(activeFace >= 0)
-            diceSlots.slots[activeFace].activationEndDelegate?.Invoke();
+            diceSlots.slots[activeFace].activeFaceTurnedDelegate?.Invoke();
         activeFace = -1;
     }
 

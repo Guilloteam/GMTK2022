@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4494495842502467510}
   - component: {fileID: 4494495842502467505}
   - component: {fileID: 4494495842502467504}
-  - component: {fileID: 1491336068760898006}
+  - component: {fileID: 1663964461334797547}
   m_Layer: 14
   m_Name: Acid Pool
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4494495842502467506}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.16, y: 0.49292135, z: 5.38}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1491336068760898006
+--- !u!114 &1663964461334797547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,6 +93,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4494495842502467506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aefcb66f5ff3c6845ae8ce5b4c18f8cb, type: 3}
+  m_Script: {fileID: 11500000, guid: b2a3e263353a80a48b30255d99d07cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capacity: 8
+  quantity: 0.5
+  emptyRate: 0.1
+  maxRadius: 10

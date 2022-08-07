@@ -6,7 +6,9 @@ public class DiceSlot : MonoBehaviour
 {
     public int slotIndex;
     public System.Action activationStartDelegate;
-    public System.Action activationEndDelegate;
+    public System.Action activeFaceTurnedDelegate;
+    public System.Action grabbedDelegate;
+    public System.Action thrownDelegate;
     public bool hovered = false;
     public float hoverAnimDuration = 0.2f;
     private float hoverAnimTime = 0;

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4176076841522664936}
   - component: {fileID: 7664270134586523767}
   m_Layer: 0
-  m_Name: Dice Side POISON
+  m_Name: Dice Side ACID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 6445310413163253118, guid: e1e1ba3e3f0f51243a92290a0c887ccb, type: 3}
+  effectType: 0
   diceEffectConfig: {fileID: 11400000, guid: f85b0e18c98c11841a16896bf27c87c0, type: 2}
   attachToSide: 0
   effectDuration: 1
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4494495842502467510, guid: c981a81d6a6256d41a910d6cc657775b, type: 3}
+  effectType: 1
   diceEffectConfig: {fileID: 11400000, guid: 9e83826737703d449957af3b691cdd39, type: 2}
-  attachToSide: 0
+  attachToSide: 1
   effectDuration: 0
